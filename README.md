@@ -7,8 +7,8 @@
 
 <p align="left"> <a href="https://twitter.com/@soumabhasaha15" target="blank"><img src="https://img.shields.io/twitter/follow/@soumabhasaha15?logo=twitter&style=for-the-badge" alt="@soumabhasaha15" /></a> </p>
 
-- 👨‍💻 All of my projects are available at [https://portfolio-seven-mu-85.vercel.app](https://portfolio-seven-mu-85.vercel.app)
-
+- 👨‍💻 All of my projects are available at my <a href="https://portfolio-seven-mu-85.vercel.app">website</a>
+- <iframe src="https://portfolio-seven-mu-85.vercel.app"></iframe>
 - 💬 Ask me about **C,C++,JS**
 
 <h3 align="left">Connect with me:</h3>
