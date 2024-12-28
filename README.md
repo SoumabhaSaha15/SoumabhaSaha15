@@ -9,9 +9,8 @@
 <img align="right" alt="Coding" width="400" src="image.png">
 
 - ![portfolio](https://komarev.com/ghpvc/?username=soumabhasaha15&label=Profile%20views&color=0e75b6&style=flat)
-- 🌱 I'm currently learning _MERN stack_
-
-- 📝 I often write articles on [https://hashnode.com/@soumabhasaha15](https://hashnode.com/@soumabhasaha15)
+- <img src="https://avatars.githubusercontent.com/u/108742981" width="20" height="20"> I'm currently learning _MERN stack_
+- 📝 I often write articles on [HASHNODE](https://hashnode.com/@soumabhasaha15)
 
 - 📄 Know about my experiences [CV Gdrive link](https://drive.google.com/file/d/1T7xJ_KN1l6lJIkANvYlqBa2cgkgPB1fo/view)
 
@@ -20,9 +19,10 @@
 - 📫 How to reach me <a href="mailto:soumabhasaha1509@gmail.com">![Static Badge](https://img.shields.io/badge/soumabhasaha1509%40gmail.com-red?logo=gmail&logoColor=white&link=mailto%soumabhasaha1509%40gmail.com)</a>
 - ⚡ Fun fact _I'm also a Gamer_ 🎮 & always like to be a _dreamer🌙_
 
-- 👨‍💻 All of my projects are available at my
-![Custom Badge](https://img.shields.io/badge/portfolio-blue?logo=https://portfolio-seven-mu-85.vercel.app/assets/logo.svg)
+- <img src="https://portfolio-seven-mu-85.vercel.app/assets/logo.svg" width="20" height="20"> All of my projects are available at my ![Custom Badge](https://img.shields.io/badge/portfolio-blue?logo=https://portfolio-seven-mu-85.vercel.app/assets/logo.svg)
+
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0111.gif" width="1000" height="2" />
+
 
 ## 💫 Github Stats
 
