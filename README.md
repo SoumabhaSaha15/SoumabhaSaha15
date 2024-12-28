@@ -16,11 +16,11 @@
 
 <p align="left">  </p>
 
-- 🌱 I’m currently learning *MERN stack*
+- 🌱 I'm currently learning *MERN stack*
 
 - 📝 I often write articles on [https://hashnode.com/@soumabhasaha15](https://hashnode.com/@soumabhasaha15)
 
-- 📫 How to reach me *soumabhasaha1509@gmail.com*
+- 📫 How to reach me *<soumabhasaha1509@gmail.com>*
 
 - 📄 Know about my experiences [CV Gdrive link](https://drive.google.com/file/d/1T7xJ_KN1l6lJIkANvYlqBa2cgkgPB1fo/view)
 
