@@ -12,39 +12,36 @@
 
 <img align="right" alt="Coding" width="400" src="image.png">
 
-
-
 <p align="left">  </p>
 
-- 🌱 I'm currently learning *MERN stack*
+- 🌱 I'm currently learning _MERN stack_
 
 - 📝 I often write articles on [https://hashnode.com/@soumabhasaha15](https://hashnode.com/@soumabhasaha15)
 
-- 📫 How to reach me *<soumabhasaha1509@gmail.com>*
-
 - 📄 Know about my experiences [CV Gdrive link](https://drive.google.com/file/d/1T7xJ_KN1l6lJIkANvYlqBa2cgkgPB1fo/view)
 
-- 💬 Ask me about *Web Development, Competitive Programming, GCloud*
+- 💬 Ask me about _Web Development, Competitive Programming, GCloud_
 
 - 📫 How to reach me <a href="mailto:soumabhasaha1509@gmail.com">![Static Badge](https://img.shields.io/badge/soumabhasaha1509%40gmail.com-red?logo=gmail&logoColor=white&link=mailto%soumabhasaha1509%40gmail.com)</a>
 
-- ⚡ Fun fact *I'm also a Gamer* 🎮 & always like to be a *dreamer🌙 & a **traveller of the universe* 🌍 
+- ⚡ Fun fact _I'm also a Gamer_ 🎮 & always like to be a _dreamer🌙_
 
+- 👨‍💻 All of my projects are available at my
+![Custom Badge](https://img.shields.io/badge/portfolio-blue?logo=https://portfolio-seven-mu-85.vercel.app/assets/logo.svg)
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0111.gif" width="1000" height="2" />
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=soumabhasaha15&label=Profile%20views&color=0e75b6&style=flat" alt="soumabhasaha15" /> </p>
 
 ## 💫 Github Stats
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=soumabhasaha15&theme=dracula" alt="soumabhasaha15" /></a> </p>
+
+<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=soumabhasaha15&theme=juicyfresh" alt="soumabhasaha15" /></a> </p>
 <img src="https://leetcard.jacoblin.cool/SOUMABHA_SAHA?ext=heatmap">
 <div align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=SoumabhaSaha15&theme=github-dark&true&hide_border=true" />
 </div>
 
-<p align="left"> <a href="https://twitter.com/@soumabhasaha15" target="blank"><img src="https://img.shields.io/twitter/follow/@soumabhasaha15?logo=twitter&style=for-the-badge" alt="@soumabhasaha15" /></a> </p>
 <div id="header" align="center">
   <img src="https://media.giphy.com/media/hqU2KkjW5bE2v2Z7Q2/giphy.gif" width="100"/>
 </div>
-- 👨‍💻 All of my projects are available at my <a href="https://portfolio-seven-mu-85.vercel.app">website</a>
 - 💬 Ask me about **C,C++,JS**
 <h3 align="left">🌐 Connect with me:</h3>
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0111.gif" width="1000" height="2" />
