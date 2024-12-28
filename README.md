@@ -1,9 +1,21 @@
-<h1 align="center">Hi 👋, I'm Soumabha Saha</h1>
+<h1 align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.herokuapp.com/?lines=Hello,+There!+👋;This+is+Soumabha+Saha;Nice+to+meet+you!&center=true&size=30">
+  </a>
+</h1>
+<p align="center"> 
+  Visitor count<br>
+  <img src="https://profile-counter.glitch.me/TerminatorSS24/count.svg" />
+</p>
 <h3 align="center">A passionate frontend developer from India</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=soumabhasaha15&label=Profile%20views&color=0e75b6&style=flat" alt="soumabhasaha15" /> </p>
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=soumabhasaha15" alt="soumabhasaha15" /></a> </p>
+<img src="https://leetcard.jacoblin.cool/SOUMABHA_SAHA?ext=heatmap">
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=SoumabhaSaha15&theme=synthwave-84&true&hide_border=true" />
+</div>
 
 <p align="left"> <a href="https://twitter.com/@soumabhasaha15" target="blank"><img src="https://img.shields.io/twitter/follow/@soumabhasaha15?logo=twitter&style=for-the-badge" alt="@soumabhasaha15" /></a> </p>
 
