@@ -6,9 +6,31 @@
 
 <p align="center"> 
   Visitor count<br>
-  <img src="https://profile-counter.glitch.me/TerminatorSS24/count.svg" />
+  <img src="https://profile-counter.glitch.me/SoumabhaSaha15/count.svg" />
 </p>
 <h3 align="center">A passionate frontend developer from India</h3>
+
+<img align="right" alt="Coding" width="400" src="image.png">
+
+
+
+<p align="left">  </p>
+
+- 🌱 I’m currently learning *MERN stack*
+
+- 📝 I often write articles on [https://hashnode.com/@soumabhasaha15](https://hashnode.com/@soumabhasaha15)
+
+- 📫 How to reach me *soumabhasaha1509@gmail.com*
+
+- 📄 Know about my experiences [CV Gdrive link](https://drive.google.com/file/d/1T7xJ_KN1l6lJIkANvYlqBa2cgkgPB1fo/view)
+
+- 💬 Ask me about *Web Development, Competitive Programming, GCloud*
+
+- 📫 How to reach me <a href="mailto:soumabhasaha1509@gmail.com">![Static Badge](https://img.shields.io/badge/soumabhasaha1509%40gmail.com-red?logo=gmail&logoColor=white&link=mailto%soumabhasaha1509%40gmail.com)</a>
+
+- ⚡ Fun fact *I'm also a Gamer* 🎮 & always like to be a *dreamer🌙 & a **traveller of the universe* 🌍 
+
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0111.gif" width="1000" height="2" />
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=soumabhasaha15&label=Profile%20views&color=0e75b6&style=flat" alt="soumabhasaha15" /> </p>
 
 ## 💫 Github Stats
@@ -23,11 +45,9 @@
   <img src="https://media.giphy.com/media/hqU2KkjW5bE2v2Z7Q2/giphy.gif" width="100"/>
 </div>
 - 👨‍💻 All of my projects are available at my <a href="https://portfolio-seven-mu-85.vercel.app">website</a>
-
-![website](./image.png "website")
 - 💬 Ask me about **C,C++,JS**
-
-<h3 align="left">Connect with me:</h3>
+<h3 align="left">🌐 Connect with me:</h3>
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0111.gif" width="1000" height="2" />
 <p align="left">
 <a href="https://twitter.com/@soumabhasaha15" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="@soumabhasaha15" height="30" width="40" /></a>
 <a href="https://www.linkedin.com/in/soumabha-saha-663816253/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="soumabha saha" height="30" width="40" /></a>
