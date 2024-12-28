@@ -14,7 +14,7 @@
 
 - 📄 Know about my experiences [CV Gdrive link](https://drive.google.com/file/d/1T7xJ_KN1l6lJIkANvYlqBa2cgkgPB1fo/view)
 
-- 💬 Ask me about _Web Development, Competitive Programming, GCloud_
+- 💬 Ask me about _Web Development, C++,django_
 
 - 📫 How to reach me <a href="mailto:soumabhasaha1509@gmail.com">![Static Badge](https://img.shields.io/badge/soumabhasaha1509%40gmail.com-red?logo=gmail&logoColor=white&link=mailto%soumabhasaha1509%40gmail.com)</a>
 - ⚡ Fun fact _I'm also a Gamer_ 🎮 & always like to be a _dreamer🌙_
