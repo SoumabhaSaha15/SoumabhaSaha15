@@ -19,7 +19,8 @@
 - 📫 How to reach me <a href="mailto:soumabhasaha1509@gmail.com">![Static Badge](https://img.shields.io/badge/soumabhasaha1509%40gmail.com-red?logo=gmail&logoColor=white&link=mailto%soumabhasaha1509%40gmail.com)</a>
 - ⚡ Fun fact _I'm also a Gamer_ 🎮 & always like to be a _dreamer🌙_
 
-- <img src="https://portfolio-seven-mu-85.vercel.app/assets/logo.svg" width="20" height="20"> All of my projects are available at my ![Custom Badge](https://img.shields.io/badge/portfolio-blue?logo=https://portfolio-seven-mu-85.vercel.app/assets/logo.svg)
+- <img src="https://portfolio-seven-mu-85.vercel.app/assets/logo.svg" width="20" height="20"> All of my projects are available at my <a href="https://portfolio-seven-mu-85.vercel.app/"> ![Static Badge](https://img.shields.io/badge/portfolio-blue?color=blue)
+</a>
 
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0111.gif" width="1000" height="2" />
 
