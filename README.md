@@ -53,4 +53,4 @@
 
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=soumabhasaha15&show_icons=true&locale=en&theme=highcontrast" alt="soumabhasaha15" /></p>
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=soumabhasaha15&&theme=highcontrast" alt="soumabhasaha15" /></p>
+![github streak](https://github-readme-streak-stats.herokuapp.com/?user=soumabhasaha15&&theme=highcontrast)
