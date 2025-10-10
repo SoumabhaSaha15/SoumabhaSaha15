@@ -6,7 +6,7 @@
 
 <h3 align="center">A passionate frontend developer from India</h3>
 
-<img align="right" alt="Coding" width="400" src="image.png">
+<img align="right" alt="Coding" width="400" src="./src/assets/image.png">
 
 - ![portfolio](https://komarev.com/ghpvc/?username=soumabhasaha15&label=Profile%20views&color=0e75b6&style=flat)
 - <img src="https://avatars.githubusercontent.com/u/108742981" width="20" height="20"> I'm currently learning _MERN stack_
