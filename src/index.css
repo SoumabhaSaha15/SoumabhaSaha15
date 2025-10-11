@@ -1,5 +1,15 @@
 @import "tailwindcss";
 @plugin "tailwindcss-motion";
 @plugin "daisyui" {
-  themes: cupcake --default, dark  ;
+  themes: all;
+}
+html[data-theme] {
+  --radius-selector: 1rem;
+  --radius-field: 1rem;
+  --radius-box: 1rem;
+  --depth: 1;
+}
+html,body{
+  font-family: "Tomorrow", sans-serif;
+  transition: color 0.1s linear;
 }
