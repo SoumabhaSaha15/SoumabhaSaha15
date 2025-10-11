@@ -1,7 +1,7 @@
 import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { ThemeOptionsValidator, useTheme, type ThemeOptionsType } from "../Context/Theme/ThemeContext";
-const TabIndexes = ["Home", "Projects", "Certifications", "Contact"];
+import { TabIndexes } from "../consts";
 
 const Navbar: React.FC = () => {
   const { theme, applyTheme } = useTheme();
@@ -14,25 +14,24 @@ const Navbar: React.FC = () => {
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden rounded-full">
               <GiHamburgerMenu className="text-accent" size={24} />
             </div>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-              {TabIndexes.map((item, index) => (<li key={index}><a href={`#${item}`}>{item}</a></li>))}
+            <ul tabIndex={0} className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+              {TabIndexes.map((item, index) => (<li key={index} children={<a href={`#${item}`} className="font-semibold" children={item} />} />))}
             </ul>
           </div>
           <a className="btn btn-ghost text-xl">WebDude</a>
         </div>
 
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            {TabIndexes.map((item, index) => (<li key={index}><a href={`#${item}`} className="font-semibold">{item}</a></li>))}
-          </ul>
+          <ul className="menu menu-horizontal px-1" children={TabIndexes.map((item, index) => (<li key={index} children={<a href={`#${item}`} className="font-semibold" children={item} />} />))} />
         </div>
 
         <div className="navbar-end">
-          <select defaultValue={theme} className="select select-ghost w-30" onChange={({ target }) => applyTheme(target.value as ThemeOptionsType)}>
-            {ThemeOptionsValidator.options.map((item, index) => (<option key={index} children={item} />))}
-          </select>
+          <select
+            defaultValue={theme}
+            className="select select-ghost w-30"
+            onChange={({ target }) => applyTheme(target.value as ThemeOptionsType)}
+            children={ThemeOptionsValidator.options.map((item, index) => (<option key={index} children={item} />))}
+          />
         </div>
       </div>
     </React.Fragment>

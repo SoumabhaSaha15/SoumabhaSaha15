@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@plugin "tailwindcss-motion";
 @plugin "daisyui" {
   themes: all;
 }
@@ -9,7 +8,8 @@ html[data-theme] {
   --radius-box: 1rem;
   --depth: 1;
 }
-html,body{
+html,
+body {
   font-family: "Tomorrow", sans-serif;
   transition: color 0.1s linear;
 }
