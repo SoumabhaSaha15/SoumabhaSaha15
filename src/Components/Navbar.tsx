@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
       <div className="navbar bg-base-100 shadow-sm sticky top-0 z-50">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden rounded-full">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden btn-circle">
               <GiHamburgerMenu className="text-accent" size={24} />
             </div>
             <ul tabIndex={0} className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">

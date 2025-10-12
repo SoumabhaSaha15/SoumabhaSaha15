@@ -6,7 +6,7 @@ const Home: React.FC = () => {
     <React.Fragment>
       <div className="hero bg-base-200 min-h-[100dvh] scroll-smooth transition-all snap-y snap-mandatory" id={TabIndexes[0]} data-aos="zoom-in-up" data-aos-delay='100'>
         <div className="hero-content flex-col lg:flex-row">
-          <figure className="hover-gallery max-w-72 rounded-2xl">
+          <figure className="hover-gallery max-w-60 sm:max-w-72 rounded-2xl">
             <img src="./myImages/picture (3).jpg" />
             <img src="./myImages/picture (1).jpg" />
             <img src="./myImages/picture (2).jpg" />
