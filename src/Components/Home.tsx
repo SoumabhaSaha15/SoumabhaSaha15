@@ -4,13 +4,13 @@ import { TypeAnimation } from 'react-type-animation';
 const Home: React.FC = () => {
   return (
     <React.Fragment>
-      <div className="hero bg-base-200 min-h-[100dvh]" id={TabIndexes[0]}>
+      <div className="hero bg-base-200 min-h-[100dvh] scroll-smooth transition-all snap-y snap-mandatory" id={TabIndexes[0]} data-aos="zoom-in-up" data-aos-delay='100'>
         <div className="hero-content flex-col lg:flex-row">
           <figure className="hover-gallery max-w-72 rounded-2xl">
-            <img src="picture (3).jpg" />
-            <img src="picture (1).jpg" />
-            <img src="picture (2).jpg" />
-            <img src="picture (4).jpg" />
+            <img src="./myImages/picture (3).jpg" />
+            <img src="./myImages/picture (1).jpg" />
+            <img src="./myImages/picture (2).jpg" />
+            <img src="./myImages/picture (4).jpg" />
           </figure>
           <div>
             <h1 className="text-3xl font-normal animate-pulse">
@@ -25,12 +25,14 @@ const Home: React.FC = () => {
                   'React is awesome.',
                   1000,
                   'CSS feels like a magic with Tailwind-CSS and Daisy-UI.',
-                  1000
+                  1000,
+                  'Hello I am Soumabha Saha.',
                 ]}
                 wrapper="span"
                 speed={40}
                 style={{ fontSize: '2em', display: 'inline-block' }}
-                repeat={Infinity}
+                repeat={0}
+                preRenderFirstString={true}
               />}
             </h1>
             <p className="py-6">
@@ -48,7 +50,7 @@ const Home: React.FC = () => {
                 document.body.removeChild(link);
               }}
             >
-              Download CV
+              Download resume
             </button>
           </div>
         </div>

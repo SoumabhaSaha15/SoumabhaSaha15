@@ -1,1 +1,0 @@
-export const TabIndexes: Array<string> = ["Home", "Projects", "Certifications", "Contacts"];
