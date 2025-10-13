@@ -1,9 +1,11 @@
 import React from "react";
-import { type Certificate, Certificates } from "./../consts";
-import { TabIndexes } from "../consts";
+import { type Certificate, Certificates } from "../utils";
+import { TabIndexes } from "../utils";
 const CertificatePreview: React.FC<Certificate> = (prop: Certificate) => {
   return (
-    <div className="card bg-base-100 image-full w-full max-h-full min-h-full shadow-sm scale-95 hover:scale-100 transition-transform">
+    <div
+      className="card bg-base-100 image-full w-full max-h-full min-h-full shadow-sm scale-95 hover:scale-100 transition-transform" data-aos="zoom-in-up"
+    >
       <figure>
         <img
           src={prop.preview}
@@ -14,13 +16,18 @@ const CertificatePreview: React.FC<Certificate> = (prop: Certificate) => {
       <div className="card-body">
         <h2
           className="card-title"
-          children={prop.name}
+          children={
+            <div
+              className='badge badge-neutral'
+              children={prop.name}
+            />
+          }
         />
-        <p>{prop.description}</p>
+        <p className="p-2">{prop.description}</p>
         <div className="card-actions justify-end">
           <a
             href={prop.url}
-            className="btn btn-secondary"
+            className="btn btn-accent hover:btn-neutral"
             children="View"
           />
         </div>

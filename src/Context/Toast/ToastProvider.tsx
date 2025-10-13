@@ -1,7 +1,7 @@
-import { ToastOptionsValidator, type ToastOptionsType } from './ToastContext';
+import { prettifyError } from 'zod';
 import { ToastContext } from './ToastContext';
 import { useState, type ReactNode } from 'react';
-import { prettifyError } from 'zod';
+import { ToastOptionsValidator, type ToastOptionsType } from './ToastContext';
 export default function ToastProvider({ children }: { children: ReactNode; }) {
 
   const [toasts, setToasts] = useState<{ component: string; id: string }[]>([]);

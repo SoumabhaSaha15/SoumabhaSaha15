@@ -11,4 +11,13 @@ export default defineConfig({
     }),
     tailwindcss(),
   ],
+  server: {
+    proxy: {
+      '/gscript': {
+        target: 'https://script.google.com',
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/gscript/, '')
+      }
+    },
+  },
 })

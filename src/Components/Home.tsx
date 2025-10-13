@@ -1,5 +1,5 @@
 import React from "react";
-import { TabIndexes } from "../consts";
+import { TabIndexes } from "../utils";
 import { TypeAnimation } from 'react-type-animation';
 const Home: React.FC = () => {
   return (
@@ -41,7 +41,7 @@ const Home: React.FC = () => {
               projects.
             </p>
             <button
-              className="btn btn-accent"
+              className="btn btn-accent hover:btn-primary"
               onClick={() => {
                 const link = document.createElement('a');
                 link.href = 'Resume.docx';

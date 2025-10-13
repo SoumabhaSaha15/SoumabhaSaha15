@@ -1,8 +1,8 @@
 import React from "react";
-import axios from "axios";
-import { TabIndexes } from "../consts";
-import { TypeAnimation } from 'react-type-animation';
-import { Contact, type ContactType } from "../consts";
+// import axios from "axios";
+import { TabIndexes } from "../utils";
+// import { TypeAnimation } from 'react-type-animation';
+import { Contact, type ContactType, GoogleScript } from "../utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useToast } from "../Context/Toast/ToastContext";
 import { useForm, type SubmitHandler } from "react-hook-form";
@@ -19,16 +19,16 @@ const Contacts: React.FC = () => {
   const contactSubmit: SubmitHandler<ContactType> = async (data) => {
     setIsLoading(true);
     try {
-      const response = await axios.post(import.meta.env.VITE_API, data);
-      console.log(response.status);
-      toast.open(
-        response.statusText, true, 2000,
-        { toastPosition: ["toast-end", "toast-top"], toastVariant: "alert-success" }
+      const { status, statusText } = await GoogleScript.post(import.meta.env.VITE_API_ROUTE, data);
+      if (status > 200 && status < 204) toast.open(
+        statusText, true, 2000,
+        { toastPosition: ["toast-start", "toast-bottom"], toastVariant: "alert-success" }
       );
+      else throw new Error(statusText);
     } catch (error) {
       toast.open(
-        (error as Error).message, true, 2000,
-        { toastPosition: ["toast-end", "toast-top"], toastVariant: "alert-error" }
+        (error as Error)?.message||'An error occured', true, 2000,
+        { toastPosition: ["toast-start", "toast-bottom"], toastVariant: "alert-error" }
       );
     }
     setIsLoading(false);
@@ -43,14 +43,8 @@ const Contacts: React.FC = () => {
           <div className="hero-content flex-col lg:flex-row-reverse">
             <div className="text-center lg:text-left">
               <h1 className="text-5xl font-bold">Contact Me</h1>
-              <p className="py-6">
-                {<TypeAnimation
-                  sequence={['Thank you for coming.', 1000, 'Nice to meet you.', 1000]}
-                  wrapper="span"
-                  speed={40}
-                  style={{ fontSize: '1.2em', display: 'inline-block' }}
-                  repeat={Infinity}
-                />}
+              <p className="p-6">
+                Thanks for visiting my portfolio. Drop me a message,I'm always open to new opportunities and collaborations in tech
               </p>
             </div>
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
@@ -67,10 +61,10 @@ const Contacts: React.FC = () => {
                   <label className="label" htmlFor="MessageInput">
                     Message {errors.Message && (<span className="text-red-500" children={errors.Message.message} />)}
                   </label>
-                  <textarea className="textarea" id="MessageInput" {...register('Message')} placeholder="write purpose" required disabled={isLoading}></textarea>
-                  <button className="btn btn-neutral mt-4 w-80" type="submit" onClick={handleSubmit(contactSubmit)} disabled={isLoading}>
+                  <textarea className="textarea" id="MessageInput" {...register('Message')} placeholder="Drop a message" required disabled={isLoading}></textarea>
+                  <button className="btn btn-neutral mt-4 w-80 hover:btn-accent" type="submit" onClick={handleSubmit(contactSubmit)} disabled={isLoading}>
                     {isLoading && <span className="loading loading-dots loading-md text-accent" />}
-                    Submit
+                    Send message
                   </button>
                 </fieldset>
               </div>

@@ -1,6 +1,7 @@
 import { z } from "zod/v4";
+import axios from "axios";
 import { type IconType } from "react-icons";
-import { SiReplit, SiLeetcode, SiGmail } from "react-icons/si";
+import { SiReplit, SiLeetcode, SiGmail, SiHashnode } from "react-icons/si";
 import { FaGithub, FaLinkedin, FaInstagram, FaFacebook, FaTwitter, } from "react-icons/fa";
 export const TabIndexes: Array<string> = ["Home", "Projects", "Certifications", "Contacts"];
 export type Certificate = {
@@ -63,8 +64,8 @@ export const Certificates: Array<Certificate> = [
     url: "https://www.dropbox.com/scl/fi/47nrsud8roxlx0rgej1i6/gen_ai.pdf?e=1"
   },
   {
-    name: "MERN stack",
-    description: `MERN stack certification by Euphoria-Genx`,
+    name: "MERN",
+    description: `MERN stack internship certification by Euphoria-Genx`,
     preview: "./certificates/MERN.png",
     url: "https://www.dropbox.com/scl/fi/9u3i7ulqm1v4f6ux6vu3t/MERN.pdf?e=1"
   },
@@ -77,6 +78,14 @@ export const Certificates: Array<Certificate> = [
 ];
 export const SocialLinks: Array<SocialLinkType> = [
   {
+    name: "Gmail",
+    icon: SiGmail,
+    link: "mailto:soumabhasaha1509@gmail.com"
+  }, {
+    name: "Replit",
+    icon: SiReplit,
+    link: "https://replit.com/@SoumabhaSaha"
+  }, {
     name: "Github",
     icon: FaGithub,
     link: "https://github.com/SoumabhaSaha15"
@@ -85,29 +94,25 @@ export const SocialLinks: Array<SocialLinkType> = [
     icon: FaLinkedin,
     link: "https://www.linkedin.com/in/soumabha-saha-663816253"
   }, {
-    name: "Replit",
-    icon: SiReplit,
-    link: "https://replit.com/@SoumabhaSaha"
-  }, {
-    name: "Instagram",
-    icon: FaInstagram,
-    link: "https://www.instagram.com/webdude1509"
+    name: "Leetcode",
+    icon: SiLeetcode,
+    link: "https://leetcode.com/SOUMABHA_SAHA"
   }, {
     name: "Facebook",
     icon: FaFacebook,
     link: "https://www.facebook.com/profile.php?id=100073559877285"
   }, {
+    name: "Hashnode",
+    icon: SiHashnode,
+    link: "https://hashnode.com/@soumabhasaha15"
+  }, {
+    name: "Instagram",
+    icon: FaInstagram,
+    link: "https://www.instagram.com/webdude1509"
+  }, {
     name: "Twitter/X.com",
     icon: FaTwitter,
     link: "https://twitter.com/SoumabhaSaha15"
-  }, {
-    name: "Leetcode",
-    icon: SiLeetcode,
-    link: "https://leetcode.com/SOUMABHA_SAHA/"
-  }, {
-    name: "Gmail",
-    icon: SiGmail,
-    link: "mailto:soumabhasaha1509@gmail.com"
   },
 ];
 export const Contact = z.strictObject({
@@ -122,3 +127,39 @@ export const Contact = z.strictObject({
     .max(100, { error: "Message can't exceed 100 chars." })
 });
 export type ContactType = z.infer<typeof Contact>;
+export const GoogleScript = axios.create({
+  baseURL: '/gscript',
+  withCredentials: true,
+  validateStatus: (_) => true
+});
+
+export type Project = {
+  name: string;
+  image: string;
+  url: string;
+  description: string;
+};
+export const ProjectList: Array<Project> = [
+  {
+    name: "Hero Weather",
+    image: "./projects/weather.png",
+    url: "https://github.com/SoumabhaSaha15/HeroWeatherWebDude",
+    description: `
+      A simple react[vite] weather app that can access your location,
+      and show weather by using Open-Weather API.
+      Built using Tailwind[Hero-ui].
+    `
+  }, {
+    name: "Code Editor",
+    image: "./projects/code.png",
+    url: "https://github.com/SoumabhaSaha15/CodeEditorWebDude",
+    description: `
+      A simple react[vite] code editor built using sandpack[codesandbox] & flowbite-react[tailwind] you can use as a web playground.
+    `
+  }, {
+    name: "Auto billing",
+    image: "./projects/billing.png",
+    url: "https://github.com/SoumabhaSaha15/AutoBilling",
+    description: `Description: Generates invoice by scanning barcode,uses express-js, mongodg,sessions and react-flowbite & axios.`
+  }
+]; 

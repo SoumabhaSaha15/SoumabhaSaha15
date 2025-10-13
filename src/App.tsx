@@ -3,7 +3,7 @@ import React from "react";
 import Home from "./Components/Home";
 import Navbar from "./Components/Navbar";
 import { FaGlobe } from "react-icons/fa";
-import { SocialLinks } from "./consts";
+import { SocialLinks } from "./utils";
 import Projects from "./Components/Projects";
 import Contacts from "./Components/Contacts";
 import Certifications from "./Components/Certifications";
@@ -11,7 +11,6 @@ const App: React.FC = () => {
   React.useEffect(() => {
     AOS.init({
       easing: "ease-in-out",
-      mirror: true,
       duration: 1000,
       once: true,
     });
@@ -36,13 +35,16 @@ const App: React.FC = () => {
         {SocialLinks.map((item, index) => (
           <a
             key={index}
-            role="button"
+            role="div"
             href={item.link}
-            className="btn btn-lg btn-secondary"
+            className="link link-accent"
             children={
               <>
-                <item.icon />
                 {item.name}
+                <button
+                  className="btn btn-lg btn-circle btn-secondary"
+                  children={<item.icon className="text" size={24} />}
+                />
               </>
             }
           />
