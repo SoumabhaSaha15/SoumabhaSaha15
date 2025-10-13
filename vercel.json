@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/gscript/:path*",
+      "destination": "https://script.google.com/:path*"
+    }
+  ]
+}
