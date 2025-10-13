@@ -27,7 +27,7 @@ const CertificatePreview: React.FC<Certificate> = (prop: Certificate) => {
         <div className="card-actions justify-end">
           <a
             href={prop.url}
-            className="btn btn-accent hover:btn-neutral"
+            className="btn btn-accent hover:btn-primary"
             children="View"
           />
         </div>

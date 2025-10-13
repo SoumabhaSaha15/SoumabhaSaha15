@@ -8,6 +8,7 @@ import Projects from "./Components/Projects";
 import Contacts from "./Components/Contacts";
 import Certifications from "./Components/Certifications";
 const App: React.FC = () => {
+
   React.useEffect(() => {
     AOS.init({
       easing: "ease-in-out",
@@ -16,6 +17,7 @@ const App: React.FC = () => {
     });
     AOS.refresh();
   }, []);
+
   return (
     <React.Fragment>
       <Navbar />
