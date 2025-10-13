@@ -7,10 +7,10 @@ const Home: React.FC = () => {
       <div className="hero bg-base-200 min-h-[100dvh] scroll-smooth transition-all snap-y snap-mandatory" id={TabIndexes[0]} data-aos="zoom-in-up" data-aos-delay='100'>
         <div className="hero-content flex-col lg:flex-row">
           <figure className="hover-gallery max-w-60 sm:max-w-72 rounded-2xl">
-            <img src="./myImages/picture (3).jpg" />
-            <img src="./myImages/picture (1).jpg" />
-            <img src="./myImages/picture (2).jpg" />
-            <img src="./myImages/picture (4).jpg" />
+            <img src="./myImages/picture (3).png" />
+            <img src="./myImages/picture (1).png" />
+            <img src="./myImages/picture (2).png" />
+            <img src="./myImages/picture (4).png" />
           </figure>
           <div>
             <h1 className="text-3xl font-normal animate-pulse">
@@ -20,7 +20,7 @@ const Home: React.FC = () => {
                   1000,
                   'Like to build apps in Node js.',
                   1000,
-                  'Typescript is Love.',
+                  'TypeScript is Love.',
                   1000,
                   'React is awesome.',
                   1000,

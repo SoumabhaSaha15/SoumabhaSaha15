@@ -71,7 +71,7 @@ export const Certificates: Array<Certificate> = [
   },
   {
     name: "MongoDb",
-    description: `Mongo db certification by MTA learning pvt ltd.`,
+    description: `MongoDB certification by MTA learning pvt ltd.`,
     preview: "./certificates/mongoDb.png",
     url: "https://www.dropbox.com/scl/fi/9u3i7ulqm1v4f6ux6vu3t/MERN.pdf?e=1"
   }
@@ -129,7 +129,6 @@ export const Contact = z.strictObject({
 export type ContactType = z.infer<typeof Contact>;
 export const GoogleScript = axios.create({
   baseURL: '/gscript',
-  withCredentials: true,
   validateStatus: (_) => true
 });
 
@@ -139,7 +138,7 @@ export type Project = {
   url: string;
   description: string;
 };
-export const ProjectList: Array<Project> = [
+export const Projects: Array<Project> = [
   {
     name: "Hero Weather",
     image: "./projects/weather.png",
@@ -160,6 +159,6 @@ export const ProjectList: Array<Project> = [
     name: "Auto billing",
     image: "./projects/billing.png",
     url: "https://github.com/SoumabhaSaha15/AutoBilling",
-    description: `Description: Generates invoice by scanning barcode,uses express-js, mongodg,sessions and react-flowbite & axios.`
+    description: `Generates invoice by scanning barcode, uses express-js, mongodb, sessions and react-flowbite & axios.`
   }
 ]; 

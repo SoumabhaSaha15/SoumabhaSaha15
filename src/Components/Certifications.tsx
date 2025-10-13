@@ -18,7 +18,7 @@ const CertificatePreview: React.FC<Certificate> = (prop: Certificate) => {
           className="card-title"
           children={
             <div
-              className='badge badge-neutral'
+              className='badge badge-outline'
               children={prop.name}
             />
           }

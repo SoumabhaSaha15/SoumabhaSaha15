@@ -16,7 +16,8 @@ export default defineConfig({
       '/gscript': {
         target: 'https://script.google.com',
         changeOrigin: true,
-        rewrite: path => path.replace(/^\/gscript/, '')
+        rewrite: path => path.replace(/^\/gscript/, ''),
+        secure:false
       }
     },
   },

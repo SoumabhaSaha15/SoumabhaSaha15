@@ -19,22 +19,19 @@ const Contacts: React.FC = () => {
   const contactSubmit: SubmitHandler<ContactType> = async (data) => {
     setIsLoading(true);
     try {
-      const { status, statusText } = await GoogleScript.post(import.meta.env.VITE_API_ROUTE, data);
-      if (status > 200 && status < 204) toast.open(
-        statusText, true, 2000,
-        { toastPosition: ["toast-start", "toast-bottom"], toastVariant: "alert-success" }
-      );
-      else throw new Error(statusText);
+      const contactForm = new FormData();
+      Object.entries(data).forEach(([k, v]) => {
+        contactForm.append(k, v);
+        setValue(k as ('Name' | 'Email' | 'Message'), '');
+      });
+
+      const { status } = await GoogleScript.post(import.meta.env.VITE_API_ROUTE, contactForm);
+      if (status !== 200) throw new Error('An error occured, respnse code:' + status);
+      toast.open('Message send successfully.', true, 2000, { toastPosition: ["toast-start", "toast-bottom"], toastVariant: "alert-success" });
     } catch (error) {
-      toast.open(
-        (error as Error)?.message||'An error occured', true, 2000,
-        { toastPosition: ["toast-start", "toast-bottom"], toastVariant: "alert-error" }
-      );
+      toast.open((error as Error)?.message || 'An error occured', true, 2000, { toastPosition: ["toast-start", "toast-bottom"], toastVariant: "alert-error" });
     }
     setIsLoading(false);
-    setValue('Name', '');
-    setValue('Email', '');
-    setValue('Message', '');
   }
   return (
     <React.Fragment >
@@ -44,7 +41,7 @@ const Contacts: React.FC = () => {
             <div className="text-center lg:text-left">
               <h1 className="text-5xl font-bold">Contact Me</h1>
               <p className="p-6">
-                Thanks for visiting my portfolio. Drop me a message,I'm always open to new opportunities and collaborations in tech
+                Thanks for visiting my portfolio. Drop me a message,I'm always open to new opportunities and collaborations in tech.
               </p>
             </div>
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
