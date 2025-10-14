@@ -4,7 +4,7 @@ import { TabIndexes } from "../utils";
 const CertificatePreview: React.FC<Certificate> = (prop: Certificate) => {
   return (
     <div
-      className="card bg-base-100 image-full w-full max-h-full min-h-full shadow-sm scale-95 hover:scale-100 transition-transform" data-aos="zoom-in-up"
+      className="card bg-base-100 image-full w-full max-h-full min-h-full shadow-sm scale-95 hover:scale-100 transition-transform overflow-auto" data-aos="zoom-in-up"
     >
       <figure>
         <img

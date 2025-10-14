@@ -2,7 +2,7 @@ import React from "react";
 import { TabIndexes, type Project, Projects as ProjectList } from "../utils";
 const ProjectPreview: React.FC<Project> = (props) => {
   return (
-    <div className="card bg-base-100 image-full w-full max-h-full min-h-full shadow-sm scale-95 hover:scale-100 transition-transform" data-aos="zoom-in-up">
+    <div className="card bg-base-100 image-full w-full max-h-full min-h-full shadow-sm scale-95 hover:scale-100 transition-transform overflow-auto" data-aos="zoom-in-up">
       <figure>
         <img
           src={props.image}

@@ -1,8 +1,8 @@
 import { z } from "zod/v4";
 import axios from "axios";
 import { type IconType } from "react-icons";
-import { SiReplit, SiLeetcode, SiGmail, SiHashnode } from "react-icons/si";
-import { FaGithub, FaLinkedin, FaInstagram, FaFacebook, FaTwitter, } from "react-icons/fa";
+import { SiGmail, SiLinktree } from "react-icons/si";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 export const TabIndexes: Array<string> = ["Home", "Projects", "Certifications", "Contacts"];
 export type Certificate = {
   name: string;
@@ -80,11 +80,7 @@ export const SocialLinks: Array<SocialLinkType> = [
   {
     name: "Gmail",
     icon: SiGmail,
-    link: "mailto:soumabhasaha1509@gmail.com"
-  }, {
-    name: "Replit",
-    icon: SiReplit,
-    link: "https://replit.com/@SoumabhaSaha"
+    link: "mailto:soumabhasaha1509+portfolio@gmail.com"
   }, {
     name: "Github",
     icon: FaGithub,
@@ -94,25 +90,9 @@ export const SocialLinks: Array<SocialLinkType> = [
     icon: FaLinkedin,
     link: "https://www.linkedin.com/in/soumabha-saha-663816253"
   }, {
-    name: "Leetcode",
-    icon: SiLeetcode,
-    link: "https://leetcode.com/SOUMABHA_SAHA"
-  }, {
-    name: "Facebook",
-    icon: FaFacebook,
-    link: "https://www.facebook.com/profile.php?id=100073559877285"
-  }, {
-    name: "Hashnode",
-    icon: SiHashnode,
-    link: "https://hashnode.com/@soumabhasaha15"
-  }, {
-    name: "Instagram",
-    icon: FaInstagram,
-    link: "https://www.instagram.com/webdude1509"
-  }, {
-    name: "Twitter/X.com",
-    icon: FaTwitter,
-    link: "https://twitter.com/SoumabhaSaha15"
+    name: "Linktree",
+    icon: SiLinktree,
+    link: "https://linktr.ee/Soumabha.Saha"
   },
 ];
 export const Contact = z.strictObject({

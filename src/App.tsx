@@ -27,7 +27,7 @@ const App: React.FC = () => {
         <Certifications />
         <Contacts />
       </div>
-      <div className="fab">
+      <div className="fab fab-flower">
         <div
           tabIndex={0}
           role="button"
@@ -41,13 +41,12 @@ const App: React.FC = () => {
             href={item.link}
             className="link link-accent"
             children={
-              <>
-                {item.name}
+              <div className="tooltip tooltip-top" data-tip={item.name}>
                 <button
                   className="btn btn-lg btn-circle btn-secondary"
-                  children={<item.icon className="text" size={24} />}
+                  children={<item.icon className="text" />}
                 />
-              </>
+              </div>
             }
           />
         ))}
