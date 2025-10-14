@@ -2,25 +2,27 @@ import React from "react";
 import { TabIndexes, type Project, Projects as ProjectList } from "../utils";
 const ProjectPreview: React.FC<Project> = (props) => {
   return (
-    <div className="card bg-base-100 image-full w-full max-h-full min-h-full shadow-sm scale-95 hover:scale-100 transition-transform overflow-auto" data-aos="zoom-in-up">
+    <div className="card bg-base-100 image-full w-full max-h-full min-h-full shadow-sm transition-transform scale-95 hover:scale-100 hover:rotate-3 overflow-auto" >
       <figure>
         <img
           src={props.image}
-          alt={props.name} 
+          alt={props.name}
           className="w-full h-full"
         />
       </figure>
       <div className="card-body">
         <h2 className="card-title">
-          <div className="badge badge-outline">
-            {props.name}
-          </div>
-          </h2>
-        <p className="p-2">{props.description}</p>
+          <div className="badge badge-outline hover:text-primary" children={props.name} />
+        </h2>
+        <p className="p-2">
+          {props.description}
+          <br />
+          {props.skills.map((skill, index) => (<span key={index} className="badge hover:bg-accent hover:text-accent-content ml-1 mt-1" children={skill} />))}
+        </p>
         <div className="card-actions justify-end">
-          <a 
-            role="button" 
-            href={props.url} 
+          <a
+            role="button"
+            href={props.url}
             className="btn btn-secondary hover:btn-primary"
             children={"View"}
           />

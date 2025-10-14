@@ -13,25 +13,22 @@ const Home: React.FC = () => {
             <img src="./myImages/picture (4).png" />
           </figure>
           <div>
-            <h1 className="text-3xl font-normal animate-pulse">
+            <h1 className="text-4xl font-normal animate-pulse">
+              {"Hi, I'm Soumabha Saha,"}
+              <br />
               {<TypeAnimation
                 sequence={[
-                  'Hello I am Soumabha Saha.',
-                  1000,
-                  'Like to build apps in Node js.',
-                  1000,
-                  'TypeScript is Love.',
-                  1000,
-                  'React is awesome.',
-                  1000,
-                  'CSS feels like a magic with Tailwind-CSS and Daisy-UI.',
-                  1000,
-                  'Hello I am Soumabha Saha.',
+                  "a full-stack web developer.",
+                  2000,
+                  "a UI/UX designer.",
+                  2000,
+                  "an app developer.",
+                  2000,
                 ]}
                 wrapper="span"
-                speed={40}
-                style={{ fontSize: '2em', display: 'inline-block' }}
-                repeat={0}
+                speed={10}
+                style={{ fontSize: 'inherit', display: 'inline-block',color:"var(--color-primary)" }}
+                repeat={Infinity}
                 preRenderFirstString={true}
               />}
             </h1>

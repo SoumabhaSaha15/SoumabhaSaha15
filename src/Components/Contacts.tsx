@@ -38,7 +38,7 @@ const Contacts: React.FC = () => {
         <div className="hero bg-base-200 min-h-screen px-4 py-8">
           <div className="hero-content flex-col lg:flex-row-reverse w-full max-w-6xl gap-8">
             <div className="text-center lg:text-left lg:flex-1">
-              <h1 className="text-4xl sm:text-5xl font-bold">Contact Me</h1>
+              <h1 className="text-4xl sm:text-5xl font-bold text-secondary">Get In Touch</h1>
               <p className="py-6 px-2 sm:px-6">
                 Thanks for visiting my portfolio. Drop me a message, I'm always open to new opportunities and collaborations in tech.
               </p>

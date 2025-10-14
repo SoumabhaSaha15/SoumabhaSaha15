@@ -1,5 +1,5 @@
 import React from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { IoMenu } from "react-icons/io5";
 import { ThemeOptionsValidator, useTheme, type ThemeOptionsType } from "../Context/Theme/ThemeContext";
 import { TabIndexes } from "../utils";
 
@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className=" btn btn-ghost lg:hidden btn-circle">
-              <GiHamburgerMenu className="text-accent" size={24} />
+              <IoMenu className="text-accent" size={24} />
             </div>
             <ul tabIndex={0} className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
               {TabIndexes.map((item, index) => (<li key={index} children={<a href={`#${item}`} className="font-semibold hover:underline" children={item} />} />))}

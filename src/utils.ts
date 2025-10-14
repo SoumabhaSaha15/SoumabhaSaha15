@@ -116,6 +116,7 @@ export type Project = {
   name: string;
   image: string;
   url: string;
+  skills:string[];
   description: string;
 };
 export const Projects: Array<Project> = [
@@ -123,6 +124,7 @@ export const Projects: Array<Project> = [
     name: "Hero Weather",
     image: "./projects/weather.png",
     url: "https://github.com/SoumabhaSaha15/HeroWeatherWebDude",
+    skills:["React","Hero ui","Tailwind","Axios","Zod"],
     description: `
       A simple react[vite] weather app that can access your location,
       and show weather by using Open-Weather API.
@@ -132,6 +134,7 @@ export const Projects: Array<Project> = [
     name: "Code Editor",
     image: "./projects/code.png",
     url: "https://github.com/SoumabhaSaha15/CodeEditorWebDude",
+    skills:["React","Flowbite","Tailwind","Sandpack"],
     description: `
       A simple react[vite] code editor built using sandpack[codesandbox] & flowbite-react[tailwind] you can use as a web playground.
     `
@@ -139,6 +142,7 @@ export const Projects: Array<Project> = [
     name: "Auto billing",
     image: "./projects/billing.png",
     url: "https://github.com/SoumabhaSaha15/AutoBilling",
+    skills:["React","Flowbite","Express.js","MongoDB[atlas]","Session","CSRF"],
     description: `Generates invoice by scanning barcode, uses express-js, mongodb, sessions and react-flowbite & axios.`
   }
 ]; 

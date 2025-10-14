@@ -3,9 +3,7 @@ import { type Certificate, Certificates } from "../utils";
 import { TabIndexes } from "../utils";
 const CertificatePreview: React.FC<Certificate> = (prop: Certificate) => {
   return (
-    <div
-      className="card bg-base-100 image-full w-full max-h-full min-h-full shadow-sm scale-95 hover:scale-100 transition-transform overflow-auto" data-aos="zoom-in-up"
-    >
+    <div className="card bg-base-100 image-full w-full max-h-full min-h-full shadow-sm scale-95 hover:scale-100 hover:rotate-3 transition-transform overflow-auto">
       <figure>
         <img
           src={prop.preview}
@@ -18,7 +16,7 @@ const CertificatePreview: React.FC<Certificate> = (prop: Certificate) => {
           className="card-title"
           children={
             <div
-              className='badge badge-outline'
+              className='badge badge-outline hover:text-primary'
               children={prop.name}
             />
           }
