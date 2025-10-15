@@ -18,7 +18,7 @@ const Home: React.FC = () => {
               <br />
               {<TypeAnimation
                 sequence={[
-                  "a full-stack web developer.",
+                  "a fullstack dev.",
                   2000,
                   "a UI/UX designer.",
                   2000,
