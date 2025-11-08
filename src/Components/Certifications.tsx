@@ -1,4 +1,5 @@
 import React from "react";
+// import useRipple from "use-ripple-hook";
 import { type Certificate, Certificates } from "../utils";
 import { TabIndexes } from "../utils";
 const CertificatePreview: React.FC<Certificate> = (prop: Certificate) => {
@@ -25,7 +26,7 @@ const CertificatePreview: React.FC<Certificate> = (prop: Certificate) => {
         <div className="card-actions justify-end">
           <a
             href={prop.url}
-            className="btn btn-accent hover:btn-primary"
+            className="btn btn-accent hover:btn-primary underline"
             children="View"
           />
         </div>
@@ -39,8 +40,6 @@ const Certifications: React.FC = () => {
     <div
       className="bg-base-200 px-4 min-h-[100dvh] grid auto-rows-[33.33dvh] grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-center place-items-center"
       id={TabIndexes[2]}
-      data-aos="zoom-in-up"
-      data-aos-delay='100'
       children={Certificates.map((item, index) => <CertificatePreview key={index} {...item} />)}
     />
   );

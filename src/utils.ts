@@ -95,7 +95,7 @@ export const SocialLinks: Array<SocialLinkType> = [
     link: "https://linktr.ee/Soumabha.Saha"
   },
 ];
-export const Contact = z.strictObject({
+export const ContactSchema = z.strictObject({
   Name: z.string({ error: "Name is required." })
     .min(4, { error: "Name must have 4 to 30 chars." })
     .max(30, { error: "Name can't exceed 30 chars." })
@@ -106,7 +106,14 @@ export const Contact = z.strictObject({
     .min(10, { error: "Message must have 10 to 100 chars." })
     .max(100, { error: "Message can't exceed 100 chars." })
 });
-export type ContactType = z.infer<typeof Contact>;
+
+export type ContactType = z.infer<typeof ContactSchema>;
+export const contactFDT = ContactSchema.transform((data: ContactType) => {
+  const formData = new FormData();
+  Object.entries(data).forEach(([K, V]) => formData.append(K, V));
+  return formData;
+});
+
 export const GoogleScript = axios.create({
   baseURL: '/gscript',
   validateStatus: (_) => true
@@ -116,7 +123,7 @@ export type Project = {
   name: string;
   image: string;
   url: string;
-  skills:string[];
+  skills: string[];
   description: string;
 };
 export const Projects: Array<Project> = [
@@ -124,7 +131,7 @@ export const Projects: Array<Project> = [
     name: "Hero Weather",
     image: "./projects/weather.png",
     url: "https://github.com/SoumabhaSaha15/HeroWeatherWebDude",
-    skills:["React","Hero ui","Tailwind","Axios","Zod"],
+    skills: ["React", "Hero ui", "Tailwind", "Axios", "Zod"],
     description: `
       A simple react[vite] weather app that can access your location,
       and show weather by using Open-Weather API.
@@ -134,7 +141,7 @@ export const Projects: Array<Project> = [
     name: "Code Editor",
     image: "./projects/code.png",
     url: "https://github.com/SoumabhaSaha15/CodeEditorWebDude",
-    skills:["React","Flowbite","Tailwind","Sandpack"],
+    skills: ["React", "Flowbite", "Tailwind", "Sandpack"],
     description: `
       A simple react[vite] code editor built using sandpack[codesandbox] & flowbite-react[tailwind] you can use as a web playground.
     `
@@ -142,7 +149,7 @@ export const Projects: Array<Project> = [
     name: "Auto billing",
     image: "./projects/billing.png",
     url: "https://github.com/SoumabhaSaha15/AutoBilling",
-    skills:["React","Flowbite","Express.js","MongoDB[atlas]","Session","CSRF"],
+    skills: ["React", "Flowbite", "Express.js", "MongoDB[atlas]", "Session", "CSRF"],
     description: `Generates invoice by scanning barcode, uses express-js, mongodb, sessions and react-flowbite & axios.`
   }
 ]; 

@@ -1,28 +1,26 @@
 import React from "react";
-// import axios from "axios";
 import { TabIndexes } from "../utils";
-// import { TypeAnimation } from 'react-type-animation';
-import { Contact, type ContactType, GoogleScript } from "../utils";
+import useRipple from "use-ripple-hook";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useToast } from "../Context/Toast/ToastContext";
 import { useForm, type SubmitHandler } from "react-hook-form";
+import { ContactSchema, type ContactType, GoogleScript, contactFDT } from "../utils";
 
 const Contacts: React.FC = () => {
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
+  const [ripple, event] = useRipple({ timingFunction: 'linear' });
   const toast = useToast();
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors }
-  } = useForm<ContactType>({ resolver: zodResolver(Contact) });
+  } = useForm<ContactType>({ resolver: zodResolver(ContactSchema) });
 
   const contactSubmit: SubmitHandler<ContactType> = async (data) => {
     setIsLoading(true);
     try {
-      const contactForm = new FormData();
-      Object.entries(data).forEach(([key, value]) => contactForm.append(key, value));
-      const { status } = await GoogleScript.post(import.meta.env.VITE_API_ROUTE, contactForm);
+      const { status } = await GoogleScript.post(import.meta.env.VITE_API_ROUTE, contactFDT.parse(data));
       if (status !== 200) throw new Error('An error occured, response code:' + status);
       toast.open('Message sent successfully.', true, 2000, { toastPosition: ["toast-start", "toast-bottom"], toastVariant: "alert-success" });
       reset();
@@ -34,7 +32,7 @@ const Contacts: React.FC = () => {
 
   return (
     <React.Fragment>
-      <div className="hero bg-base-200 min-h-[100dvh] scroll-smooth transition-all snap-y snap-mandatory" id={TabIndexes[3]} data-aos="zoom-in-up" data-aos-delay='100'>
+      <div className="hero bg-base-200 min-h-[100dvh] scroll-smooth transition-all snap-y snap-mandatory" id={TabIndexes[3]} >
         <div className="hero bg-base-200 min-h-screen px-4 py-8">
           <div className="hero-content flex-col lg:flex-row-reverse w-full max-w-6xl gap-8">
             <div className="text-center lg:text-left lg:flex-1">
@@ -46,61 +44,62 @@ const Contacts: React.FC = () => {
             <div className="card bg-base-100 w-full max-w-sm lg:max-w-md shrink-0 shadow-2xl">
               <div className="card-body p-4 sm:p-8">
                 <form className="fieldset space-y-4" onSubmit={handleSubmit(contactSubmit)}>
+
                   <div>
-                    <label className="label" htmlFor="NameInput">
-                      <span className="label-text">Name</span>
-                      {errors.Name && (<span className="text-error text-sm ml-2">{errors.Name.message}</span>)}
+                    <label className="floating-label" htmlFor="NameInput">
+                      <span children={"Name"} />
+                      <input
+                        type="text"
+                        className="validator input input-bordered w-full focus:outline-none focus:ring-0 focus:ring-accent"
+                        id="NameInput"
+                        {...register('Name')}
+                        placeholder="Your name"
+                        disabled={isLoading}
+                        required
+                      />
+                      {errors.Name && (<span className="validator-hint text-error text-sm ml-2">{errors.Name.message}</span>)}
                     </label>
-                    <input 
-                      type="text" 
-                      className="input input-bordered w-full" 
-                      id="NameInput" 
-                      {...register('Name')} 
-                      placeholder="Your name" 
-                      required 
-                      disabled={isLoading} 
-                    />
                   </div>
 
                   <div>
-                    <label className="label" htmlFor="EmailInput">
-                      <span className="label-text">Email</span>
-                      {errors.Email && (<span className="text-error text-sm ml-2">{errors.Email.message}</span>)}
+                    <label className="floating-label" htmlFor="EmailInput">
+                      <span children={"Mail"} />
+                      <input
+                        type="email"
+                        className="validator input input-bordered w-full focus:outline-none focus:ring-0 focus:ring-accent"
+                        id="EmailInput"
+                        {...register('Email')}
+                        placeholder="your.email@example.com"
+                        disabled={isLoading}
+                        required
+                      />
+                      {errors.Email && (<span className="validator-hint text-error text-sm ml-2">{errors.Email.message}</span>)}
                     </label>
-                    <input 
-                      type="email" 
-                      className="input input-bordered w-full" 
-                      id="EmailInput" 
-                      {...register('Email')} 
-                      placeholder="your.email@example.com" 
-                      required 
-                      disabled={isLoading} 
-                    />
                   </div>
 
                   <div>
                     <label className="label" htmlFor="MessageInput">
-                      <span className="label-text">Message</span>
                       {errors.Message && (<span className="text-error text-sm ml-2">{errors.Message.message}</span>)}
                     </label>
-                    <textarea 
-                      className="textarea textarea-bordered w-full min-h-[120px]" 
-                      id="MessageInput" 
-                      {...register('Message')} 
-                      placeholder="Drop a message" 
-                      required 
+                    <textarea
+                      className="validator textarea textarea-bordered w-full min-h-[120px] focus:outline-none focus:ring-0 focus:ring-accent"
+                      id="MessageInput"
+                      {...register('Message')}
+                      placeholder="Drop a message"
+                      required
                       disabled={isLoading}
                     />
                   </div>
 
-                  <button 
-                    className="btn btn-neutral w-full hover:btn-accent" 
-                    type="submit" 
+                  <button
+                    ref={ripple}
+                    type="submit"
                     disabled={isLoading}
-                  >
-                    {isLoading && <span className="loading loading-dots loading-md text-accent" />}
-                    Send message
-                  </button>
+                    onPointerDown={event}
+                    className="btn btn-neutral w-full hover:btn-accent"
+                    children={isLoading ? (<><span className="loading loading-dots loading-md text-accent" /> Sending... </>) : ("Send message")}
+                  />
+
                 </form>
               </div>
             </div>

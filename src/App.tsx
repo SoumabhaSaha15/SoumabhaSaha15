@@ -1,25 +1,20 @@
-import AOS from "aos";
-import React from "react";
+// import AOS from "aos";
+import { TabIndexes } from "./utils";
+import ScrollReveal from "scrollreveal";
+import { type FC, useEffect } from "react";
 import Home from "./Components/Home";
+import { SocialLinks } from "./utils";
+import useRipple from "use-ripple-hook";
 import Navbar from "./Components/Navbar";
 import { FaGlobe } from "react-icons/fa";
-import { SocialLinks } from "./utils";
 import Projects from "./Components/Projects";
 import Contacts from "./Components/Contacts";
 import Certifications from "./Components/Certifications";
-const App: React.FC = () => {
-
-  React.useEffect(() => {
-    AOS.init({
-      easing: "ease-in-out",
-      duration: 1000,
-      once: true,
-    });
-    AOS.refresh();
-  }, []);
-
+const App: FC = () => {
+  const [ripple, event] = useRipple();
+  useEffect(() => TabIndexes.forEach((ids, index) => ScrollReveal().reveal(`#${ids}`, { delay: (index + 1) * 100, reset: true, easing: "ease-in-out" })), []);
   return (
-    <React.Fragment>
+    <>
       <Navbar />
       <div className="min-h-screen overflow-y-auto">
         <Home />
@@ -31,7 +26,9 @@ const App: React.FC = () => {
         <div
           tabIndex={0}
           role="button"
-          className="btn btn-lg btn-circle btn-primary"
+          ref={ripple}
+          onPointerDown={event}
+          className="btn btn-lg btn-circle btn-accent"
           children={<FaGlobe size={24} />}
         />
         {SocialLinks.map((item, index) => (
@@ -44,14 +41,14 @@ const App: React.FC = () => {
               <div className="tooltip tooltip-left" data-tip={item.name}>
                 <button
                   className="btn btn-lg btn-circle btn-secondary hover:btn-accent"
-                  children={<item.icon className="hover:btn-accent-content" size={24}/>}
+                  children={<item.icon className="hover:btn-accent-content" size={24} />}
                 />
               </div>
             }
           />
         ))}
       </div>
-    </React.Fragment>
+    </>
   )
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
+import { TabIndexes } from "../utils";
 import { IoMenu } from "react-icons/io5";
 import { ThemeOptionsValidator, useTheme, type ThemeOptionsType } from "../Context/Theme/ThemeContext";
-import { TabIndexes } from "../utils";
 
 const Navbar: React.FC = () => {
   const { theme, applyTheme } = useTheme();
@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
               {TabIndexes.map((item, index) => (<li key={index} children={<a href={`#${item}`} className="font-semibold hover:underline" children={item} />} />))}
             </ul>
           </div>
-          <a href={'#' + TabIndexes[0]} className="btn btn-primary btn-ghost text-xl">WebDude</a>
+          <a href={'#' + TabIndexes[0]} className="btn btn-primary btn-ghost text-xl hover:underline">WebDude</a>
         </div>
 
         <div className="navbar-center hidden lg:flex">
@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
         <div className="navbar-end">
           <select
             defaultValue={theme}
-            className="select select-ghost w-30"
+            className="select select-ghost w-30 focus:outline-none focus:ring-0 focus:ring-accent"
             onChange={({ target }) => applyTheme(target.value as ThemeOptionsType)}
             children={ThemeOptionsValidator.options.map((item, index) => (<option key={index} children={item} />))}
           />

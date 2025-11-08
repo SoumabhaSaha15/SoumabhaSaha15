@@ -1,10 +1,12 @@
 import React from "react";
+import useRipple from "use-ripple-hook";
 import { TabIndexes } from "../utils";
 import { TypeAnimation } from 'react-type-animation';
 const Home: React.FC = () => {
+  const [ripple, event] = useRipple({duration:200,timingFunction:'linear'});
   return (
     <React.Fragment>
-      <div className="hero bg-base-200 min-h-[100dvh] scroll-smooth transition-all snap-y snap-mandatory" id={TabIndexes[0]} data-aos="zoom-in-up" data-aos-delay='100'>
+      <div className="hero bg-base-200 min-h-[100dvh] scroll-smooth transition-all snap-y snap-mandatory" id={TabIndexes[0]}>
         <div className="hero-content flex-col lg:flex-row">
           <figure className="hover-gallery max-w-60 sm:max-w-72 rounded-2xl">
             <img src="./myImages/picture (3).png" />
@@ -27,7 +29,7 @@ const Home: React.FC = () => {
                 ]}
                 wrapper="span"
                 speed={10}
-                style={{ fontSize: 'inherit', display: 'inline-block',color:"var(--color-primary)" }}
+                style={{ fontSize: 'inherit', display: 'inline-block', color: "var(--color-primary)" }}
                 repeat={Infinity}
                 preRenderFirstString={true}
               />}
@@ -39,6 +41,8 @@ const Home: React.FC = () => {
             </p>
             <button
               className="btn btn-accent hover:btn-primary"
+              ref={ripple}
+              onPointerDown={event}
               onClick={() => {
                 const link = document.createElement('a');
                 link.href = 'Resume.docx';

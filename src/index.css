@@ -3,10 +3,10 @@
   themes: all;
 }
 html[data-theme] {
-  --radius-selector: 1rem;
-  --radius-field: 1rem;
-  --radius-box: 1rem;
-  --depth: 1;
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.5rem;
+  --depth: 0;
 }
 
 html,

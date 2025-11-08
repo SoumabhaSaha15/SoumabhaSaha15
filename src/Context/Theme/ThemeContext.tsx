@@ -7,7 +7,7 @@ export type ThemeContextProps = {
   applyTheme: (theme: ThemeOptionsType) => void;
 }
 export const ThemeContext: Context<ThemeContextProps> = createContext<ThemeContextProps>({
-  theme: "black",
+  theme: "dark",
   applyTheme: (theme: ThemeOptionsType) => { console.log(theme); },
 });
 export const useTheme = () => useContext(ThemeContext);

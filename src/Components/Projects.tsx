@@ -22,8 +22,8 @@ const ProjectPreview: React.FC<Project> = (props) => {
         <div className="card-actions justify-end">
           <a
             role="button"
+            className="underline btn btn-secondary hover:btn-primary"
             href={props.url}
-            className="btn btn-secondary hover:btn-primary"
             children={"View"}
           />
         </div>
@@ -36,8 +36,6 @@ const Projects: React.FC = () => {
     <div
       className="bg-base-200 px-4 min-h-[100dvh] grid auto-rows-[50dvh] grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center place-items-center"
       id={TabIndexes[1]}
-      data-aos="zoom-in-up"
-      data-aos-delay='100'
       children={ProjectList.map((item, index) => <ProjectPreview key={index} {...item} />)}
     />
   );
