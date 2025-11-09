@@ -1,4 +1,4 @@
-import React from "react";
+import {type FC, useState} from "react";
 import { TabIndexes } from "../utils";
 import useRipple from "use-ripple-hook";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -6,8 +6,8 @@ import { useToast } from "../Context/Toast/ToastContext";
 import { useForm, type SubmitHandler } from "react-hook-form";
 import { ContactSchema, type ContactType, GoogleScript, contactFDT } from "../utils";
 
-const Contacts: React.FC = () => {
-  const [isLoading, setIsLoading] = React.useState<boolean>(false);
+const Contacts: FC = () => {
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [ripple, event] = useRipple({ timingFunction: 'linear' });
   const toast = useToast();
   const {
@@ -23,6 +23,8 @@ const Contacts: React.FC = () => {
       const { status } = await GoogleScript.post(import.meta.env.VITE_API_ROUTE, contactFDT.parse(data));
       if (status !== 200) throw new Error('An error occured, response code:' + status);
       toast.open('Message sent successfully.', true, 2000, { toastPosition: ["toast-start", "toast-bottom"], toastVariant: "alert-success" });
+      // setTimeout(()=>reset(),2000);
+      // reset(;)
       reset();
     } catch (error) {
       toast.open((error as Error)?.message || 'An error occured', true, 2000, { toastPosition: ["toast-start", "toast-bottom"], toastVariant: "alert-error" });
@@ -31,8 +33,8 @@ const Contacts: React.FC = () => {
   }
 
   return (
-    <React.Fragment>
-      <div className="hero bg-base-200 min-h-[100dvh] scroll-smooth transition-all snap-y snap-mandatory" id={TabIndexes[3]} >
+    <>
+      <div className="hero bg-base-200 min-h-dvh scroll-smooth transition-all snap-y snap-mandatory" id={TabIndexes[3]} >
         <div className="hero bg-base-200 min-h-screen px-4 py-8">
           <div className="hero-content flex-col lg:flex-row-reverse w-full max-w-6xl gap-8">
             <div className="text-center lg:text-left lg:flex-1">
@@ -46,8 +48,9 @@ const Contacts: React.FC = () => {
                 <form className="fieldset space-y-4" onSubmit={handleSubmit(contactSubmit)}>
 
                   <div>
+                    {errors.Name && (<span className="">{}</span>)}
                     <label className="floating-label" htmlFor="NameInput">
-                      <span children={"Name"} />
+                      <span className={errors.Name?("text-error text-sm ml-2"):("")} children={errors.Name?(errors.Name.message):("Name")} />
                       <input
                         type="text"
                         className="validator input input-bordered w-full focus:outline-none focus:ring-0 focus:ring-accent"
@@ -57,13 +60,13 @@ const Contacts: React.FC = () => {
                         disabled={isLoading}
                         required
                       />
-                      {errors.Name && (<span className="validator-hint text-error text-sm ml-2">{errors.Name.message}</span>)}
                     </label>
                   </div>
 
                   <div>
                     <label className="floating-label" htmlFor="EmailInput">
-                      <span children={"Mail"} />
+                      {/* <span className={errors.Name?("text-error text-sm ml-2"):("")} children={errors.Name?(errors.Name.message):("Name")} /> */}
+                      <span className={errors.Email?("text-error text-sm ml-2"):("")} children={errors.Email?(errors.Email.message):("Email")} />
                       <input
                         type="email"
                         className="validator input input-bordered w-full focus:outline-none focus:ring-0 focus:ring-accent"
@@ -73,8 +76,8 @@ const Contacts: React.FC = () => {
                         disabled={isLoading}
                         required
                       />
-                      {errors.Email && (<span className="validator-hint text-error text-sm ml-2">{errors.Email.message}</span>)}
                     </label>
+                      {errors.Email && (<span className="validator-hint text-error text-sm ml-2">{errors.Email.message}</span>)}
                   </div>
 
                   <div>
@@ -106,7 +109,7 @@ const Contacts: React.FC = () => {
           </div>
         </div>
       </div>
-    </React.Fragment>
+    </>
   );
 }
 

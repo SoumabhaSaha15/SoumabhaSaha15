@@ -1,12 +1,12 @@
-import React from "react";
+import {type FC} from "react";
 import useRipple from "use-ripple-hook";
 import { TabIndexes } from "../utils";
 import { TypeAnimation } from 'react-type-animation';
-const Home: React.FC = () => {
+const Home: FC = () => {
   const [ripple, event] = useRipple({duration:200,timingFunction:'linear'});
   return (
-    <React.Fragment>
-      <div className="hero bg-base-200 min-h-[100dvh] scroll-smooth transition-all snap-y snap-mandatory" id={TabIndexes[0]}>
+    <>
+      <div className="hero bg-base-200 min-h-dvh scroll-smooth transition-all snap-y snap-mandatory" id={TabIndexes[0]}>
         <div className="hero-content flex-col lg:flex-row">
           <figure className="hover-gallery max-w-60 sm:max-w-72 rounded-2xl">
             <img src="./myImages/picture (3).png" />
@@ -56,7 +56,7 @@ const Home: React.FC = () => {
           </div>
         </div>
       </div>
-    </React.Fragment>
+    </>
   );
 }
 export default Home;

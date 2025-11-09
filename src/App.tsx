@@ -16,7 +16,7 @@ const App: FC = () => {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen overflow-y-auto">
+      <div className="min-h-dvh overflow-y-auto">
         <Home />
         <Projects />
         <Certifications />

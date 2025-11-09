@@ -1,6 +1,6 @@
-import React from "react";
+import {type FC} from "react";
 import { TabIndexes, type Project, Projects as ProjectList } from "../utils";
-const ProjectPreview: React.FC<Project> = (props) => {
+const ProjectPreview: FC<Project> = (props) => {
   return (
     <div className="card bg-base-100 image-full w-full max-h-full min-h-full shadow-sm transition-transform scale-95 hover:scale-100 hover:rotate-3 overflow-auto" >
       <figure>
@@ -34,7 +34,7 @@ const ProjectPreview: React.FC<Project> = (props) => {
 const Projects: React.FC = () => {
   return (
     <div
-      className="bg-base-200 px-4 min-h-[100dvh] grid auto-rows-[50dvh] grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center place-items-center"
+      className="bg-base-200 px-4 min-h-dvh grid auto-rows-[50dvh] grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center place-items-center"
       id={TabIndexes[1]}
       children={ProjectList.map((item, index) => <ProjectPreview key={index} {...item} />)}
     />
