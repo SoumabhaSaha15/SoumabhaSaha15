@@ -11,7 +11,7 @@ export default function ToastProvider({ children }: { children: ReactNode; }) {
     toastVariant: "alert-info",
   });
 
-  const close = (id: string) => setToasts((toasts) => toasts.filter((toast) => toast.id !== id));
+  const close = (id: string) => setToasts(toasts => toasts.filter(toast => toast.id !== id));
 
   const open = (component: string, autoClose: boolean = true, timeout: number = 1000, toastOptions: ToastOptionsType = {
     toastPosition: ["", ""],
@@ -30,13 +30,15 @@ export default function ToastProvider({ children }: { children: ReactNode; }) {
       {children}
       <div
         className={"toast" + ((toastOptions.toastPosition[0] == "") ? "" : (" " + toastOptions.toastPosition.join(" ")))}
-      >
-        {toasts.map(({ id, component }) => (
-          <div id={id} key={id} className={"alert " + toastOptions.toastVariant} >
-            {component}
-          </div>
+        children={toasts.map(({ id, component }) => (
+          <div
+            id={id}
+            key={id}
+            children={component}
+            className={"alert " + toastOptions.toastVariant}
+          />
         ))}
-      </div>
+      />
     </ToastContext.Provider>
   );
 }

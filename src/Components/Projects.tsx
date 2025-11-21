@@ -1,8 +1,10 @@
-import {type FC} from "react";
+import { type FC } from "react";
+import { HiExternalLink } from "react-icons/hi";
 import { TabIndexes, type Project, Projects as ProjectList } from "../utils";
+
 const ProjectPreview: FC<Project> = (props) => {
   return (
-    <div className="card bg-base-100 image-full w-full max-h-full min-h-full shadow-sm transition-transform scale-95 hover:scale-100 hover:rotate-3 overflow-auto" >
+    <div className="card bg-base-100 image-full w-full max-h-full min-h-full shadow-sm transition-transform scale-95 hover:scale-100 hover:rotate-3 overflow-auto rounded-2xl" >
       <figure>
         <img
           src={props.image}
@@ -12,19 +14,19 @@ const ProjectPreview: FC<Project> = (props) => {
       </figure>
       <div className="card-body">
         <h2 className="card-title">
-          <div className="badge badge-outline hover:text-primary" children={props.name} />
+          <div className="badge badge-outline hover:text-primary rounded-full" children={props.name} />
         </h2>
         <p className="p-2">
           {props.description}
           <br />
-          {props.skills.map((skill, index) => (<span key={index} className="badge hover:bg-accent hover:text-accent-content ml-1 mt-1" children={skill} />))}
+          {props.skills.map((skill, index) => (<span key={index} className="badge hover:bg-accent hover:text-accent-content ml-1 mt-1 rounded-full" children={skill} />))}
         </p>
         <div className="card-actions justify-end">
           <a
             role="button"
-            className="underline btn btn-secondary hover:btn-primary"
+            className="underline btn btn-secondary hover:btn-primary rounded-full"
             href={props.url}
-            children={"View"}
+            children={<>View <HiExternalLink size={20} /></>}
           />
         </div>
       </div>
@@ -33,11 +35,14 @@ const ProjectPreview: FC<Project> = (props) => {
 }
 const Projects: React.FC = () => {
   return (
-    <div
-      className="bg-base-200 px-4 min-h-dvh grid auto-rows-[50dvh] grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center place-items-center"
-      id={TabIndexes[1]}
-      children={ProjectList.map((item, index) => <ProjectPreview key={index} {...item} />)}
-    />
+    <>
+      <div className="h-16 bg-base-200" id={TabIndexes[1]}></div>
+      <div
+        id={TabIndexes[1]+"content"}
+        className="bg-base-200 px-4 min-h-[calc(100dvh-64px)] grid auto-rows-[50dvh] grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center place-items-center"
+        children={ProjectList.map((item, index) => <ProjectPreview key={index} {...item} />)}
+      />
+    </>
   );
 }
 export default Projects; 
