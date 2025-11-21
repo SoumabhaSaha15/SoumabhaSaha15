@@ -35,7 +35,7 @@ export default function ToastProvider({ children }: { children: ReactNode; }) {
             id={id}
             key={id}
             children={component}
-            className={"alert " + toastOptions.toastVariant}
+            className={`rounded-full alert ${toastOptions.toastVariant}`}
           />
         ))}
       />
