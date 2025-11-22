@@ -1,6 +1,5 @@
 import { z } from "zod/v4";
 import axios from "axios";
-import { serialize } from "object-to-formdata";
 import { type IconType } from "react-icons";
 import { SiGmail, SiLinktree } from "react-icons/si";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
