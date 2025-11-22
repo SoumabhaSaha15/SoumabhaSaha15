@@ -39,7 +39,7 @@ const App: FC = () => {
             className="link link-accent"
             children={
               <div
-                className="tooltip tooltip-left"
+                className="tooltip tooltip-left rounded-[100%]"
                 data-tip={item.name}
                 children={
                   <button

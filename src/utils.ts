@@ -1,20 +1,33 @@
 import { z } from "zod/v4";
 import axios from "axios";
+import { serialize } from "object-to-formdata";
 import { type IconType } from "react-icons";
 import { SiGmail, SiLinktree } from "react-icons/si";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+
 export const TabIndexes: Array<string> = ["Home", "Projects", "Certifications", "Contacts"];
+
 export type Certificate = {
   name: string;
   preview: string;
   url: string;
   description: string;
 };
+
 export type SocialLinkType = {
   name: string;
   icon: IconType;
   link: string;
 }
+
+export type Project = {
+  name: string;
+  image: string;
+  url: string;
+  skills: string[];
+  description: string;
+};
+
 export const Certificates: Array<Certificate> = [
   {
     name: "C++",
@@ -76,6 +89,7 @@ export const Certificates: Array<Certificate> = [
     url: "https://www.dropbox.com/scl/fi/9u3i7ulqm1v4f6ux6vu3t/MERN.pdf?e=1"
   }
 ];
+
 export const SocialLinks: Array<SocialLinkType> = [
   {
     name: "Gmail",
@@ -95,37 +109,7 @@ export const SocialLinks: Array<SocialLinkType> = [
     link: "https://linktr.ee/Soumabha.Saha"
   },
 ];
-export const ContactSchema = z.strictObject({
-  Name: z.string({ error: "Name is required." })
-    .min(4, { error: "Name must have 4 to 30 chars." })
-    .max(30, { error: "Name can't exceed 30 chars." })
-    .regex(/^[\x00-\x7F]*$/, { error: "Don't use non-ascii chars." }),
-  Email: z.email({ error: "Email is required" })
-    .regex(/^[\x00-\x7F]*$/, { error: "Don't use non-ascii chars." }),
-  Message: z.string({ error: "Message is required." })
-    .min(10, { error: "Message must have 10 to 100 chars." })
-    .max(100, { error: "Message can't exceed 100 chars." })
-});
 
-export type ContactType = z.infer<typeof ContactSchema>;
-export const contactFDT = ContactSchema.transform((data: ContactType) => {
-  const formData = new FormData();
-  Object.entries(data).forEach(([K, V]) => formData.append(K, V));
-  return formData;
-});
-
-export const GoogleScript = axios.create({
-  baseURL: '/gscript',
-  validateStatus: (_) => true
-});
-
-export type Project = {
-  name: string;
-  image: string;
-  url: string;
-  skills: string[];
-  description: string;
-};
 export const Projects: Array<Project> = [
   {
     name: "Hero Weather",
@@ -152,4 +136,24 @@ export const Projects: Array<Project> = [
     skills: ["React", "Flowbite", "Express.js", "MongoDB[atlas]", "Session", "CSRF"],
     description: `Generates invoice by scanning barcode, uses express-js, mongodb, sessions and react-flowbite & axios.`
   }
-]; 
+];
+
+export const ContactSchema = z.strictObject({
+  Name: z.string({ error: "Name is required." })
+    .min(4, { error: "Name must have 4 to 30 chars." })
+    .max(30, { error: "Name can't exceed 30 chars." })
+    .regex(/^[\x00-\x7F]*$/, { error: "Don't use non-ascii chars." }),
+  Email: z.email({ error: "Email is required" })
+    .regex(/^[\x00-\x7F]*$/, { error: "Don't use non-ascii chars." }),
+  Message: z.string({ error: "Message is required." })
+    .min(10, { error: "Message must have 10 to 100 chars." })
+    .max(100, { error: "Message can't exceed 100 chars." })
+});
+
+export type ContactType = z.infer<typeof ContactSchema>;
+
+export const GoogleScript = axios.create({
+  baseURL: '/gscript',
+  validateStatus: (_) => true
+});
+

@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { createContext, useContext, type Context } from "react";
-export const ThemeOptionsValidator = z.enum(["light", "cupcake", "bumblebee", "emerald", "corporate", "retro", "valentine", "garden", "lofi", "pastel", "fantasy", "cmyk", "autumn", "acid", "lemonade", "winter", "nord", "caramellatte", "silk", "dark", "synthwave", "halloween", "forest", "aqua", "black", "luxury", "dracula", "business", "night", "coffee", "dim", "sunset"]);
+export const ThemeOptionsValidator = z.enum(["light", "cupcake", "bumblebee", "emerald", "corporate", "retro", "cyberpunk", "valentine", "garden", "lofi", "pastel", "fantasy", "cmyk", "autumn", "acid", "lemonade", "winter", "nord", "caramellatte", "silk", "dark", "synthwave", "halloween", "forest", "aqua", "black", "luxury", "dracula", "business", "night", "coffee", "dim", "sunset", "abyss"]);
 export type ThemeOptionsType = z.infer<typeof ThemeOptionsValidator>;
 export type ThemeContextProps = {
   theme: ThemeOptionsType;

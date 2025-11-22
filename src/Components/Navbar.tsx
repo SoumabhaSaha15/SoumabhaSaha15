@@ -1,13 +1,16 @@
-import { type FC } from "react";
+import { useEffect, type FC } from "react";
 import { TabIndexes } from "../utils";
 import { IoMenu } from "react-icons/io5";
+import { MdOutlineColorLens } from "react-icons/md";
 import { ThemeOptionsValidator, useTheme, type ThemeOptionsType } from "../Context/Theme/ThemeContext";
 
 const Navbar: FC = () => {
-  const { theme, applyTheme } = useTheme();
+  const { applyTheme } = useTheme();
+  useEffect(() => {console.log(ThemeOptionsValidator.options.length)}, []);
   return (
     <>
       <div className="navbar bg-base-100 shadow-sm sticky top-0 z-50">
+
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden btn-circle">
@@ -36,13 +39,30 @@ const Navbar: FC = () => {
         </div>
 
         <div className="navbar-end">
-          <select
-            defaultValue={theme}
-            className="select select-ghost w-30 rounded-full"
-            onChange={({ target }) => applyTheme(target.value as ThemeOptionsType)}
-            children={ThemeOptionsValidator.options.map((item, index) => (<option key={index} children={item} className="rounded-full" />))}
-          />
+          <div className="dropdown dropdown-end">
+            <div tabIndex={0} role="button" className="btn btn-circle btn-primary mb-1 hover:btn-accent">
+              <MdOutlineColorLens size={24} />
+            </div>
+            <ul tabIndex={-1} className="dropdown-content bg-base-300 rounded-2xl z-1 w-36 p-2 shadow-2xl max-h-[80dvh] overflow-y-scroll">
+              {ThemeOptionsValidator.options.map((item, index) => (
+                <li
+                  key={index}
+                  children={
+                    <input
+                      type="radio"
+                      name="theme-dropdown"
+                      className="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start capitalize"
+                      aria-label={item}
+                      value={item}
+                      onChange={({ target }) => applyTheme(target.value as ThemeOptionsType)}
+                    />
+                  }
+                />
+              ))}
+            </ul>
+          </div>
         </div>
+
       </div>
     </>
   );
