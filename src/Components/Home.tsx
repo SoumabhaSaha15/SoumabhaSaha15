@@ -7,8 +7,8 @@ const Home: FC = () => {
   const [ripple, event] = useRipple({ duration: 200, timingFunction: 'linear' });
   return (
     <>
-      <div className="h-0 bg-base-200" id={TabIndexes[0]}></div>
-      <div className="hero bg-base-200 min-h-dvh scroll-smooth transition-all snap-y snap-mandatory" id={TabIndexes[0]+"content"}>
+      <div className="h-0" id={TabIndexes[0]}></div>
+      <div className="hero min-h-dvh scroll-smooth transition-all snap-y snap-mandatory" id={TabIndexes[0]+"content"}>
         <div className="hero-content flex-col lg:flex-row">
           <figure className="hover-gallery max-w-60 sm:max-w-72 rounded-2xl">
             <img src="./myImages/picture (3).png" />

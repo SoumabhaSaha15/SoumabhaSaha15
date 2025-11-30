@@ -1,12 +1,11 @@
-import { useEffect, type FC } from "react";
+import { type FC } from "react";
 import { TabIndexes } from "../utils";
 import { IoMenu } from "react-icons/io5";
 import { MdOutlineColorLens } from "react-icons/md";
 import { ThemeOptionsValidator, useTheme, type ThemeOptionsType } from "../Context/Theme/ThemeContext";
 
 const Navbar: FC = () => {
-  const { applyTheme } = useTheme();
-  useEffect(() => {console.log(ThemeOptionsValidator.options.length)}, []);
+  const { theme , applyTheme } = useTheme();
   return (
     <>
       <div className="navbar bg-base-100 shadow-sm sticky top-0 z-50">
@@ -17,7 +16,7 @@ const Navbar: FC = () => {
               <IoMenu className="text-accent" size={24} />
             </div>
             <ul tabIndex={0} className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-              {TabIndexes.map((item, index) => (<li key={index} children={<a href={`#${item}`} className="font-semibold hover:underline rounded-full" children={item} />} />))}
+              {TabIndexes.map((item, index) => (<li key={index} children={<a href={`#${item}`} className="font-semibold link hover:underline rounded-full text-shadow-lg" children={item} />} />))}
             </ul>
           </div>
           <a href={'#' + TabIndexes[0]} className="btn btn-primary btn-ghost text-xl hover:underline rounded-full">WebDude</a>
@@ -30,7 +29,7 @@ const Navbar: FC = () => {
               TabIndexes.map((item, index) => (<li key={index} children={
                 <a
                   href={`#${item}`}
-                  className="font-semibold link link-accent hover:underline rounded-full"
+                  className="font-semibold link link-secondary hover:underline rounded-full text-shadow-xs hover:text-shadow-secondary"
                   children={item}
                 />
               } />))
@@ -51,10 +50,12 @@ const Navbar: FC = () => {
                     <input
                       type="radio"
                       name="theme-dropdown"
-                      className="theme-controller w-full btn btn-sm btn-block btn-ghost justify-start capitalize"
+                      className={`theme-controller w-full btn btn-sm btn-block justify-start capitalize ${theme === item ? ("btn-primary") : ("btn-ghost")}`}
                       aria-label={item}
                       value={item}
-                      onChange={({ target }) => applyTheme(target.value as ThemeOptionsType)}
+                      onChange={({ target }) =>{
+                        applyTheme(target.value as ThemeOptionsType);
+                      }}
                     />
                   }
                 />

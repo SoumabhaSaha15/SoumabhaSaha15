@@ -36,10 +36,10 @@ const ProjectPreview: FC<Project> = (props) => {
 const Projects: React.FC = () => {
   return (
     <>
-      <div className="h-16 bg-base-200" id={TabIndexes[1]}></div>
+      <div className="h-16" id={TabIndexes[1]}></div>
       <div
         id={TabIndexes[1]+"content"}
-        className="bg-base-200 px-4 min-h-[calc(100dvh-64px)] grid auto-rows-[50dvh] grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center place-items-center"
+        className="px-4 min-h-[calc(100dvh-64px)] grid auto-rows-[50dvh] grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center place-items-center"
         children={ProjectList.map((item, index) => <ProjectPreview key={index} {...item} />)}
       />
     </>
