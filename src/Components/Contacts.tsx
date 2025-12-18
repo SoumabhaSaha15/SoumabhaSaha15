@@ -83,7 +83,7 @@ const Contacts: FC = () => {
                       {errors.Message && (<span className="text-error text-sm ml-2">{errors.Message.message}</span>)}
                     </label>
                     <textarea
-                      className="validator textarea textarea-bordered w-full min-h-[120px] focus:outline-none focus:ring-0 focus:ring-accent rounded-2xl"
+                      className="validator textarea textarea-bordered w-full min-h-30 focus:outline-none focus:ring-0 focus:ring-accent rounded-2xl"
                       id="MessageInput"
                       {...register('Message')}
                       placeholder="Drop a message"
