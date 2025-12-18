@@ -1,7 +1,6 @@
 import useRipple from "use-ripple-hook";
 import { type FC, useState } from "react";
 import { IoMdSend } from "react-icons/io";
-import { serialize } from "object-to-formdata";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useToast } from "../Context/Toast/ToastContext";
 import { useForm, type SubmitHandler } from "react-hook-form";
@@ -21,7 +20,7 @@ const Contacts: FC = () => {
   const contactSubmit: SubmitHandler<ContactType> = async (data) => {
     setIsLoading(true);
     try {
-      const { status } = await GoogleScript.post(import.meta.env.VITE_API_ROUTE,serialize(data));
+      const { status } = await GoogleScript.postForm(import.meta.env.VITE_API_ROUTE, data);
       if (status !== 200) throw new Error('An error occured, response code:' + status);
       toast.open('Message sent successfully.', true, 2000, { toastPosition: ["toast-start", "toast-bottom"], toastVariant: "alert-success" });
       reset();
@@ -107,7 +106,7 @@ const Contacts: FC = () => {
                     ) : (
                       <>
                         Send message
-                        <IoMdSend size={20}/>
+                        <IoMdSend size={20} />
                       </>
                     )}
                   />
