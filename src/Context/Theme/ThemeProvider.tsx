@@ -5,18 +5,21 @@ export default function ThemeProvider({ children }: { children: ReactNode }) {
 
   const getDefaultTheme: () => ThemeOptionsType = () => {
     const { success, data } = ThemeOptionsValidator.safeParse(localStorage.getItem("theme"));
-    return success ? data : "dark";
+    const finalTheme = success ? data : "dark";
+    document.documentElement.setAttribute('data-theme', finalTheme);
+    return finalTheme;
   }
-  
+
   const [theme, setTheme] = useState<ThemeOptionsType>(getDefaultTheme);
-  
-  useEffect(() => document.documentElement.setAttribute('data-theme', theme), [theme]);
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   const applyTheme = (theme: ThemeOptionsType) => {
     const { success, data, error } = ThemeOptionsValidator.safeParse(theme);
     if (!success) return console.log(prettifyError(error));
-    localStorage.setItem("theme", data);
-    document.documentElement.setAttribute('data-theme', data);
     setTheme(data);
   };
 
