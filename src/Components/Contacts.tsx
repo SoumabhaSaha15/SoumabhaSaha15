@@ -4,7 +4,8 @@ import { IoMdSend } from "react-icons/io";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useToast } from "../Context/Toast/ToastContext";
 import { useForm, type SubmitHandler } from "react-hook-form";
-import { ContactSchema, type ContactType, GoogleScript, TabIndexes } from "../utils";
+import { ContactSchema, type ContactType, GoogleScript, TabIndexes, cn } from "../utils";
+
 
 const Contacts: FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -47,9 +48,10 @@ const Contacts: FC = () => {
                 <form className="fieldset space-y-4" onSubmit={handleSubmit(contactSubmit)}>
 
                   <div>
-                    {errors.Name && (<span className="">{ }</span>)}
                     <label className="floating-label" htmlFor="NameInput">
-                      <span className={errors.Name ? ("text-error text-sm ml-2") : ("")} children={errors.Name ? (errors.Name.message) : ("Name")} />
+                      <span className={cn("transition-colors duration-300", errors.Name && "text-error text-sm ml-2")}  >
+                        {errors.Name ? (errors.Name.message) : ("Name")}
+                      </span>
                       <input
                         type="text"
                         className="validator input input-bordered w-full focus:outline-none focus:ring-0 focus:ring-accent rounded-full"
@@ -64,7 +66,9 @@ const Contacts: FC = () => {
 
                   <div>
                     <label className="floating-label" htmlFor="EmailInput">
-                      <span className={errors.Email ? ("text-error text-sm ml-2") : ("")} children={errors.Email ? (errors.Email.message) : ("Email")} />
+                      <span className={cn("transition-colors duration-300", errors.Email && "text-error text-sm ml-2")} >
+                        {errors.Email ? (errors.Email.message) : ("Email")}
+                      </span>
                       <input
                         type="email"
                         className="validator input input-bordered w-full focus:outline-none focus:ring-0 focus:ring-accent rounded-full"
@@ -75,7 +79,6 @@ const Contacts: FC = () => {
                         required
                       />
                     </label>
-                    {errors.Email && (<span className="validator-hint text-error text-sm ml-2">{errors.Email.message}</span>)}
                   </div>
 
                   <div>

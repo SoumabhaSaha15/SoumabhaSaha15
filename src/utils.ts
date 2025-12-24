@@ -1,6 +1,8 @@
 import { z } from "zod/v4";
 import axios from "axios";
+import { twMerge } from "tailwind-merge";
 import { type IconType } from "react-icons";
+import { clsx, type ClassValue } from "clsx";
 import { SiGmail, SiLinktree } from "react-icons/si";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
@@ -156,3 +158,4 @@ export const GoogleScript = axios.create({
   validateStatus: (_) => true
 });
 
+export const cn = (...inputs: ClassValue[]) => twMerge(clsx(inputs));

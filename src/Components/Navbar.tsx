@@ -1,4 +1,4 @@
-import { TabIndexes } from "../utils";
+import { TabIndexes, cn } from "../utils";
 import { IoMenu } from "react-icons/io5";
 import { type FC, useRef, useEffect } from "react";
 import { MdOutlineColorLens } from "react-icons/md";
@@ -39,6 +39,7 @@ const Navbar: FC = () => {
                 toastVariant: 'alert-info',
                 toastPosition: ["toast-start", "toast-bottom"]
               });
+
               if (animatingRef.current) return; // prevent overlap
               animatingRef.current = true;
               const appliedTheme = theme;
@@ -91,7 +92,7 @@ const Navbar: FC = () => {
                     <input
                       type="radio"
                       name="theme-dropdown"
-                      className={`theme-controller w-full btn btn-sm btn-block justify-start capitalize ${theme === item ? ("btn-primary") : ("btn-ghost")}`}
+                      className={cn("theme-controller w-full btn btn-sm btn-block justify-start capitalize", theme === item ? "btn-primary" : "btn-ghost")}
                       aria-label={item}
                       value={item}
                       checked={theme === item}                // <-- controlled
