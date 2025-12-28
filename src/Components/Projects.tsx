@@ -24,7 +24,7 @@ const ProjectPreview: FC<Project> = (props) => {
         <div className="card-actions justify-end">
           <a
             role="button"
-            className="underline btn btn-secondary hover:btn-primary rounded-full"
+            className="underline btn btn-primary hover:btn-secondary rounded-full"
             href={props.url}
             children={<>View <HiExternalLink size={20} /></>}
           />
@@ -38,7 +38,7 @@ const Projects: React.FC = () => {
     <>
       <div className="h-16" id={TabIndexes[1]}></div>
       <div
-        id={TabIndexes[1]+"content"}
+        id={TabIndexes[1] + "content"}
         className="px-4 min-h-[calc(100dvh-64px)] grid auto-rows-[50dvh] grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center place-items-center"
         children={ProjectList.map((item, index) => <ProjectPreview key={index} {...item} />)}
       />

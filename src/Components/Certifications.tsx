@@ -25,7 +25,7 @@ const CertificatePreview: FC<Certificate> = (prop: Certificate) => {
         <div className="card-actions justify-end">
           <a
             href={prop.url}
-            className="btn btn-accent hover:btn-primary underline rounded-full"
+            className="btn btn-primary hover:btn-secondary underline rounded-full"
             children={<>View <HiExternalLink size={20} /></>}
           />
         </div>
@@ -39,7 +39,7 @@ const Certifications: React.FC = () => {
     <>
       <div className="h-16" id={TabIndexes[2]}></div>
       <div
-        id={TabIndexes[2]+"content"}
+        id={TabIndexes[2] + "content"}
         className="px-4 min-h-[calc(100dvh-64px)] grid auto-rows-[33.33dvh] grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-center place-items-center"
         children={Certificates.map((item, index) => <CertificatePreview key={index} {...item} />)}
       />

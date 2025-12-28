@@ -1,34 +1,33 @@
 import useRipple from "use-ripple-hook";
-import { type FC, useState } from "react";
+import { type FC } from "react";
 import { IoMdSend } from "react-icons/io";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useToast } from "../Context/Toast/ToastContext";
+import { useToast, DefaultOptions } from "../Context/Toast/ToastContext";
 import { useForm, type SubmitHandler } from "react-hook-form";
 import { ContactSchema, type ContactType, GoogleScript, TabIndexes, cn } from "../utils";
 
-
 const Contacts: FC = () => {
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [ripple, event] = useRipple({ timingFunction: 'linear' });
+  const [ripple, event] = useRipple({ timingFunction: 'ease-in-out' });
   const toast = useToast();
   const {
     register,
     handleSubmit,
     reset,
-    formState: { errors }
+    formState: {
+      errors,
+      isSubmitting
+    },
   } = useForm<ContactType>({ resolver: zodResolver(ContactSchema) });
 
   const contactSubmit: SubmitHandler<ContactType> = async (data) => {
-    setIsLoading(true);
     try {
       const { status } = await GoogleScript.postForm(import.meta.env.VITE_API_ROUTE, data);
       if (status !== 200) throw new Error('An error occured, response code:' + status);
-      toast.open('Message sent successfully.', true, 2000, { toastPosition: ["toast-start", "toast-bottom"], toastVariant: "alert-success" });
+      toast.open('Message sent successfully.', true, 2000, DefaultOptions.success);
       reset();
     } catch (error) {
-      toast.open((error as Error)?.message || 'An error occured', true, 2000, { toastPosition: ["toast-start", "toast-bottom"], toastVariant: "alert-error" });
+      toast.open((error as Error)?.message || 'An error occured', true, 2000, DefaultOptions.error);
     }
-    setIsLoading(false);
   }
 
   return (
@@ -58,7 +57,7 @@ const Contacts: FC = () => {
                         id="NameInput"
                         {...register('Name')}
                         placeholder="Your name"
-                        disabled={isLoading}
+                        disabled={isSubmitting}
                         required
                       />
                     </label>
@@ -75,7 +74,7 @@ const Contacts: FC = () => {
                         id="EmailInput"
                         {...register('Email')}
                         placeholder="your.email@example.com"
-                        disabled={isLoading}
+                        disabled={isSubmitting}
                         required
                       />
                     </label>
@@ -91,17 +90,17 @@ const Contacts: FC = () => {
                       {...register('Message')}
                       placeholder="Drop a message"
                       required
-                      disabled={isLoading}
+                      disabled={isSubmitting}
                     />
                   </div>
 
                   <button
                     ref={ripple}
                     type="submit"
-                    disabled={isLoading}
+                    disabled={isSubmitting}
                     onPointerDown={event}
-                    className="btn btn-neutral w-full hover:btn-accent rounded-full"
-                    children={isLoading ? (
+                    className="btn btn-primary w-full hover:btn-secondary rounded-full"
+                    children={isSubmitting ? (
                       <>
                         <span className="loading loading-dots loading-md text-accent" />
                         Sending...

@@ -28,7 +28,7 @@ const App: FC = () => {
           role="button"
           ref={ripple}
           onPointerDown={event}
-          className="btn btn-lg btn-circle btn-accent"
+          className="btn btn-lg btn-circle btn-primary hover:btn-secondary"
           children={<FaGlobe size={24} />}
         />
         {SocialLinks.map((item, index) => (
@@ -43,7 +43,7 @@ const App: FC = () => {
                 data-tip={item.name}
                 children={
                   <button
-                    className="btn btn-lg btn-circle btn-secondary hover:btn-accent"
+                    className="btn btn-lg btn-circle btn-primary hover:btn-secondary"
                     children={
                       <item.icon
                         className="hover:btn-accent-content"
