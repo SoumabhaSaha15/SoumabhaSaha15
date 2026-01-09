@@ -1,7 +1,5 @@
+import z from "zod";
 import { createContext, useContext, type Context } from "react";
-// import {z} from 'zod/v4';
-// import { z } from "zod"
-import z from "zod"
 export const ToastOptionsValidator = z.strictObject({
   toastVariant: z.enum(['alert-info', 'alert-success', 'alert-warning', 'alert-error']),
   toastPosition: z.tuple([
