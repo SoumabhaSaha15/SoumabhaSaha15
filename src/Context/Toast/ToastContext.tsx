@@ -1,13 +1,13 @@
 import { createContext, useContext, type Context } from "react";
-import { z } from 'zod';
-
+// import {z} from 'zod/v4';
+// import { z } from "zod"
+import z from "zod"
 export const ToastOptionsValidator = z.strictObject({
   toastVariant: z.enum(['alert-info', 'alert-success', 'alert-warning', 'alert-error']),
   toastPosition: z.tuple([
     z.enum(['', 'toast-start', 'toast-end', 'toast-center']),
     z.enum(['', 'toast-top', 'toast-bottom', 'toast-middle'])
-  ]).refine(
-    v => (v[0] === "") ? (v[1] === v[0]) : true, {
+  ]).refine(v => (v[0] === "") ? (v[1] === v[0]) : true, {
     message: "Both toast position should be empty or defined."
   })
 });
@@ -41,7 +41,7 @@ export const ToastContext: Context<ToastContextProps> = createContext<ToastConte
 });
 export const useToast = () => useContext(ToastContext);
 
-export const DefaultToastPosition: ["" | "toast-start" | "toast-end" | "toast-center", "" | "toast-top" | "toast-bottom" | "toast-middle"] = ['toast-start', 'toast-bottom'];
+export const DefaultToastPosition: ToastOptionsType['toastPosition'] = ['toast-start', 'toast-bottom'];
 export type DefaultoptionsType = Record<("error" | "success" | "info" | "warning"), ToastOptionsType>
 export const DefaultOptions: DefaultoptionsType = {
   error: { toastPosition: DefaultToastPosition, toastVariant: 'alert-error' },

@@ -1,4 +1,5 @@
 import { TabIndexes, cn } from "../utils";
+import useRipple from "use-ripple-hook";
 import { IoMenu } from "react-icons/io5";
 import { type FC, useRef, useEffect } from "react";
 import { MdOutlineColorLens } from "react-icons/md";
@@ -8,6 +9,7 @@ import { ThemeOptionsValidator, useTheme, type ThemeOptionsType } from "../Conte
 const Navbar: FC = () => {
   const { theme, applyTheme } = useTheme();
   const animatingRef = useRef(false);
+  const [ripple, event] = useRipple();
   const timersRef = useRef<number[]>([]);
   const { open } = useToast();
   useEffect(() => {
@@ -81,12 +83,15 @@ const Navbar: FC = () => {
             <div
               tabIndex={0}
               role="button"
+              ref={ripple}
+              onPointerDown={event}
               className="btn btn-circle btn-primary mb-1 hover:btn-accent"
               children={<MdOutlineColorLens size={24} />}
             />
             <ul tabIndex={-1} className="dropdown-content bg-base-300 rounded-2xl z-1 w-36 p-2 shadow-2xl max-h-[80dvh] overflow-y-scroll">
               {ThemeOptionsValidator.options.map((item, index) => (
                 <li
+                  className="mt-0.5"
                   key={index}
                   children={
                     <input

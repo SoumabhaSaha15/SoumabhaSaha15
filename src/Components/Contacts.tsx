@@ -53,7 +53,7 @@ const Contacts: FC = () => {
                       </span>
                       <input
                         type="text"
-                        className="validator input input-bordered w-full focus:outline-none focus:ring-0 focus:ring-accent rounded-full"
+                        className={cn("validator input input-bordered w-full focus:outline-none focus:ring-0 rounded-full focus:ring-accent", errors.Name && "focus:ring-error")}
                         id="NameInput"
                         {...register('Name')}
                         placeholder="Your name"
@@ -70,7 +70,7 @@ const Contacts: FC = () => {
                       </span>
                       <input
                         type="email"
-                        className="validator input input-bordered w-full focus:outline-none focus:ring-0 focus:ring-accent rounded-full"
+                        className={cn("validator input input-bordered w-full focus:outline-none focus:ring-0 focus:ring-accent rounded-full", errors.Email && "focus:ring-error")}
                         id="EmailInput"
                         {...register('Email')}
                         placeholder="your.email@example.com"

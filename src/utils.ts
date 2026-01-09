@@ -1,4 +1,4 @@
-import { z } from "zod/v4";
+import z from "zod/v4";
 import axios from "axios";
 import { twMerge } from "tailwind-merge";
 import { type IconType } from "react-icons";
@@ -113,14 +113,14 @@ export const SocialLinks: Array<SocialLinkType> = [
 
 export const Projects: Array<Project> = [
   {
-    name: "Hero Weather",
+    name: "Weather app",
     image: "./projects/weather.png",
     url: "https://github.com/SoumabhaSaha15/HeroWeatherWebDude",
-    skills: ["React", "Hero ui", "Tailwind", "Axios", "Zod"],
+    skills: ["React", "Daisy ui", "Tailwind", "Axios", "Zod", "Tanstack-query"],
     description: `
       A simple react[vite] weather app that can access your location,
       and show weather by using Open-Weather API.
-      Built using Tailwind[Hero-ui].
+      Built using Tailwind & Daisy-ui.
     `
   }, {
     name: "Code Editor",
