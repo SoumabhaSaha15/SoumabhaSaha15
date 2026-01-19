@@ -134,7 +134,7 @@ export const Projects: Array<Project> = [
     name: "Auto billing",
     image: "./projects/billing.png",
     url: "https://github.com/SoumabhaSaha15/AutoBilling",
-    skills: ["React", "Flowbite", "Express.js", "MongoDB[atlas]", "Session", "CSRF"],
+    skills: ["React", "Tailwind", "Flowbite", "Express.js", "MongoDB[atlas]", "Session", "CSRF", "Pagination"],
     description: `Generates invoice by scanning barcode, uses express-js, mongodb, sessions and react-flowbite & axios.`
   }
 ];
