@@ -27,6 +27,7 @@ export type Project = {
   url: string;
   skills: string[];
   description: string;
+  new?: boolean;
 };
 
 export const Certificates: Array<Certificate> = [
@@ -136,6 +137,13 @@ export const Projects: Array<Project> = [
     url: "https://github.com/SoumabhaSaha15/AutoBilling",
     skills: ["React", "Tailwind", "Flowbite", "Express.js", "MongoDB[atlas]", "Session", "CSRF", "Pagination"],
     description: `Generates invoice by scanning barcode, uses express-js, mongodb, sessions and react-flowbite & axios.`
+  }, {
+    name: "City Library",
+    image: "./projects/lms.png",
+    url: "https://github.com/SoumabhaSaha15/CityLibrary",
+    skills: ["React", "Tailwind", "Daisy ui", "tanstack-router", "tanstack-query", "axios", "zod", "Django", "DRF", "Cloudinary", "Django-Unfold"],
+    description: `library management system using Django and react.`,
+    new: true,
   }
 ];
 

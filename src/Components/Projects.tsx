@@ -19,6 +19,7 @@ const ProjectPreview: FC<Project> = (props) => {
         <p className="p-2">
           {props.description}
           <br />
+          {props.new && (<span className="badge badge-lg badge-accent ml-1 mt-1 rounded-full" children="🌠new" />)}
           {props.skills.map((skill, index) => (<span key={index} className="badge hover:bg-accent hover:text-accent-content ml-1 mt-1 rounded-full" children={skill} />))}
         </p>
         <div className="card-actions justify-end">
