@@ -29,13 +29,18 @@ const Navbar: FC = () => {
               <IoMenu className="text-accent" size={24} />
             </div>
             <ul tabIndex={0} className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-              {TabIndexes.map((item, index) => (<li key={index} children={<a href={`#${item}`} className="font-semibold link hover:underline rounded-full text-shadow-lg" children={item} />} />))}
+              {TabIndexes.map(item => (
+                <li key={crypto.randomUUID()}
+                >
+                  <a href={`#${item}`} className="font-semibold link hover:underline rounded-full text-shadow-lg" >{item}</a>
+                </li>
+
+              ))}
             </ul>
           </div>
           <a
             href={'#' + TabIndexes[0]}
             className="btn btn-primary btn-ghost text-xl hover:underline rounded-full"
-            children="WebDude"
             onDoubleClick={() => {
               open('Theme Animation Started!', true, 2000, {
                 toastVariant: 'alert-info',
@@ -60,22 +65,22 @@ const Navbar: FC = () => {
               }, 1000 * (ThemeOptionsValidator.options.length + 1));
               timersRef.current.push(restoreId);
             }}
-          />
+          >WebDude</a>
         </div>
 
         <div className="navbar-center hidden lg:flex">
-          <ul
-            className="menu menu-horizontal px-1"
-            children={
-              TabIndexes.map((item, index) => (<li key={index} children={
+          <ul className="menu menu-horizontal px-1">
+            {TabIndexes.map(item => (
+              <li key={crypto.randomUUID()}  >
                 <a
                   href={`#${item}`}
                   className="font-semibold link link-secondary hover:underline rounded-full text-shadow-xs hover:text-shadow-secondary"
-                  children={item}
-                />
-              } />))
-            }
-          />
+                >
+                  {item}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div className="navbar-end">
@@ -86,27 +91,26 @@ const Navbar: FC = () => {
               ref={ripple}
               onPointerDown={event}
               className="btn btn-circle btn-primary mb-1 hover:btn-accent"
-              children={<MdOutlineColorLens size={24} />}
-            />
+            >
+              <MdOutlineColorLens size={24} />
+            </div>
+
             <ul tabIndex={-1} className="dropdown-content bg-base-300 rounded-2xl z-1 w-36 p-2 shadow-2xl max-h-[80dvh] overflow-y-scroll">
-              {ThemeOptionsValidator.options.map((item, index) => (
+              {ThemeOptionsValidator.options.map(item => (
                 <li
                   className="mt-0.5"
-                  key={index}
-                  children={
-                    <input
-                      type="radio"
-                      name="theme-dropdown"
-                      className={cn("theme-controller w-full btn btn-sm btn-block justify-start capitalize", theme === item ? "btn-primary" : "btn-ghost")}
-                      aria-label={item}
-                      value={item}
-                      checked={theme === item}                // <-- controlled
-                      onChange={({ target }) => {
-                        applyTheme(target.value as ThemeOptionsType);
-                      }}
-                    />
-                  }
-                />
+                  key={crypto.randomUUID()}
+                >
+                  <input
+                    type="radio"
+                    name="theme-dropdown"
+                    className={cn("theme-controller w-full btn btn-sm btn-block justify-start capitalize", theme === item ? "btn-primary" : "btn-ghost")}
+                    aria-label={item}
+                    value={item}
+                    checked={theme === item}                // <-- controlled
+                    onChange={({ target }) => applyTheme(target.value as ThemeOptionsType)}
+                  />
+                </li>
               ))}
             </ul>
           </div>

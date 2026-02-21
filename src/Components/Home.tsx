@@ -11,10 +11,10 @@ const Home: FC = () => {
       <div className="hero min-h-dvh scroll-smooth transition-all snap-y snap-mandatory" id={TabIndexes[0] + "content"}>
         <div className="hero-content flex-col lg:flex-row">
           <figure className="hover-gallery max-w-60 sm:max-w-72 rounded-2xl">
-            <img src="./myImages/picture (3).png" />
-            <img src="./myImages/picture (1).png" />
-            <img src="./myImages/picture (2).png" />
-            <img src="./myImages/picture (4).png" />
+            <img src="./myImages/picture (3).png" alt="3rd pic" />
+            <img src="./myImages/picture (1).png" alt="1st pic" />
+            <img src="./myImages/picture (2).png" alt="2nd pic" />
+            <img src="./myImages/picture (4).png" alt="4th pic" />
           </figure>
           <div>
             <span className="text-rotate text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl leading-loose w-full duration-12000">
