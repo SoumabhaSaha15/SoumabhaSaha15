@@ -11,7 +11,7 @@ export const ToastOptionsValidator = z.strictObject({
 });
 
 export type ToastOptionsType = z.infer<typeof ToastOptionsValidator>;
-export type ToastContextProps = {
+type ToastContextProps = {
   /**
    * @param component string message to be displayed in the toast
    * @param autoClose? boolean if true, the toast will close automatically after the timeout
