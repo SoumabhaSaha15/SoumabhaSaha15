@@ -1,9 +1,9 @@
-import useRipple from "use-ripple-hook";
 import { type FC } from "react";
+import useRipple from "use-ripple-hook";
 import { IoMdSend } from "react-icons/io";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useToast, DefaultOptions } from "../Context/Toast/ToastContext";
 import { useForm, type SubmitHandler } from "react-hook-form";
+import { useToast, DefaultOptions } from "../Context/Toast/ToastContext";
 import { ContactSchema, type ContactType, GoogleScript, TabIndexes, cn } from "../utils";
 
 const Contacts: FC = () => {
@@ -19,10 +19,14 @@ const Contacts: FC = () => {
     },
   } = useForm<ContactType>({ resolver: zodResolver(ContactSchema) });
 
+  const submitContact = async (data: ContactType): Promise<void> => {
+    const { status } = await GoogleScript.postForm(import.meta.env.VITE_API_ROUTE, data);
+    if (status !== 200) throw new Error('An error occured, response code:' + status);
+  }
+
   const contactSubmit: SubmitHandler<ContactType> = async (data) => {
     try {
-      const { status } = await GoogleScript.postForm(import.meta.env.VITE_API_ROUTE, data);
-      if (status !== 200) throw new Error('An error occured, response code:' + status);
+      await submitContact(data);
       toast.open('Message sent successfully.', true, 2000, DefaultOptions.success);
       reset();
     } catch (error) {
@@ -100,7 +104,8 @@ const Contacts: FC = () => {
                     disabled={isSubmitting}
                     onPointerDown={event}
                     className="btn btn-primary w-full hover:btn-secondary rounded-full"
-                    children={isSubmitting ? (
+                  >
+                    {isSubmitting ? (
                       <>
                         <span className="loading loading-dots loading-md text-accent" />
                         Sending...
@@ -111,7 +116,7 @@ const Contacts: FC = () => {
                         <IoMdSend size={20} />
                       </>
                     )}
-                  />
+                  </button>
                 </form>
               </div>
             </div>

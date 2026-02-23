@@ -155,6 +155,7 @@ export const ContactSchema = z.strictObject({
   Email: z.email({ error: "Email is required" })
     .regex(/^[\x00-\x7F]*$/, { error: "Don't use non-ascii chars." }),
   Message: z.string({ error: "Message is required." })
+    .regex(/^[\x00-\x7F]*$/, { error: "Don't use non-ascii chars." })
     .min(10, { error: "Message must have 10 to 100 chars." })
     .max(100, { error: "Message can't exceed 100 chars." })
 });
