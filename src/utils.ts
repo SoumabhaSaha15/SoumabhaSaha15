@@ -15,7 +15,7 @@ export type Certificate = {
   description: string;
 };
 
-export type SocialLinkType = {
+type SocialLinkType = {
   name: string;
   icon: IconType;
   link: string;
