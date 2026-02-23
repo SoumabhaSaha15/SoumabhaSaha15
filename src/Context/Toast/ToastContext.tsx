@@ -40,8 +40,8 @@ export const ToastContext: Context<ToastContextProps> = createContext<ToastConte
 export const useToast = () => useContext(ToastContext);
 
 const DefaultToastPosition: ToastOptionsType['toastPosition'] = ['toast-start', 'toast-bottom'];
-export type DefaultoptionsType = Record<("error" | "success" | "info" | "warning"), ToastOptionsType>
-export const DefaultOptions: DefaultoptionsType = {
+type DefaultOptionsType = Record<("error" | "success" | "info" | "warning"), ToastOptionsType>
+export const DefaultOptions: DefaultOptionsType = {
   error: { toastPosition: DefaultToastPosition, toastVariant: 'alert-error' },
   success: { toastPosition: DefaultToastPosition, toastVariant: 'alert-success' },
   info: { toastPosition: DefaultToastPosition, toastVariant: 'alert-info' },
