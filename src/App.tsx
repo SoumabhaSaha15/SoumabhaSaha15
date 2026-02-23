@@ -31,9 +31,9 @@ const App: FC = () => {
           className="btn btn-lg btn-circle btn-primary hover:btn-secondary"
           children={<FaGlobe size={24} />}
         />
-        {SocialLinks.map((item, index) => (
+        {SocialLinks.map((item) => (
           <a
-            key={index}
+            key={crypto.randomUUID()}
             role="div"
             href={item.link}
             className="link link-accent"

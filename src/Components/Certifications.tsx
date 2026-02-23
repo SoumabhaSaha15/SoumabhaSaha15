@@ -41,7 +41,7 @@ const Certifications: React.FC = () => {
       <div
         id={TabIndexes[2] + "content"}
         className="px-4 min-h-[calc(100dvh-64px)] grid auto-rows-[33.33dvh] grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-center place-items-center"
-        children={Certificates.map((item, index) => <CertificatePreview key={index} {...item} />)}
+        children={Certificates.map((item) => <CertificatePreview key={crypto.randomUUID()} {...item} />)}
       />
     </>
   );
