@@ -14,12 +14,14 @@ const ProjectPreview: FC<Project> = (props) => {
       </figure>
       <div className="card-body">
         <h2 className="card-title">
-          <div className="badge badge-outline hover:text-primary rounded-full" children={props.name} />
+          <div className="badge badge-outline hover:text-primary rounded-full">
+            {props.name}
+          </div>
         </h2>
         <p className="p-2">
           {props.description}
           <br />
-          {props.new && (<span className="badge badge-lg badge-accent ml-1 mt-1 rounded-full" children="🌠new" />)}
+          {props.new && (<span className="badge badge-lg badge-accent ml-1 mt-1 rounded-full">{"🌠new"}</span>)}
           {props.skills.map((skill) => (
             <span key={crypto.randomUUID()} className="badge hover:bg-accent hover:text-accent-content ml-1 mt-1 rounded-full">
               {skill}
@@ -47,8 +49,9 @@ const Projects: React.FC = () => {
       <div
         id={TabIndexes[1] + "content"}
         className="px-4 min-h-[calc(100dvh-64px)] grid auto-rows-[50dvh] grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center place-items-center"
-        children={ProjectList.map((item) => <ProjectPreview key={crypto.randomUUID()} {...item} />)}
-      />
+      >
+        {ProjectList.map((item) => <ProjectPreview key={crypto.randomUUID()} {...item} />)}
+      </div>
     </>
   );
 }
