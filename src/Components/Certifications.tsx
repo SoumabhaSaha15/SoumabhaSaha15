@@ -12,22 +12,16 @@ const CertificatePreview: FC<Certificate> = (prop: Certificate) => {
         />
       </figure>
       <div className="card-body">
-        <h2
-          className="card-title"
-          children={
-            <div
-              className='badge badge-outline hover:text-primary rounded-full'
-              children={prop.name}
-            />
-          }
-        />
+        <h2 className="card-title">
+          <div className='badge badge-outline hover:text-primary rounded-full'>
+            {prop.name}
+          </div>
+        </h2>
         <p className="p-2">{prop.description}</p>
         <div className="card-actions justify-end">
-          <a
-            href={prop.url}
-            className="btn btn-primary hover:btn-secondary underline rounded-full"
-            children={<>View <HiExternalLink size={20} /></>}
-          />
+          <a href={prop.url} className="btn btn-primary hover:btn-secondary underline rounded-full">
+            View <HiExternalLink size={20} />
+          </a>
         </div>
       </div>
     </div>
@@ -41,8 +35,9 @@ const Certifications: React.FC = () => {
       <div
         id={TabIndexes[2] + "content"}
         className="px-4 min-h-[calc(100dvh-64px)] grid auto-rows-[33.33dvh] grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-center place-items-center"
-        children={Certificates.map((item) => <CertificatePreview key={crypto.randomUUID()} {...item} />)}
-      />
+      >
+        {Certificates.map((item) => <CertificatePreview key={crypto.randomUUID()} {...item} />)}
+      </div>
     </>
   );
 }

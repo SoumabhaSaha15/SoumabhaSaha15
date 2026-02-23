@@ -20,15 +20,21 @@ const ProjectPreview: FC<Project> = (props) => {
           {props.description}
           <br />
           {props.new && (<span className="badge badge-lg badge-accent ml-1 mt-1 rounded-full" children="🌠new" />)}
-          {props.skills.map((skill) => (<span key={crypto.randomUUID()} className="badge hover:bg-accent hover:text-accent-content ml-1 mt-1 rounded-full" children={skill} />))}
+          {props.skills.map((skill) => (
+            <span key={crypto.randomUUID()} className="badge hover:bg-accent hover:text-accent-content ml-1 mt-1 rounded-full">
+              {skill}
+            </span>
+          ))}
         </p>
         <div className="card-actions justify-end">
           <a
             role="button"
             className="underline btn btn-primary hover:btn-secondary rounded-full"
             href={props.url}
-            children={<>View <HiExternalLink size={20} /></>}
-          />
+          // children={}
+          >
+            <>View <HiExternalLink size={20} /></>
+          </a>
         </div>
       </div>
     </div>

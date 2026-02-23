@@ -29,32 +29,31 @@ const App: FC = () => {
           ref={ripple}
           onPointerDown={event}
           className="btn btn-lg btn-circle btn-primary hover:btn-secondary"
-          children={<FaGlobe size={24} />}
-        />
+        >
+          <FaGlobe size={24} />
+        </div>
+
         {SocialLinks.map((item) => (
           <a
             key={crypto.randomUUID()}
             role="div"
             href={item.link}
             className="link link-accent"
-            children={
-              <div
-                className="tooltip tooltip-left rounded-[100%]"
-                data-tip={item.name}
-                children={
-                  <button
-                    className="btn btn-lg btn-circle btn-primary hover:btn-secondary"
-                    children={
-                      <item.icon
-                        className="hover:btn-accent-content"
-                        size={24}
-                      />
-                    }
-                  />
-                }
-              />
-            }
-          />
+          >
+            <div
+              className="tooltip tooltip-left rounded-[100%]"
+              data-tip={item.name}
+            >
+              <button
+                className="btn btn-lg btn-circle btn-primary hover:btn-secondary"
+              >
+                <item.icon
+                  className="hover:btn-accent-content"
+                  size={24}
+                />
+              </button>
+            </div>
+          </a>
         ))}
       </div>
     </>
