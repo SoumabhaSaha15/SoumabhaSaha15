@@ -1,0 +1,86 @@
+# llms.txt - Soumabha Saha's Portfolio
+
+## About Soumabha Saha
+
+**Full Name**: Soumabha Saha  
+**Title**: Full-Stack Developer & B.Tech CSE Student  
+**Institution**: Guru Nanak Institute of Technology (GNIT), Sodpur, West Bengal, India  
+**Email**: soumabhasaha1509@gmail.com  
+**Location**: West Bengal, India
+
+### Professional Links
+- **GitHub**: https://github.com/SoumabhaSaha15
+- **LinkedIn**: https://www.linkedin.com/in/soumabha-saha-663816253/
+- **Linktree**: https://linktr.ee/Soumabha.Saha
+
+### Core Expertise
+Soumabha is a passionate full-stack developer specializing in modern JavaScript/TypeScript ecosystems and Python-based backends. With expertise in both frontend frameworks and backend technologies, they focus on building scalable, production-ready web applications with emphasis on code quality, performance optimization, and user experience.
+
+---
+
+## Project Overview
+This is a personal portfolio website for Soumabha Saha, a B.Tech Computer Science student specializing in full-stack development. The portfolio showcases projects, certifications, contact information, and professional expertise.
+
+**Website**: https://soumabha-saha15.vercel.app/
+**Deployment**: Vercel
+**Repository**: https://github.com/SoumabhaSaha15
+
+---
+
+## Technical Skills & Competencies
+
+### Frontend Specialization
+- **Languages**: JavaScript (Expert), TypeScript (Expert), HTML5, CSS3
+- **Frameworks & Libraries**: React 19 (Expert), TanStack ecosystem
+- **Styling**: Tailwind CSS, DaisyUI, CSS-in-JS solutions
+- **State Management**: React Context API, Custom Hooks
+- **Form Management**: React Hook Form with Zod validation
+- **UI/UX**: Component-driven development, accessibility, responsive design
+- **Animations**: ScrollReveal, CSS animations, transition effects
+
+### Backend Development
+- **Languages**: Python (Strong), JavaScript/Node.js (Strong), Java
+- **Frameworks**: Django, Express.js, Nest.js
+- **Databases**: MongoDB (Document-based), SQL, database design and optimization
+- **APIs**: RESTful API design and development, API integration
+
+### Additional Technical Skills
+- **Languages**: C++, Java, Python, JavaScript/TypeScript
+- **DevOps & Deployment**: Vercel, Git, GitHub
+- **Build Tools**: Vite, Webpack understanding
+- **Code Quality**: ESLint, TypeScript strict mode, code standards
+- **Tools & Utilities**: Axios, Ripple effects, Icon libraries (react-icons)
+
+---
+
+## Education
+- **Degree**: B.Tech in Computer Science Engineering (CSE)
+- **Institution**: Guru Nanak Institute of Technology (GNIT)
+- **Location**: Sodpur, West Bengal, India
+- **Focus Areas**: Full-Stack Web Development, Software Engineering, Data Structures
+
+
+
+---
+
+## Portfolio Sections
+
+### Home / Landing
+The landing section introduces Soumabha as a full-stack developer with a focus on building scalable web applications. It highlights expertise in modern frameworks and commitment to clean, maintainable code.
+
+### Projects Showcase
+Displays Soumabha's major projects including:
+- Full-stack applications built with React, Django, and Node.js
+- Projects demonstrating knowledge of MongoDB, SQL databases
+- Real-world problem-solving applications
+- Code quality and architectural best practices
+- Responsive, production-ready applications
+
+### Certifications
+Displays professional certifications and achievements including:
+- Relevant development and engineering certifications
+- Completion of specialized courses and training
+- Professional development credentials
+
+### Contact
+Contact form for professional inquiries and collaborations
