@@ -4,7 +4,7 @@ import useRipple from "use-ripple-hook";
 import { HiDownload } from "react-icons/hi";
 
 const Home: FC = () => {
-  const [ripple, event] = useRipple({ duration: 200, timingFunction: 'ease-in-out' });
+  const [ripple, event] = useRipple({ duration: 200, timingFunction: 'ease-in-out', color: "currentColor" });
   return (
     <>
       <div className="h-0" id={TabIndexes[0]}></div>

@@ -11,7 +11,8 @@ import Contacts from "./Components/Contacts";
 import Certifications from "./Components/Certifications";
 
 const App: FC = () => {
-  const [ripple, event] = useRipple();
+  const [ripple, event] = useRipple({ color: "currentColor" });
+
   useEffect(() => TabIndexes.forEach((ids, index) => ScrollReveal().reveal(`#${ids}content`, { delay: (index + 1) * 100, reset: true, easing: "ease-in-out" })), []);
   return (
     <>

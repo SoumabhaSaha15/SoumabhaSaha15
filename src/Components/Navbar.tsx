@@ -9,7 +9,7 @@ import { ThemeOptionsValidator, useTheme, type ThemeOptionsType } from "../Conte
 const Navbar: FC = () => {
   const { theme, applyTheme } = useTheme();
   const animatingRef = useRef(false);
-  const [ripple, event] = useRipple();
+  const [ripple, event] = useRipple({ color: "currentColor" });
   const timersRef = useRef<number[]>([]);
   const { open } = useToast();
   useEffect(() => {
@@ -74,7 +74,7 @@ const Navbar: FC = () => {
               <li key={crypto.randomUUID()}  >
                 <a
                   href={`#${item}`}
-                  className="font-semibold link link-secondary hover:underline rounded-full text-shadow-xs hover:text-shadow-secondary"
+                  className="font-semibold link hover:underline rounded-full text-shadow-xs hover:text-shadow-secondary"
                 >
                   {item}
                 </a>

@@ -7,7 +7,7 @@ import { useToast, DefaultOptions } from "../Context/Toast/ToastContext";
 import { ContactSchema, type ContactType, GoogleScript, TabIndexes, cn } from "../utils";
 
 const Contacts: FC = () => {
-  const [ripple, event] = useRipple({ timingFunction: 'ease-in-out' });
+  const [ripple, event] = useRipple({ timingFunction: 'ease-in-out', color: "currentColor" });
   const toast = useToast();
   const {
     register,
@@ -103,7 +103,7 @@ const Contacts: FC = () => {
                     type="submit"
                     disabled={isSubmitting}
                     onPointerDown={event}
-                    className="btn btn-primary w-full hover:btn-secondary rounded-full"
+                    className="btn btn-primary w-full rounded-full hover:btn-secondary"
                   >
                     {isSubmitting ? (
                       <>
