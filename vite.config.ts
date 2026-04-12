@@ -4,11 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    react({
-      babel: {
-        plugins: [['babel-plugin-react-compiler']],
-      },
-    }),
+    react(),
     tailwindcss(),
   ],
   server: {
@@ -17,7 +13,7 @@ export default defineConfig({
         target: 'https://script.google.com',
         changeOrigin: true,
         rewrite: path => path.replace(/^\/gscript/, ''),
-        secure:false
+        secure: false
       }
     },
   },
