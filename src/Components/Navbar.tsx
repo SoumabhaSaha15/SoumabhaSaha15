@@ -1,6 +1,6 @@
 import { TabIndexes, cn } from "../utils";
-import useRipple from "use-ripple-hook";
 import { IoMenu } from "react-icons/io5";
+import { useRipple } from "use-ripple-hook";
 import { type FC, useRef, useEffect } from "react";
 import { MdOutlineColorLens } from "react-icons/md";
 import { useToast } from "../Context/Toast/ToastContext";

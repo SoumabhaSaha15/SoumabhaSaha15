@@ -1,6 +1,6 @@
 import { type FC } from "react";
 import { TabIndexes } from "../utils";
-import useRipple from "use-ripple-hook";
+import { useRipple } from "use-ripple-hook";
 import { HiDownload } from "react-icons/hi";
 
 const Home: FC = () => {

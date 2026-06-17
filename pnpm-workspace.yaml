@@ -1,3 +1,5 @@
+allowBuilds:
+  scrollreveal: false
 onlyBuiltDependencies:
   - esbuild
   - scrollreveal

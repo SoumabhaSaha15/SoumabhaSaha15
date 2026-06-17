@@ -1,7 +1,7 @@
 import { TabIndexes } from "./utils";
 import Home from "./Components/Home";
 import { SocialLinks } from "./utils";
-import useRipple from "use-ripple-hook";
+import { useRipple } from "use-ripple-hook";
 import ScrollReveal from "scrollreveal";
 import Navbar from "./Components/Navbar";
 import { FaGlobe } from "react-icons/fa";
