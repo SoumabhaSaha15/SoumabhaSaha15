@@ -1,4 +1,5 @@
 User-agent: *
-Disallow:
+Disallow: 
 
-Sitemap: /sitemap.xml
+Sitemap: https://soumabha-saha15.vercel.app/sitemap.xml
+LLMS: https://soumabha-saha15.vercel.app/llms.txt

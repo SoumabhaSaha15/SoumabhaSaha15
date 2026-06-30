@@ -46,6 +46,8 @@ const Contacts: FC = () => {
                 Thanks for visiting my portfolio. Drop me a message, I'm always open to new opportunities and collaborations in tech.
               </p>
             </div>
+
+            {/* <div className="aura"> */}
             <div className="card bg-base-100 w-full max-w-sm lg:max-w-md shrink-0 shadow-2xl rounded-2xl hover:scale-110 transition-transform">
               <div className="card-body p-4 sm:p-8">
                 <form className="fieldset space-y-4" onSubmit={handleSubmit(contactSubmit)}>
@@ -117,9 +119,13 @@ const Contacts: FC = () => {
                       </>
                     )}
                   </button>
+
                 </form>
               </div>
             </div>
+            {/* </div> */}
+
+
           </div>
         </div>
       </div>
