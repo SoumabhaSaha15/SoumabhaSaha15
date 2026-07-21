@@ -1,14 +1,20 @@
+
 import { type FC } from "react";
 import { IoMdSend } from "react-icons/io";
 import { useRipple } from "use-ripple-hook";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, type SubmitHandler } from "react-hook-form";
-import { useToast, DefaultOptions } from "../Context/Toast/ToastContext";
+import { useToast } from "../Context/Toast/ToastContext";
 import { ContactSchema, type ContactType, GoogleScript, TabIndexes, cn } from "../utils";
 
+const submitContact = async (data: ContactType): Promise<void> => {
+  const { status, statusText } = await GoogleScript.postForm(import.meta.env.VITE_API_ROUTE, data);
+  if (status !== 200) throw new Error(statusText);
+};
+
 const Contacts: FC = () => {
+  const toast = useToast({ horizontal: "toast-start" });
   const [ripple, event] = useRipple({ timingFunction: 'ease-in-out', color: "currentColor" });
-  const toast = useToast();
   const {
     register,
     handleSubmit,
@@ -19,25 +25,19 @@ const Contacts: FC = () => {
     },
   } = useForm<ContactType>({ resolver: zodResolver(ContactSchema) });
 
-  const submitContact = async (data: ContactType): Promise<void> => {
-    const { status } = await GoogleScript.postForm(import.meta.env.VITE_API_ROUTE, data);
-    if (status !== 200) throw new Error('An error occured, response code:' + status);
-  }
-
   const contactSubmit: SubmitHandler<ContactType> = async (data) => {
     try {
       await submitContact(data);
-      toast.open('Message sent successfully.', true, 2000, DefaultOptions.success);
+      toast.open('Message sent successfully.', 'alert-success', true, 2000);
       reset();
     } catch (error) {
-      toast.open((error as Error)?.message || 'An error occured', true, 2000, DefaultOptions.error);
+      toast.open((error as Error)?.message || 'An error occured', 'alert-error', true, 2000);
     }
   }
 
   return (
     <>
-      <div className="h-0" id={TabIndexes[3]}></div>
-      <div className="hero min-h-dvh scroll-smooth transition-all snap-y snap-mandatory" id={TabIndexes[3] + "content"}>
+      <div className="hero min-h-dvh scroll-smooth transition-all snap-y snap-mandatory" id={TabIndexes[3]}>
         <div className="hero min-h-screen px-4 py-8">
           <div className="hero-content flex-col lg:flex-row-reverse w-full max-w-6xl gap-8">
             <div className="text-center lg:text-left lg:flex-1">
@@ -100,25 +100,27 @@ const Contacts: FC = () => {
                     />
                   </div>
 
-                  <button
-                    ref={ripple}
-                    type="submit"
-                    disabled={isSubmitting}
-                    onPointerDown={event}
-                    className="btn btn-primary w-full rounded-full hover:btn-secondary"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <span className="loading loading-dots loading-md text-accent" />
-                        Sending...
-                      </>
-                    ) : (
-                      <>
-                        Send message
-                        <IoMdSend size={20} />
-                      </>
-                    )}
-                  </button>
+                  <div className="hover:aura text-base-content rounded-full inline-block duration-2000">
+                    <button
+                      ref={ripple}
+                      type="submit"
+                      disabled={isSubmitting}
+                      onPointerDown={event}
+                      className="btn btn-primary w-full rounded-full hover:btn-secondary"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <span className="loading loading-dots loading-md text-accent" />
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          Send message
+                          <IoMdSend size={20} />
+                        </>
+                      )}
+                    </button>
+                  </div>
 
                 </form>
               </div>

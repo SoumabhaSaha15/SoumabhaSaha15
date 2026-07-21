@@ -3,7 +3,7 @@ import { HiExternalLink } from "react-icons/hi";
 import { type Certificate, Certificates, TabIndexes } from "../utils";
 const CertificatePreview: FC<Certificate> = (prop: Certificate) => {
   return (
-    <div className="hover:aura hover:aura-gold card bg-base-100 image-full w-full max-h-full min-h-full shadow-sm scale-95 hover:scale-100 hover:rotate-3 transition-transform overflow-auto rounded-2xl">
+    <div className="hover:aura text-base-content card bg-base-100 image-full w-full max-h-full min-h-full shadow-sm scale-95 hover:scale-100 hover:rotate-3 transition-transform overflow-auto rounded-2xl duration-1750">
       <figure>
         <img
           src={prop.preview}
@@ -36,7 +36,7 @@ const Certifications: React.FC = () => {
         id={TabIndexes[2] + "content"}
         className="px-4 min-h-[calc(100dvh-64px)] grid auto-rows-[33.33dvh] grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-center place-items-center"
       >
-        {Certificates.map((item) => <CertificatePreview key={crypto.randomUUID()} {...item} />)}
+        {Certificates.map((item) => <CertificatePreview key={item.name} {...item} />)}
       </div>
     </>
   );

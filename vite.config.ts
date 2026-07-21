@@ -10,6 +10,7 @@ export default defineConfig({
     tailwindcss(),
   ],
   server: {
+    port: 5000,
     proxy: {
       '/gscript': {
         target: 'https://script.google.com',

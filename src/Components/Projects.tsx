@@ -4,7 +4,7 @@ import { TabIndexes, type Project, Projects as ProjectList } from "../utils";
 
 const ProjectPreview: FC<Project> = (props) => {
   return (
-    <div className="hover:aura hover:aura-rainbow card bg-base-100 image-full w-full max-h-full min-h-full shadow-sm transition-transform scale-95 hover:scale-100 hover:rotate-3 overflow-auto rounded-2xl" >
+    <div className="hover:aura text-base-content card bg-base-100 image-full w-full max-h-full min-h-full shadow-sm transition-transform scale-95 hover:scale-100 hover:rotate-3 overflow-auto rounded-2xl duration-1000" >
       <figure>
         <img
           src={props.image}
@@ -23,7 +23,7 @@ const ProjectPreview: FC<Project> = (props) => {
           <br />
           {props.new && (<span className="badge badge-lg badge-accent ml-1 mt-1 rounded-full">{"🌠new"}</span>)}
           {props.skills.map((skill) => (
-            <span key={crypto.randomUUID()} className="badge hover:bg-accent hover:text-accent-content ml-1 mt-1 rounded-full">
+            <span key={skill} className="badge hover:bg-accent hover:text-accent-content ml-1 mt-1 rounded-full">
               {skill}
             </span>
           ))}
@@ -43,14 +43,16 @@ const ProjectPreview: FC<Project> = (props) => {
   )
 }
 const Projects: React.FC = () => {
+  // const { ref, inView } = useInView({ threshold: 0.1 });
   return (
     <>
       <div className="h-16" id={TabIndexes[1]}></div>
       <div
         id={TabIndexes[1] + "content"}
+        // ref={ref}
         className="px-4 min-h-[calc(100dvh-64px)] grid auto-rows-[50dvh] grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center place-items-center"
       >
-        {ProjectList.map((item) => <ProjectPreview key={crypto.randomUUID()} {...item} />)}
+        {ProjectList.map((item) => <ProjectPreview key={item.name} {...item} />)}
       </div>
     </>
   );

@@ -1,7 +1,8 @@
+
 import { type FC } from "react";
 import { TabIndexes } from "../utils";
-import { useRipple } from "use-ripple-hook";
 import { HiDownload } from "react-icons/hi";
+import { useRipple } from "use-ripple-hook";
 
 const Home: FC = () => {
   const [ripple, event] = useRipple({ duration: 200, timingFunction: 'ease-in-out', color: "currentColor" });
@@ -30,20 +31,24 @@ const Home: FC = () => {
               experience in full-stack development, programming, and databases. Eager to apply technical skills to innovative
               projects.
             </p>
-            <button
-              className="btn btn-primary hover:btn-secondary rounded-full"
-              ref={ripple}
-              onPointerDown={event}
-              onClick={() => {
-                const link = document.createElement('a');
-                link.href = 'Resume.docx';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-              }}
-            >
-              <HiDownload size={20} />Get resume
-            </button>
+            <div className="hover:aura text-base-content rounded-full inline-block duration-1750">
+              <button
+                type="button"
+                className="btn btn-primary hover:btn-secondary rounded-full"
+                ref={ripple}
+                onPointerDown={event}
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = 'Resume.docx';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+              >
+                <HiDownload size={20} />Get resume
+              </button>
+            </div>
+
           </div>
         </div>
       </div>

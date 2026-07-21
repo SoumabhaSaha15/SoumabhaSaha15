@@ -1,15 +1,15 @@
 import { prettifyError } from "zod";
 import { type ReactNode, useState, useEffect } from "react";
 import { ThemeContext, type ThemeOptionsType, ThemeOptionsValidator } from "./ThemeContext";
+
+const getDefaultTheme = (): ThemeOptionsType => {
+  const { success, data } = ThemeOptionsValidator.safeParse(localStorage.getItem("theme"));
+  const finalTheme = success ? data : "dark";
+  document.documentElement.setAttribute('data-theme', finalTheme);
+  return finalTheme;
+};
+
 export default function ThemeProvider({ children }: { children: ReactNode }) {
-
-  const getDefaultTheme: () => ThemeOptionsType = () => {
-    const { success, data } = ThemeOptionsValidator.safeParse(localStorage.getItem("theme"));
-    const finalTheme = success ? data : "dark";
-    document.documentElement.setAttribute('data-theme', finalTheme);
-    return finalTheme;
-  }
-
   const [theme, setTheme] = useState<ThemeOptionsType>(getDefaultTheme);
 
   useEffect(() => {
