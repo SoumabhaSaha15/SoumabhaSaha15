@@ -130,11 +130,17 @@ export const Projects: Array<Project> = [
     skills: ["React", "Tailwind", "Flowbite", "Express.js", "MongoDB[atlas]", "Session", "CSRF", "Pagination"],
     description: `Generates invoice by scanning barcode, uses express-js, mongodb, sessions and react-flowbite & axios.`
   }, {
+    name: "Phone Book",
+    image: "./projects/phone-book.png",
+    url: "https://github.com/SoumabhaSaha15/PhoneBookWebDude",
+    skills: ["sqlite", "drizzle-kit", "zod", "inquirer", "vcf",],
+    description: "Command line phonebook managent system"
+  }, {
     name: "City Library",
     image: "./projects/lms.png",
     url: "https://github.com/SoumabhaSaha15/CityLibrary",
     skills: ["React", "Tailwind", "Daisy ui", "tanstack-router", "tanstack-query", "axios", "zod", "Django", "DRF", "Cloudinary", "Django-Unfold"],
-    description: `library management system using Django and react.`,
+    description: "library management system using Django and react.",
     new: true,
   }
 ];
