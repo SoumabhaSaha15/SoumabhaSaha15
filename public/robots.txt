@@ -2,4 +2,3 @@ User-agent: *
 Disallow: 
 
 Sitemap: https://soumabha-saha15.vercel.app/sitemap.xml
-LLMS: https://soumabha-saha15.vercel.app/llms.txt

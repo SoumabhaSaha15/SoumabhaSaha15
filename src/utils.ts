@@ -75,7 +75,7 @@ export const Certificates: Array<Certificate> = [
     name: "MongoDb",
     description: `MongoDB certification by MTA learning pvt ltd.`,
     preview: "./certificates/mongoDb.png",
-    url: "https://www.dropbox.com/scl/fi/9u3i7ulqm1v4f6ux6vu3t/MERN.pdf?e=1"
+    url: "https://www.dropbox.com/scl/fi/kfdw85fh56xxplije8vk4/mongo-db.pdf?e=1"
   }, {
     name: "sqlite",
     description: `SQLite Fundamentals from coddy.tech.`,
@@ -83,7 +83,6 @@ export const Certificates: Array<Certificate> = [
     url: "https://coddy.tech/certifications/MMO5bM-sqlite-oRigJZ"
   }
 ];
-
 export const SocialLinks: Array<SocialLinkType> = [
   {
     name: "Gmail",
