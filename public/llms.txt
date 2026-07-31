@@ -1,86 +1,94 @@
-# llms.txt - Soumabha Saha's Portfolio
+# **Soumabha Saha**
 
-## About Soumabha Saha
+**Software Engineer | Full-Stack Developer**  
+📍 Kolkata, West Bengal, India |  
+📱 \+91 74395 69806 |   
+✉️ [soumabhasaha1509@gmail.com](mailto:soumabhasaha1509@gmail.com)  
+🌐 [Portfolio](https://soumabha-saha15.vercel.app/) | 💻 [GitHub](https://github.com/soumabhasaha15) | 👔 [LinkedIn](https://www.linkedin.com/in/soumabha-saha-663816253/)
 
-**Full Name**: Soumabha Saha  
-**Title**: Full-Stack Developer & B.Tech CSE Student  
-**Institution**: Guru Nanak Institute of Technology (GNIT), Sodpur, West Bengal, India  
-**Email**: soumabhasaha1509@gmail.com  
-**Location**: West Bengal, India
+### **Professional Summary**
 
-### Professional Links
-- **GitHub**: https://github.com/SoumabhaSaha15
-- **LinkedIn**: https://www.linkedin.com/in/soumabha-saha-663816253/
-- **Linktree**: https://linktr.ee/Soumabha.Saha
+Results-driven Computer Science Engineering graduate with hands-on experience in full-stack web development, modern frontend frameworks, and robust backend architectures. Proficient in React 19, TypeScript, Django REST Framework, Node.js, and .NET Core. Demonstrates a strong foundation in software design, database management, and asynchronous state orchestration. Experienced in developing scalable, decoupled web applications and enterprise services.
 
-### Core Expertise
-Soumabha is a passionate full-stack developer specializing in modern JavaScript/TypeScript ecosystems and Python-based backends. With expertise in both frontend frameworks and backend technologies, they focus on building scalable, production-ready web applications with emphasis on code quality, performance optimization, and user experience.
+### 
 
----
+### **Technical Skills**
 
-## Project Overview
-This is a personal portfolio website for Soumabha Saha, a B.Tech Computer Science student specializing in full-stack development. The portfolio showcases projects, certifications, contact information, and professional expertise.
+* **Programming Languages:** JavaScript (ES6+), TypeScript, C, C++, Java, Python, C\#, SQL, HTML5, CSS3  
+* **Frontend Frameworks & Libraries:** React 19, Vite, TanStack Ecosystem (Query v5, Router, Form, Store), React Hook Form, Zod, Tailwind CSS v4, DaisyUI, Shadcn UI, Material-UI, Chakra UI  
+* **Backend Frameworks & APIs:** Node.js, Express.js, Django & Django REST Framework (DRF), ASP.NET Core (EF Core), Nest.js  
+* **Databases & ORMs:** MongoDB, MS SQL Server, PostgreSQL, MySQL, SQLite, Drizzle ORM, Mongoose  
+* **Tools & Platforms:** Git, GitHub, RESTful APIs, Cloudinary, Uvicorn, WhiteNoise
 
-**Website**: https://soumabha-saha15.vercel.app/
-**Deployment**: Vercel
-**Repository**: https://github.com/SoumabhaSaha15
+### 
 
----
+### **Work Experience**
 
-## Technical Skills & Competencies
+#### **Cognizant Technology Solutions — *Full-Stack Intern / Programmer Analyst Trainee \[DOTNET & SITECORE\]***
 
-### Frontend Specialization
-- **Languages**: JavaScript (Expert), TypeScript (Expert), HTML5, CSS3
-- **Frameworks & Libraries**: React 19 (Expert), TanStack ecosystem
-- **Styling**: Tailwind CSS, DaisyUI, CSS-in-JS solutions
-- **State Management**: React Context API, Custom Hooks
-- **Form Management**: React Hook Form with Zod validation
-- **UI/UX**: Component-driven development, accessibility, responsive design
-- **Animations**: ScrollReveal, CSS animations, transition effects
+*March 2026 – June 2026 | Siruseri, Tamil Nadu* [(Source)](https://www.linkedin.com/posts/soumabha-saha-663816253_i-am-excited-to-share-that-i-have-officially-share-7477199471093870592-GWIj)
 
-### Backend Development
-- **Languages**: Python (Strong), JavaScript/Node.js (Strong), Java
-- **Frameworks**: Django, Express.js, Nest.js
-- **Databases**: MongoDB (Document-based), SQL, database design and optimization
-- **APIs**: RESTful API design and development, API integration
+* Completed an intensive 3-month engineering internship program focused on full-stack web application development and enterprise IT solutions.  
+* Designed and implemented modular web applications following software design principles, hands-on project deliverables, and rigorous code reviews.
 
-### Additional Technical Skills
-- **Languages**: C++, Java, Python, JavaScript/TypeScript
-- **DevOps & Deployment**: Vercel, Git, GitHub
-- **Build Tools**: Vite, Webpack understanding
-- **Code Quality**: ESLint, TypeScript strict mode, code standards
-- **Tools & Utilities**: Axios, Ripple effects, Icon libraries (react-icons)
+### **Key Projects**
 
----
+#### **CityLibrary — Library Management System**
 
-## Education
-- **Degree**: B.Tech in Computer Science Engineering (CSE)
-- **Institution**: Guru Nanak Institute of Technology (GNIT)
-- **Location**: Sodpur, West Bengal, India
-- **Focus Areas**: Full-Stack Web Development, Software Engineering, Data Structures
+*Django 6, React 19, TypeScript, TanStack Suite, Tailwind CSS* | [GitHub Repository](https://github.com/SoumabhaSaha15/CityLibrary)
 
+* Engineered a full-stack library management platform using a decoupled architecture powered by Django 6 and React 19\.  
+* Built high-concurrency RESTful endpoints via Django REST Framework with session-based authentication, served via Uvicorn and WhiteNoise.  
+* Implemented file-based, type-safe client-side routing with TanStack React Router and server-state orchestration using TanStack React Query v5.  
+* Enforced strict runtime payload validation using Zod and created an administrative interface utilizing Django Unfold.
 
+#### 
 
----
+#### **KYC Banking Service**
 
-## Portfolio Sections
+*.NET Core, ASP.NET, EF Core, React, MS SQL Server, Material-UI* | [GitHub Repository](https://github.com/SoumabhaSaha15/KnowYourCustomerServiceForBank)
 
-### Home / Landing
-The landing section introduces Soumabha as a full-stack developer with a focus on building scalable web applications. It highlights expertise in modern frameworks and commitment to clean, maintainable code.
+* Developed an enterprise-grade Know Your Customer (KYC) service for financial institutions.  
+* Designed backend REST APIs utilizing ASP.NET Core, Entity Framework Core, MS SQL Server, and Fluent Validation for secure transaction handling.  
+* Built a responsive frontend using React, TanStack Query/Form, Material-UI, and Tailwind CSS.
 
-### Projects Showcase
-Displays Soumabha's major projects including:
-- Full-stack applications built with React, Django, and Node.js
-- Projects demonstrating knowledge of MongoDB, SQL databases
-- Real-world problem-solving applications
-- Code quality and architectural best practices
-- Responsive, production-ready applications
+#### 
 
-### Certifications
-Displays professional certifications and achievements including:
-- Relevant development and engineering certifications
-- Completion of specialized courses and training
-- Professional development credentials
+#### **AutoBilling Application**
 
-### Contact
-Contact form for professional inquiries and collaborations
+*MERN Stack (MongoDB, Express, React, Node.js), Tailwind CSS* | [GitHub Repository](https://github.com/SoumabhaSaha15/AutoBilling)
+
+* Built an automated billing and invoice management system utilizing Express, Node.js, and MongoDB with Mongoose ORM.  
+* Integrated CSRF-sync for transaction security, Cloudinary for document assets, and React Hook Form with Zod schema validation.
+
+#### 
+
+#### **Daisy Weather Web**
+
+*React, TanStack Query, OpenWeather API, Tailwind CSS* | [Live Demo](https://hero-weather-web-dude.vercel.app/) | [GitHub Repository](https://github.com/SoumabhaSaha15/DaisyWeatherWebDude)
+
+* Developed a weather application integrating OpenWeather REST APIs for real-time weather metrics and multi-day forecasting.
+
+### 
+
+### **Education**
+
+* **B.Tech in Computer Science & Engineering**  
+  * *Guru Nanak Institute of Technology (JIS University), Kolkata* | *2022 – 2026*  
+  * **CGPA:** 8.35   
+* **Higher Secondary (10+2 Science)**  
+  *Laban Hrad Vidyapith (WBCHSE)* | *2022* | **Percentage:** 80.4%  
+* **Secondary (10th)**  
+  *Laban Hrad Vidyapith (WBBSE)* | *2020* | **Percentage:** 87.85%
+
+### 
+
+### **Certifications**
+
+* **Soft Computing Techniques** — [NPTEL Certification](https://www.dropbox.com/scl/fi/wipw0b0t5g9hh7y5cb4fr/Soft-Computing-Techniques.pdf?e=1)  
+* **C++ Programming** — [Coursera Certification](https://www.dropbox.com/scl/fi/8zc946rxiupkz3zogyklc/cpp.pdf?e=1)  
+* **Django Web Framework** — [Online Certification](https://www.dropbox.com/scl/fi/hg0dntu57npeauue5rjtf/django.pdf?e=1)  
+* **Approximation Algorithms** — [Coursera Certification](https://www.dropbox.com/scl/fi/eh9mifrpbupwmrgkdl28y/approximation_algorithm.pdf?e=1)  
+* **SQLite certification** — [Coddy.tech](https://www.dropbox.com/scl/fi/5urgr754r94wx4ht3k8pz/MMO5bM-sqlite-oRigJZ.pdf?e=1)  
+* **MERN Stack Development** — [Euphoria GenX](https://www.dropbox.com/scl/fi/9u3i7ulqm1v4f6ux6vu3t/MERN.pdf?e=1)
+
