@@ -4,6 +4,7 @@
   <a href="https://git.io/typing-svg">
     <img
       src="https://readme-typing-svg.herokuapp.com/?lines=Hello,+There!+👋;This+is+Soumabha+Saha;Nice+to+meet+you!&center=true&size=30"
+      width="100%"
     />
   </a>
 </h1>
