@@ -1,6 +1,7 @@
 import { type FC } from "react";
 import { HiExternalLink } from "react-icons/hi";
-import { type Certificate, Certificates, TabIndexes } from "../utils";
+import { type Certificate, Certificates, TabIndexes } from "@/utils";
+
 const CertificatePreview: FC<Certificate> = (prop: Certificate) => {
   return (
     <div className="hover:aura text-base-content card bg-base-100 image-full w-full max-h-full min-h-full shadow-sm scale-95 hover:scale-100 hover:rotate-3 transition-transform overflow-auto rounded-2xl duration-1750">

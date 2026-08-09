@@ -3,9 +3,9 @@ import { type FC } from "react";
 import { IoMdSend } from "react-icons/io";
 import { useRipple } from "use-ripple-hook";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useToast } from "@/context/toast/ToastContext";
 import { useForm, type SubmitHandler } from "react-hook-form";
-import { useToast } from "../Context/Toast/ToastContext";
-import { ContactSchema, type ContactType, GoogleScript, TabIndexes, cn } from "../utils";
+import { ContactSchema, type ContactType, GoogleScript, TabIndexes, cn } from "@/utils";
 
 const submitContact = async (data: ContactType): Promise<void> => {
   const { status, statusText } = await GoogleScript.postForm(import.meta.env.VITE_API_ROUTE, data);

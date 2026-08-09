@@ -1,6 +1,6 @@
 import { type FC } from "react";
 import { HiExternalLink } from "react-icons/hi";
-import { TabIndexes, type Project, Projects as ProjectList } from "../utils";
+import { TabIndexes, type Project, Projects as ProjectList } from "@/utils";
 
 const ProjectPreview: FC<Project> = (props) => {
   return (

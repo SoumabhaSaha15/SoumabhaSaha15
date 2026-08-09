@@ -1,14 +1,13 @@
-import { TabIndexes } from "./utils";
-import Home from "./Components/Home";
-import { SocialLinks } from "./utils";
+import Home from "@/components/Home";
 import ScrollReveal from "scrollreveal";
-import Navbar from "./Components/Navbar";
+import Navbar from "@/components/Navbar";
 import { FaGlobe } from "react-icons/fa";
 import { type FC, useEffect } from "react";
 import { useRipple } from "use-ripple-hook";
-import Projects from "./Components/Projects";
-import Contacts from "./Components/Contacts";
-import Certifications from "./Components/Certifications";
+import Projects from "@/components/Projects";
+import Contacts from "@/components/Contacts";
+import { TabIndexes, SocialLinks } from "@/utils";
+import Certifications from "@/components/Certifications";
 
 const App: FC = () => {
   const [ripple, event] = useRipple({ color: "currentColor" });

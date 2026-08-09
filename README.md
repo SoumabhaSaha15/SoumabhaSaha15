@@ -11,20 +11,21 @@
 <a href="https://daily.dev/soumabhasaha15" style="display: grid; place-items: center">
   <img
     src="https://api.daily.dev/devcards/v2/YdxAsDrsAv9S50HsfEsuW.png?type=wide&r=egu"
-    width="80%"
+    width="100%"
     alt="Soumabha Saha's Dev Card"
   />
 </a>
 
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0111.gif" width="100%" height="2" />
+<br/><br/>
 
-- ![portfolio](https://komarev.com/ghpvc/?username=soumabhasaha15&label=Profile%20views&color=0e75b6&style=flat)
+  ![portfolio](https://komarev.com/ghpvc/?username=soumabhasaha15&label=Profile%20views&color=0e75b6&style=flat)
 
-- [![StaticBadge](https://img.shields.io/badge/soumabhasaha1509%40gmail.com-red?logo=gmail&logoColor=white&link=mailto%soumabhasaha1509%40gmail.com)](mailto:soumabhasaha1509@gmail.com)
+  [![StaticBadge](https://img.shields.io/badge/soumabhasaha1509%40gmail.com-red?logo=gmail&logoColor=white&link=mailto%soumabhasaha1509%40gmail.com)](mailto:soumabhasaha1509@gmail.com)
 
-- [![Static Badge](https://img.shields.io/badge/soumabha_saha-hashnode-blue)](https://hashnode.com/@soumabhasaha15)
+  [![Static Badge](https://img.shields.io/badge/soumabha_saha-Hashnode-blue)](https://hashnode.com/@soumabhasaha15)
 
-- [![StaticBadge](https://img.shields.io/badge/soumabha_saha-curriculum_vitae-yellow)](https://docs.google.com/document/d/1FhOHqofPSBkNWFdu_UWocUqYQ7o5H0dk/edit?usp=sharing&ouid=116043366224516834437&rtpof=true&sd=true)
+  [![StaticBadge](https://img.shields.io/badge/soumabha_saha-CV-yellow)](https://docs.google.com/document/d/1FhOHqofPSBkNWFdu_UWocUqYQ7o5H0dk/edit?usp=sharing&ouid=116043366224516834437&rtpof=true&sd=true)
 
 <div style="display: grid; place-items: center">
   <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0111.gif" width="100%" height="2" />

@@ -1,6 +1,6 @@
 
 import { type FC } from "react";
-import { TabIndexes } from "../utils";
+import { TabIndexes } from "@/utils";
 import { HiDownload } from "react-icons/hi";
 import { useRipple } from "use-ripple-hook";
 
