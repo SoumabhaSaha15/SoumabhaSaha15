@@ -108,20 +108,14 @@ export const Projects: Array<Project> = [
     name: "Weather app",
     image: "./projects/weather.png",
     url: "https://github.com/SoumabhaSaha15/HeroWeatherWebDude",
-    skills: ["React", "Daisy ui", "Tailwind", "Axios", "Zod", "Tanstack-query"],
-    description: `
-      A simple react[vite] weather app that can access your location,
-      and show weather by using Open-Weather API.
-      Built using Tailwind & Daisy-ui.
-    `
+    skills: ["React", "Daisy ui", "Tailwind", "Axios", "Zod", "Tanstack-query", "OpenWeather"],
+    description: "A simple react[vite] weather app that can access your location, and show weather by using Open-Weather API. Built using Tailwind & Daisy-ui."
   }, {
     name: "Code Editor",
     image: "./projects/code.png",
     url: "https://github.com/SoumabhaSaha15/CodeEditorWebDude",
     skills: ["React", "Flowbite", "Tailwind", "Sandpack"],
-    description: `
-      A simple react[vite] code editor built using sandpack[codesandbox] & flowbite-react[tailwind] you can use as a web playground.
-    `
+    description: "A simple react[vite] code editor built using sandpack[codesandbox] & flowbite-react[tailwind] you can use as a web playground."
   }, {
     name: "Auto billing",
     image: "./projects/billing.png",
@@ -140,6 +134,13 @@ export const Projects: Array<Project> = [
     url: "https://github.com/SoumabhaSaha15/CityLibrary",
     skills: ["React", "Tailwind", "Daisy ui", "tanstack-router", "tanstack-query", "axios", "zod", "Django", "DRF", "Cloudinary", "Django-Unfold"],
     description: "library management system using Django and react.",
+    new: true,
+  }, {
+    name: "EnhancedDirectoryView",
+    image: "./projects/enhanced-directory-view.png",
+    url: "https://github.com/SoumabhaSaha15/EnhancedDirectoryView",
+    skills: ["vite-plugin-web-extension", "Tailwind", "Daisy ui", "sharp-cli"],
+    description: "Tailwind + DaisyUI based project that overrides the native styles of existing browsers folder view",
     new: true,
   }
 ];
