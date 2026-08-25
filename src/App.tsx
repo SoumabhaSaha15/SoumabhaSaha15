@@ -30,7 +30,7 @@ const App: FC = () => {
           ref={ripple}
           onPointerDown={event}
           aria-label="Open website and social links"
-          className="btn btn-lg btn-circle btn-primary hover:btn-secondary"
+          className="btn btn-lg btn-circle btn-accent hover:btn-secondary"
         >
           <FaGlobe size={24} />
         </button>

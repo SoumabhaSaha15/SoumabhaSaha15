@@ -100,7 +100,7 @@ const Contacts: FC = () => {
                     />
                   </div>
 
-                  <div className="hover:aura text-base-content rounded-full inline-block duration-2000">
+                  <div className="hover:aura text-accent rounded-full inline-block duration-2000">
                     <button
                       ref={ripple}
                       type="submit"

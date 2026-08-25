@@ -21,17 +21,14 @@ const Home: FC = () => {
             <span className="text-rotate text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl leading-loose w-full duration-12000">
               <span className="justify-items-center">
                 <span>Hi, I'm Soumabha Saha,</span>
-                <span>a fullstack developer.</span>
-                <span>a UI/UX designer.</span>
+                <span>a fullstack web developer.</span>
                 <span>an app developer.</span>
               </span>
             </span>
             <p className="py-6">
-              Dedicated B.Tech student in Computer Science Engineering with strong academic performance and hands-on
-              experience in full-stack development, programming, and databases. Eager to apply technical skills to innovative
-              projects.
+              Results-driven CSE graduate with hands-on experience in full-stack web development, modern frontend frameworks, and robust backend architectures. Proficient in React 19, TypeScript, Django REST Framework, Node.js, and .NET Core. Demonstrates a strong foundation in software design, database management, and asynchronous state orchestration. Experienced in developing scalable, decoupled web applications and enterprise services.
             </p>
-            <div className="hover:aura text-base-content rounded-full inline-block duration-1750">
+            <div className="hover:aura text-accent rounded-full inline-block duration-1750">
               <button
                 type="button"
                 className="btn btn-primary hover:btn-secondary rounded-full"
@@ -45,7 +42,7 @@ const Home: FC = () => {
                   document.body.removeChild(link);
                 }}
               >
-                <HiDownload size={20} />Get resume
+                <HiDownload size={20} /> Get resume
               </button>
             </div>
 

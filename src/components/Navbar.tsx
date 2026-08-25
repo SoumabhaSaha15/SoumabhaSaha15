@@ -29,16 +29,16 @@ const Navbar: FC = () => {
             <button
               type="button"
               tabIndex={0}
-              className="btn btn-ghost lg:hidden btn-circle"
+              className="btn btn-accent lg:hidden btn-circle"
               aria-label="Open navigation menu"
             >
-              <IoMenu className="text-accent" size={24} />
+              <IoMenu className="text-accent-content" size={24} />
             </button>
             <ul className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
               {TabIndexes.map((item, index) => (
                 <li key={item}
                 >
-                  <a href={`#${item}`} className={cn("font-semibold link hover:underline text-shadow-lg rounded-sm", index === 0 ? "rounded-t-xl" : index === TabIndexes.length - 1 ? "rounded-b-xl" : "")} >{item}</a>
+                  <a href={`#${item}`} className={cn("font-semibold link-hover hover:link-secondary link-primary hover:underline text-shadow-lg rounded-sm", index === 0 ? "rounded-t-box" : index === TabIndexes.length - 1 ? "rounded-b-box" : "")} >{item}</a>
                 </li>
 
               ))}
@@ -74,7 +74,7 @@ const Navbar: FC = () => {
               <li key={item}  >
                 <a
                   href={`#${item}`}
-                  className="font-semibold link hover:underline rounded-full text-shadow-xs hover:text-shadow-secondary"
+                  className="font-semibold link-hover hover:link-secondary link-primary rounded-box text-shadow-xs"
                 >
                   {item}
                 </a>
@@ -88,7 +88,6 @@ const Navbar: FC = () => {
             <button
               type="button"
               tabIndex={0}
-              // role="button"
               ref={ripple}
               onPointerDown={event}
               aria-label="Open theme picker"
@@ -97,7 +96,7 @@ const Navbar: FC = () => {
               <MdOutlineColorLens size={24} />
             </button>
 
-            <ul tabIndex={-1} className="dropdown-content bg-base-300 rounded-2xl z-1 w-36 p-2 shadow-2xl max-h-[80dvh] overflow-y-scroll">
+            <ul tabIndex={-1} className="dropdown-content bg-base-300 rounded-box z-1 w-36 p-2 shadow-2xl max-h-[80dvh] overflow-y-scroll">
               {ThemeOptionsValidator.options.map((item, index) => (
                 <li
                   className="mt-0.5"
@@ -106,7 +105,7 @@ const Navbar: FC = () => {
                   <input
                     type="radio"
                     name="theme-dropdown"
-                    className={cn("theme-controller w-full btn btn-sm btn-block justify-start capitalize rounded-sm", theme === item ? "btn-primary" : "btn-ghost", index === 0 ? "rounded-t-xl" : index === ThemeOptionsValidator.options.length - 1 ? "rounded-b-xl" : "")}
+                    className={cn("theme-controller w-full btn btn-sm btn-block justify-start capitalize rounded-sm", theme === item ? "btn-primary" : "btn-ghost", index === 0 ? "rounded-t-box" : index === ThemeOptionsValidator.options.length - 1 ? "rounded-b-box" : "")}
                     aria-label={item}
                     value={item}
                     checked={theme === item}                // <-- controlled

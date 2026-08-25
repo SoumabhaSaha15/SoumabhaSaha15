@@ -4,7 +4,7 @@ import { TabIndexes, type Project, Projects as ProjectList } from "@/utils";
 
 const ProjectPreview: FC<Project> = (props) => {
   return (
-    <div className="hover:aura text-base-content card bg-base-100 image-full w-full max-h-full min-h-full shadow-sm transition-transform scale-95 hover:scale-100 hover:rotate-3 overflow-auto rounded-2xl duration-1000" >
+    <div className="hover:aura text-accent card bg-base-100 image-full w-full max-h-full min-h-full shadow-sm transition-transform scale-95 hover:scale-100 hover:rotate-3 overflow-auto rounded-2xl duration-1000" >
       <figure>
         <img
           src={props.image}
