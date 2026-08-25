@@ -20,13 +20,13 @@
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0111.gif" width="100%" height="2" />
 <br/><br/>
 
-  ![portfolio](https://komarev.com/ghpvc/?username=soumabhasaha15&label=Profile%20views&color=0e75b6&style=flat)
+ - ![portfolio](https://komarev.com/ghpvc/?username=soumabhasaha15&label=Profile%20views&color=0e75b6&style=flat)
 
-  [![StaticBadge](https://img.shields.io/badge/soumabhasaha1509%40gmail.com-red?logo=gmail&logoColor=white&link=mailto%soumabhasaha1509%40gmail.com)](mailto:soumabhasaha1509@gmail.com)
+ - [![StaticBadge](https://img.shields.io/badge/soumabhasaha1509%40gmail.com-red?logo=gmail&logoColor=white&link=mailto%soumabhasaha1509%40gmail.com)](mailto:soumabhasaha1509@gmail.com)
 
-  [![Static Badge](https://img.shields.io/badge/soumabha_saha-Hashnode-blue)](https://hashnode.com/@soumabhasaha15)
+ - [![Static Badge](https://img.shields.io/badge/soumabha_saha-Hashnode-blue)](https://hashnode.com/@soumabhasaha15)
 
-  [![StaticBadge](https://img.shields.io/badge/soumabha_saha-CV-yellow)](https://docs.google.com/document/d/1FhOHqofPSBkNWFdu_UWocUqYQ7o5H0dk/edit?usp=sharing&ouid=116043366224516834437&rtpof=true&sd=true)
+ - [![StaticBadge](https://img.shields.io/badge/soumabha_saha-CV-yellow)](https://docs.google.com/document/d/1FhOHqofPSBkNWFdu_UWocUqYQ7o5H0dk/edit?usp=sharing&ouid=116043366224516834437&rtpof=true&sd=true)
 
 <div style="display: grid; place-items: center">
   <!-- <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0111.gif" width="100%" height="2" /> -->
@@ -59,45 +59,33 @@
   <br />
 </div>
 
-<!-- <div id="header" align="center">
-  <img 
-    src="https://media.giphy.com/media/hqU2KkjW5bE2v2Z7Q2/giphy.gif" 
-    width="80%"
-    alt="LETS CODE"
-  />
-</div> -->
-
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0111.gif" width="100%" height="2" />
 
 <div align="center">
   <table>
     <tr>
-      <th colspan="4"><h3>Connect with me</h3></th>
+      <th colspan="4"><h3>🔗Connect with me</h3></th>
     </tr>
     <tr>
       <td align="center" width="100">
         <a href="https://x.com/@soumabhasaha15" target="_blank" rel="noreferrer">
           <img src="https://skillicons.dev/icons?i=twitter" width="48" height="48" alt="X (Twitter)" />
         </a>
-        <br>Twitter / X
       </td>
       <td align="center" width="100">
         <a href="https://www.linkedin.com/in/soumabha-saha-663816253/" target="_blank" rel="noreferrer">
           <img src="https://skillicons.dev/icons?i=linkedin" width="48" height="48" alt="LinkedIn" />
         </a>
-        <br>LinkedIn
       </td>
       <td align="center" width="100">
         <a href="https://www.instagram.com/webdude1509/" target="_blank" rel="noreferrer">
           <img src="https://skillicons.dev/icons?i=instagram" width="48" height="48" alt="Instagram" />
         </a>
-        <br>Instagram
       </td>
       <td align="center" width="100">
         <a href="https://www.youtube.com/channel/UCu8pBVEFUd7dW1RQJO4PbuQ" target="_blank" rel="noreferrer">
           <img src="https://www.gstatic.com/youtube/img/branding/favicon/favicon_192x192_v2.png" width="48" height="48" alt="YouTube" />
         </a>
-        <br>YouTube
       </td>
     </tr>
   </table>
@@ -108,38 +96,33 @@
 <div align="center">
   <table>
     <tr>
-      <th colspan="5" align="center"><h3>Languages and Tools</h3></th>
+      <th colspan="5"><h3> 🧑‍💻Languages and Tools</h3></th>
     </tr>
     <tr>
       <td align="center" width="100">
         <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer">
           <img src="https://skillicons.dev/icons?i=c" width="48" height="48" alt="C" />
         </a>
-        <br>C
       </td>
       <td align="center" width="100">
         <a href="https://isocpp.org/" target="_blank" rel="noreferrer">
           <img src="https://skillicons.dev/icons?i=cpp" width="48" height="48" alt="C++" />
         </a>
-        <br>C++
       </td>
       <td align="center" width="100">
         <a href="https://dotnet.microsoft.com/en-us/languages/csharp/" target="_blank" rel="noreferrer">
           <img src="https://skillicons.dev/icons?i=cs" width="48" height="48" alt="C#" />
         </a>
-        <br>C#
       </td>
       <td align="center" width="100">
         <a href="https://www.java.com" target="_blank" rel="noreferrer">
           <img src="https://skillicons.dev/icons?i=java" width="48" height="48" alt="Java" />
         </a>
-        <br>Java
       </td>
       <td align="center" width="100">
         <a href="https://www.python.org" target="_blank" rel="noreferrer">
           <img src="https://skillicons.dev/icons?i=py" width="48" height="48" alt="Python" />
         </a>
-        <br>Python
       </td>
     </tr>
     <tr>
@@ -147,31 +130,26 @@
         <a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer">
           <img src="https://skillicons.dev/icons?i=django" width="48" height="48" alt="Django" />
         </a>
-        <br>Django
       </td>
       <td align="center" width="100">
         <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
           <img src="https://skillicons.dev/icons?i=js" width="48" height="48" alt="JavaScript" />
         </a>
-        <br>JavaScript
       </td>
       <td align="center" width="100">
         <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">
           <img src="https://skillicons.dev/icons?i=ts" width="48" height="48" alt="TypeScript" />
         </a>
-        <br>TypeScript
       </td>
       <td align="center" width="100">
         <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
           <img src="https://skillicons.dev/icons?i=html" width="48" height="48" alt="HTML5" />
         </a>
-        <br>HTML5
       </td>
       <td align="center" width="100">
         <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer">
           <img src="https://skillicons.dev/icons?i=css" width="48" height="48" alt="CSS3" />
         </a>
-        <br>CSS3
       </td>
     </tr>
     <tr>
@@ -179,31 +157,26 @@
         <a href="https://react.dev/" target="_blank" rel="noreferrer">
           <img src="https://skillicons.dev/icons?i=react" width="48" height="48" alt="React" />
         </a>
-        <br>React
       </td>
       <td align="center" width="100">
         <a href="https://mui.com/material-ui/" target="_blank" rel="noreferrer">
           <img src="https://skillicons.dev/icons?i=materialui" width="48" height="48" alt="Material UI" />
         </a>
-        <br>Material UI
       </td>
       <td align="center" width="100">
         <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer">
           <img src="https://skillicons.dev/icons?i=tailwind" width="48" height="48" alt="Tailwind CSS" />
         </a>
-        <br>Tailwind CSS
       </td>
       <td align="center" width="100">
         <a href="https://daisyui.com/" target="_blank" rel="noreferrer">
           <img src="https://img.daisyui.com/images/daisyui/mark.svg" width="48" height="48" alt="daisyUI" />
         </a>
-        <br>daisyUI
       </td>
       <td align="center" width="100">
         <a href="https://tanstack.com/" target="_blank" rel="noreferrer">
           <img src="https://tanstack.com/favicon-dark.svg" width="48" height="48" alt="TanStack" />
         </a>
-        <br>TanStack
       </td>
     </tr>
     <tr>
@@ -211,56 +184,38 @@
         <a href="https://nodejs.org" target="_blank" rel="noreferrer">
           <img src="https://skillicons.dev/icons?i=nodejs" width="48" height="48" alt="Node.js" />
         </a>
-        <br>Node.js
       </td>
       <td align="center" width="100">
         <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer">
           <img src="https://skillicons.dev/icons?i=mongodb" width="48" height="48" alt="MongoDB" />
         </a>
-        <br>MongoDB
       </td>
       <td align="center" width="100">
         <a href="https://www.mysql.com/" target="_blank" rel="noreferrer">
           <img src="https://skillicons.dev/icons?i=mysql" width="48" height="48" alt="MySQL" />
         </a>
-        <br>MySQL
       </td>
       <td align="center" width="100">
         <a href="https://sqlite.org/" target="_blank" rel="noreferrer">
           <img src="https://skillicons.dev/icons?i=sqlite" width="48" height="48" alt="SQLite" />
         </a>
-        <br>SQLite
       </td>
       <td align="center" width="100">
         <a href="https://dotnet.microsoft.com/en-us/apps/aspnet" target="_blank" rel="noreferrer">
           <img src="https://skillicons.dev/icons?i=dotnet" width="48" height="48" alt=".NET" />
         </a>
-        <br>.NET
       </td>
     </tr>
   </table>
 </div>
-
-<!-- <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0111.gif" width="100%" height="2" /> -->
-<!-- <br/> -->
-<!-- <img
-  src="https://github-readme-stats.vercel.app/api/top-langs?username=soumabhasaha15&show_icons=true&locale=en&layout=compact&theme=highcontrast"
-  width="100%"
-  alt="soumabhasaha15"
-/> -->
-<!-- <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0111.gif" width="100%" height="2" /> -->
-<!-- <br/>
-<img
-  src="https://github-readme-stats.vercel.app/api?username=soumabhasaha15&show_icons=true&locale=en&theme=highcontrast"
-  width="100%"
-  alt="soumabhasaha15"
-/> -->
+<br/>
 <br/>
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0111.gif" width="100%" height="2" />
 <br/>
 <br/>
-<img src="https://streak-stats.demolab.com/?user=soumabhasaha15&theme=highcontrast" width="100%" alt="github-streak" />
-
+<img src="https://github-readme-stats-fast.vercel.app/api/streak?username=pranesh-2005&theme=radical" width="100%" alt="github-streak" />
+<br/>
+<br/>
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0111.gif" width="100%" height="2" />
 <br/>
 <br/>
