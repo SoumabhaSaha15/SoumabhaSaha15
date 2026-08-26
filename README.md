@@ -1,15 +1,13 @@
 <!-- markdownlint-disable -->
 
-<!-- <h1 style="display: grid; place-items: center"> -->
-  <a href="https://git.io/typing-svg">
-    <img
-      src="https://readme-typing-svg.herokuapp.com/?lines=Hello,+There!+👋;This+is+Soumabha+Saha;Nice+to+meet+you!&center=true&size=30"
-      width="100%"
-    />
-  </a>
-<!-- </h1> -->
+<a href="https://git.io/typing-svg">
+  <img
+    src="https://readme-typing-svg.herokuapp.com/?lines=Hello,+There!+👋;This+is+Soumabha+Saha;Nice+to+meet+you!&center=true&size=30"
+    width="100%"
+  />
+</a>
 
-<a href="https://daily.dev/soumabhasaha15" style="display: grid; place-items: center">
+<a href="https://daily.dev/soumabhasaha15">
   <img
     src="https://api.daily.dev/devcards/v2/YdxAsDrsAv9S50HsfEsuW.png?type=wide&r=egu"
     width="100%"
@@ -52,11 +50,6 @@
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0111.gif" width="100%" height="2" />
 <br />
 <br />
-<br/>
-<br/>
-<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0111.gif" width="100%" height="2" />
-<br/>
-<br/>
 <img src="https://github-readme-stats-fast.vercel.app/api/streak?username=pranesh-2005&theme=radical" width="100%" alt="github-streak" />
 <br/>
 <br/>
@@ -68,33 +61,37 @@
 <br />
 <div align="center">
   <table>
-    <tr>
-      <th colspan="4">
-        <h1>🔗Connect with me <h1/>
-      </th>
-    </tr>
-    <tr>
-      <td align="center" width="100">
-        <a href="https://x.com/@soumabhasaha15" target="_blank" rel="noreferrer">
-          <img src="https://skillicons.dev/icons?i=twitter" width="64" height="64" alt="X (Twitter)" />
-        </a>
-      </td>
-      <td align="center" width="100">
-        <a href="https://www.linkedin.com/in/soumabha-saha-663816253/" target="_blank" rel="noreferrer">
-          <img src="https://skillicons.dev/icons?i=linkedin" width="64" height="64" alt="LinkedIn" />
-        </a>
-      </td>
-      <td align="center" width="100">
-        <a href="https://www.instagram.com/webdude1509/" target="_blank" rel="noreferrer">
-          <img src="https://skillicons.dev/icons?i=instagram" width="64" height="64" alt="Instagram" />
-        </a>
-      </td>
-      <td align="center" width="100">
-        <a href="https://www.youtube.com/channel/UCu8pBVEFUd7dW1RQJO4PbuQ" target="_blank" rel="noreferrer">
-          <img src="https://www.gstatic.com/youtube/img/branding/favicon/favicon_192x192_v2.png" width="64" height="64" alt="YouTube" />
-        </a>
-      </td>
-    </tr>
+    <thead>
+      <tr>
+        <th colspan="4">
+          <h1>🔗Connect with me </h1>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td align="center" width="100">
+          <a href="https://x.com/@soumabhasaha15" target="_blank" rel="noreferrer">
+            <img src="https://skillicons.dev/icons?i=twitter" width="64" height="64" alt="X (Twitter)" />
+          </a>
+        </td>
+        <td align="center" width="100">
+          <a href="https://www.linkedin.com/in/soumabha-saha-663816253/" target="_blank" rel="noreferrer">
+            <img src="https://skillicons.dev/icons?i=linkedin" width="64" height="64" alt="LinkedIn" />
+          </a>
+        </td>
+        <td align="center" width="100">
+          <a href="https://www.instagram.com/webdude1509/" target="_blank" rel="noreferrer">
+            <img src="https://skillicons.dev/icons?i=instagram" width="64" height="64" alt="Instagram" />
+          </a>
+        </td>
+        <td align="center" width="100">
+          <a href="https://www.youtube.com/channel/UCu8pBVEFUd7dW1RQJO4PbuQ" target="_blank" rel="noreferrer">
+            <img src="https://www.gstatic.com/youtube/img/branding/favicon/favicon_192x192_v2.png" width="64" height="64" alt="YouTube" />
+          </a>
+        </td>
+      </tr>
+    </tbody>
   </table>
 </div>
 <br/>
@@ -104,116 +101,120 @@
 <br/>
 <div align="center">
   <table>
-    <tr>
-      <th colspan="5"><h1>🧑‍💻Languages and Tools</h1></th>
-    </tr>
-    <tr>
-      <td align="center" width="100">
-        <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer">
-          <img src="https://skillicons.dev/icons?i=c" width="64" height="64" alt="C" />
-        </a>
-      </td>
-      <td align="center" width="100">
-        <a href="https://isocpp.org/" target="_blank" rel="noreferrer">
-          <img src="https://skillicons.dev/icons?i=cpp" width="64" height="64" alt="C++" />
-        </a>
-      </td>
-      <td align="center" width="100">
-        <a href="https://dotnet.microsoft.com/en-us/languages/csharp/" target="_blank" rel="noreferrer">
-          <img src="https://skillicons.dev/icons?i=cs" width="64" height="64" alt="C#" />
-        </a>
-      </td>
-      <td align="center" width="100">
-        <a href="https://www.java.com" target="_blank" rel="noreferrer">
-          <img src="https://skillicons.dev/icons?i=java" width="64" height="64" alt="Java" />
-        </a>
-      </td>
-      <td align="center" width="100">
-        <a href="https://www.python.org" target="_blank" rel="noreferrer">
-          <img src="https://skillicons.dev/icons?i=py" width="64" height="64" alt="Python" />
-        </a>
-      </td>
-    </tr>
-    <tr>
-      <td align="center" width="100">
-        <a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer">
-          <img src="https://skillicons.dev/icons?i=django" width="64" height="64" alt="Django" />
-        </a>
-      </td>
-      <td align="center" width="100">
-        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
-          <img src="https://skillicons.dev/icons?i=js" width="64" height="64" alt="JavaScript" />
-        </a>
-      </td>
-      <td align="center" width="100">
-        <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">
-          <img src="https://skillicons.dev/icons?i=ts" width="64" height="64" alt="TypeScript" />
-        </a>
-      </td>
-      <td align="center" width="100">
-        <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
-          <img src="https://skillicons.dev/icons?i=html" width="64" height="64" alt="HTML5" />
-        </a>
-      </td>
-      <td align="center" width="100">
-        <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer">
-          <img src="https://skillicons.dev/icons?i=css" width="64" height="64" alt="CSS3" />
-        </a>
-      </td>
-    </tr>
-    <tr>
-      <td align="center" width="100">
-        <a href="https://react.dev/" target="_blank" rel="noreferrer">
-          <img src="https://skillicons.dev/icons?i=react" width="64" height="64" alt="React" />
-        </a>
-      </td>
-      <td align="center" width="100">
-        <a href="https://mui.com/material-ui/" target="_blank" rel="noreferrer">
-          <img src="https://skillicons.dev/icons?i=materialui" width="64" height="64" alt="Material UI" />
-        </a>
-      </td>
-      <td align="center" width="100">
-        <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer">
-          <img src="https://skillicons.dev/icons?i=tailwind" width="64" height="64" alt="Tailwind CSS" />
-        </a>
-      </td>
-      <td align="center" width="100">
-        <a href="https://daisyui.com/" target="_blank" rel="noreferrer">
-          <img src="https://img.daisyui.com/images/daisyui/mark.svg" width="64" height="64" alt="daisyUI" />
-        </a>
-      </td>
-      <td align="center" width="100">
-        <a href="https://tanstack.com/" target="_blank" rel="noreferrer">
-          <img src="https://tanstack.com/favicon-dark.svg" width="64" height="64" alt="TanStack" />
-        </a>
-      </td>
-    </tr>
-    <tr>
-      <td align="center" width="100">
-        <a href="https://nodejs.org" target="_blank" rel="noreferrer">
-          <img src="https://skillicons.dev/icons?i=nodejs" width="64" height="64" alt="Node.js" />
-        </a>
-      </td>
-      <td align="center" width="100">
-        <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer">
-          <img src="https://skillicons.dev/icons?i=mongodb" width="64" height="64" alt="MongoDB" />
-        </a>
-      </td>
-      <td align="center" width="100">
-        <a href="https://www.mysql.com/" target="_blank" rel="noreferrer">
-          <img src="https://skillicons.dev/icons?i=mysql" width="64" height="64" alt="MySQL" />
-        </a>
-      </td>
-      <td align="center" width="100">
-        <a href="https://sqlite.org/" target="_blank" rel="noreferrer">
-          <img src="https://skillicons.dev/icons?i=sqlite" width="64" height="64" alt="SQLite" />
-        </a>
-      </td>
-      <td align="center" width="100">
-        <a href="https://dotnet.microsoft.com/en-us/apps/aspnet" target="_blank" rel="noreferrer">
-          <img src="https://skillicons.dev/icons?i=dotnet" width="64" height="64" alt=".NET" />
-        </a>
-      </td>
-    </tr>
+    <thead>
+      <tr>
+        <th colspan="5"><h1>🧑‍💻Languages and Tools</h1></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td align="center" width="100">
+          <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer">
+            <img src="https://skillicons.dev/icons?i=c" width="64" height="64" alt="C" />
+          </a>
+        </td>
+        <td align="center" width="100">
+          <a href="https://isocpp.org/" target="_blank" rel="noreferrer">
+            <img src="https://skillicons.dev/icons?i=cpp" width="64" height="64" alt="C++" />
+          </a>
+        </td>
+        <td align="center" width="100">
+          <a href="https://dotnet.microsoft.com/en-us/languages/csharp/" target="_blank" rel="noreferrer">
+            <img src="https://skillicons.dev/icons?i=cs" width="64" height="64" alt="C#" />
+          </a>
+        </td>
+        <td align="center" width="100">
+          <a href="https://www.java.com" target="_blank" rel="noreferrer">
+            <img src="https://skillicons.dev/icons?i=java" width="64" height="64" alt="Java" />
+          </a>
+        </td>
+        <td align="center" width="100">
+          <a href="https://www.python.org" target="_blank" rel="noreferrer">
+            <img src="https://skillicons.dev/icons?i=py" width="64" height="64" alt="Python" />
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td align="center" width="100">
+          <a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer">
+            <img src="https://skillicons.dev/icons?i=django" width="64" height="64" alt="Django" />
+          </a>
+        </td>
+        <td align="center" width="100">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
+            <img src="https://skillicons.dev/icons?i=js" width="64" height="64" alt="JavaScript" />
+          </a>
+        </td>
+        <td align="center" width="100">
+          <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">
+            <img src="https://skillicons.dev/icons?i=ts" width="64" height="64" alt="TypeScript" />
+          </a>
+        </td>
+        <td align="center" width="100">
+          <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
+            <img src="https://skillicons.dev/icons?i=html" width="64" height="64" alt="HTML5" />
+          </a>
+        </td>
+        <td align="center" width="100">
+          <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer">
+            <img src="https://skillicons.dev/icons?i=css" width="64" height="64" alt="CSS3" />
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td align="center" width="100">
+          <a href="https://react.dev/" target="_blank" rel="noreferrer">
+            <img src="https://skillicons.dev/icons?i=react" width="64" height="64" alt="React" />
+          </a>
+        </td>
+        <td align="center" width="100">
+          <a href="https://mui.com/material-ui/" target="_blank" rel="noreferrer">
+            <img src="https://skillicons.dev/icons?i=materialui" width="64" height="64" alt="Material UI" />
+          </a>
+        </td>
+        <td align="center" width="100">
+          <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer">
+            <img src="https://skillicons.dev/icons?i=tailwind" width="64" height="64" alt="Tailwind CSS" />
+          </a>
+        </td>
+        <td align="center" width="100">
+          <a href="https://daisyui.com/" target="_blank" rel="noreferrer">
+            <img src="https://img.daisyui.com/images/daisyui/mark.svg" width="64" height="64" alt="daisyUI" />
+          </a>
+        </td>
+        <td align="center" width="100">
+          <a href="https://tanstack.com/" target="_blank" rel="noreferrer">
+            <img src="https://tanstack.com/favicon-dark.svg" width="64" height="64" alt="TanStack" />
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td align="center" width="100">
+          <a href="https://nodejs.org" target="_blank" rel="noreferrer">
+            <img src="https://skillicons.dev/icons?i=nodejs" width="64" height="64" alt="Node.js" />
+          </a>
+        </td>
+        <td align="center" width="100">
+          <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer">
+            <img src="https://skillicons.dev/icons?i=mongodb" width="64" height="64" alt="MongoDB" />
+          </a>
+        </td>
+        <td align="center" width="100">
+          <a href="https://www.mysql.com/" target="_blank" rel="noreferrer">
+            <img src="https://skillicons.dev/icons?i=mysql" width="64" height="64" alt="MySQL" />
+          </a>
+        </td>
+        <td align="center" width="100">
+          <a href="https://sqlite.org/" target="_blank" rel="noreferrer">
+            <img src="https://skillicons.dev/icons?i=sqlite" width="64" height="64" alt="SQLite" />
+          </a>
+        </td>
+        <td align="center" width="100">
+          <a href="https://dotnet.microsoft.com/en-us/apps/aspnet" target="_blank" rel="noreferrer">
+            <img src="https://skillicons.dev/icons?i=dotnet" width="64" height="64" alt=".NET" />
+          </a>
+        </td>
+      </tr>
+    </tbody>
   </table>
 </div>
