@@ -22,7 +22,6 @@ const App: FC = () => {
         <Certifications />
         <Contacts />
       </div>
-      {/* <div className="hover:aura text-base-content rounded-full inline-block"> */}
       <div className="fab">
         <button
           type="button"
@@ -60,7 +59,6 @@ const App: FC = () => {
           </a>
         ))}
       </div>
-      {/* </div> */}
     </>
   )
 }

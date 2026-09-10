@@ -37,7 +37,7 @@ const Contacts: FC = () => {
 
   return (
     <>
-      <div className="hero min-h-dvh scroll-smooth transition-all snap-y snap-mandatory" id={TabIndexes[3]}>
+      <div className="hero min-h-dvh scroll-smooth snap-y snap-mandatory" id={TabIndexes[3]}>
         <div className="hero min-h-screen px-4 py-8">
           <div className="hero-content flex-col lg:flex-row-reverse w-full max-w-6xl gap-8">
             <div className="text-center lg:text-left lg:flex-1">
@@ -99,8 +99,7 @@ const Contacts: FC = () => {
                       disabled={isSubmitting}
                     />
                   </div>
-
-                  <div className="hover:aura text-accent rounded-full inline-block duration-2000">
+                  <div className="hover:aura text-accent rounded-full inline-block">
                     <button
                       ref={ripple}
                       type="submit"

@@ -6,6 +6,49 @@ import { clsx, type ClassValue } from "clsx";
 import { SiGmail, SiLinktree } from "react-icons/si";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
+/*
+Fix exactly one React Doctor rule in portfolio:
+
+WARN Performance: transition: all animates everything (react-doctor/no-transition-all, ×5)
+Your users see janky animation because `transition-all` animates every property that changes, including expensive layout ones and instant ones like focus rings. Name the properties: `transition-colors`, `transition-opacity`, or `transition-transform`.
+
+Suggested fix: List the specific properties: `transition: "opacity 200ms, transform 200ms"`. In Tailwind, use `transition-colors`, `transition-opacity`, or `transition-transform`
+
+Curl with no cache & follow the canonical fix and false positive check recipe before fixing: https://react.doctor/docs/rules/react-doctor/no-transition-all
+
+Scope:
+- Fix only react-doctor/no-transition-all.
+- Fix the root cause; do not suppress, disable, or silence the rule.
+- Keep unrelated refactors out of this pass.
+
+Affected sites:
+- src/components/Contacts.tsx:40
+- src/components/Contacts.tsx:103
+- src/components/Home.tsx:12
+- src/components/Home.tsx:21
+- src/components/Home.tsx:31
+
+Learn more: https://react.doctor/docs/rules/react-doctor/no-transition-all
+
+Verify with `npx react-doctor@latest --verbose` and confirm react-doctor/no-transition-all is gone before moving on.
+Fix exactly one React Doctor rule in portfolio:
+
+WARN Security: react-doctor/require-pnpm-hardening (react-doctor/require-pnpm-hardening, ×2)
+pnpm-workspace.yaml is missing `minimumReleaseAge` — newly published versions can ship malware that gets caught and unpublished within hours
+
+Suggested fix: Add `minimumReleaseAge: 10080` (7 days) to pnpm-workspace.yaml to delay installs until releases have had time to be vetted
+
+Scope:
+- Fix only react-doctor/require-pnpm-hardening.
+- Fix the root cause; do not suppress, disable, or silence the rule.
+- Keep unrelated refactors out of this pass.
+
+Affected sites:
+- pnpm-workspace.yaml
+
+Verify with `npx react-doctor@latest --verbose` and confirm react-doctor/require-pnpm-hardening is gone before moving on.
+ */
+
 export const TabIndexes: Array<string> = ["Home", "Projects", "Certifications", "Contacts"];
 
 export type Certificate = {
@@ -141,6 +184,13 @@ export const Projects: Array<Project> = [
     url: "https://github.com/SoumabhaSaha15/EnhancedDirectoryView",
     skills: ["vite-plugin-web-extension", "Tailwind", "Daisy ui", "sharp-cli"],
     description: "Tailwind + DaisyUI based project that overrides the native styles of existing browsers folder view",
+    new: true,
+  }, {
+    name: "SiteBlocker",
+    image: "./projects/site-blocker.png",
+    url: "https://github.com/SoumabhaSaha15/SiteBlocker",
+    skills: ["vite-plugin-web-extension", "React", "Tailwind", "Material ui",],
+    description: "Easy way to block distracting websites to prevent access while you work",
     new: true,
   }
 ];
