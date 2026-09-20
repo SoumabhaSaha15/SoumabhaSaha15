@@ -2,7 +2,7 @@ import { type FC } from "react";
 import { TabIndexes } from "@/utils";
 import { HiDownload } from "react-icons/hi";
 import { useRipple } from "use-ripple-hook";
-
+const DOCX = "https://docs.google.com/document/d/1knazvjDgpXM5M4Ld3-EjeDxfAwL-j6V7/edit?usp=sharing&ouid=116043366224516834437&rtpof=true&sd=true"
 const Home: FC = () => {
   const [ripple, event] = useRipple({ duration: 200, timingFunction: 'ease-in-out', color: "currentColor" });
   return (
@@ -28,21 +28,14 @@ const Home: FC = () => {
               Results-driven CSE graduate with hands-on experience in full-stack web development, modern frontend frameworks, and robust backend architectures. Proficient in React 19, TypeScript, Django REST Framework, Node.js, and .NET Core. Demonstrates a strong foundation in software design, database management, and asynchronous state orchestration. Experienced in developing scalable, decoupled web applications and enterprise services.
             </p>
             <div className="hover:aura text-accent rounded-full inline-block">
-              <button
-                type="button"
+              <a
+                href={DOCX}
                 className="btn btn-primary hover:btn-secondary rounded-full"
                 ref={ripple}
                 onPointerDown={event}
-                onClick={() => {
-                  const link = document.createElement('a');
-                  link.href = 'Resume.docx';
-                  document.body.appendChild(link);
-                  link.click();
-                  document.body.removeChild(link);
-                }}
               >
                 <HiDownload size={20} /> Get resume
-              </button>
+              </a>
             </div>
 
           </div>

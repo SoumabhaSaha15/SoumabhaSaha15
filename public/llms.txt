@@ -2,15 +2,13 @@
 
 **Software Engineer | Full-Stack Developer**  
 📍 Kolkata, West Bengal, India |  
-📱 \+91 74395 69806 |   
+📱 +91 74395 69806 |   
 ✉️ [soumabhasaha1509@gmail.com](mailto:soumabhasaha1509@gmail.com)  
 🌐 [Portfolio](https://soumabha-saha15.vercel.app/) | 💻 [GitHub](https://github.com/soumabhasaha15) | 👔 [LinkedIn](https://www.linkedin.com/in/soumabha-saha-663816253/)
 
 ### **Professional Summary**
 
 Results-driven Computer Science Engineering graduate with hands-on experience in full-stack web development, modern frontend frameworks, and robust backend architectures. Proficient in React 19, TypeScript, Django REST Framework, Node.js, and .NET Core. Demonstrates a strong foundation in software design, database management, and asynchronous state orchestration. Experienced in developing scalable, decoupled web applications and enterprise services.
-
-### 
 
 ### **Technical Skills**
 
@@ -20,29 +18,115 @@ Results-driven Computer Science Engineering graduate with hands-on experience in
 * **Databases & ORMs:** MongoDB, MS SQL Server, PostgreSQL, MySQL, SQLite, Drizzle ORM, Mongoose  
 * **Tools & Platforms:** Git, GitHub, RESTful APIs, Cloudinary, Uvicorn, WhiteNoise
 
-### 
-
 ### **Work Experience**
 
 #### **Cognizant Technology Solutions — *Full-Stack Intern / Programmer Analyst Trainee \[DOTNET & SITECORE\]***
 
-*March 2026 – June 2026 | Siruseri, Tamil Nadu* [(Source)](https://www.linkedin.com/posts/soumabha-saha-663816253_i-am-excited-to-share-that-i-have-officially-share-7477199471093870592-GWIj)
+*March 2026 - June 2026 | Siruseri, Tamil Nadu* [(Source)](https://www.linkedin.com/posts/soumabha-saha-663816253_i-am-excited-to-share-that-i-have-officially-share-7477199471093870592-GWIj)
 
 * Completed an intensive 3-month engineering internship program focused on full-stack web application development and enterprise IT solutions.  
 * Designed and implemented modular web applications following software design principles, hands-on project deliverables, and rigorous code reviews.
+--- 
 
 ### **Key Projects**
 
 #### **CityLibrary — Library Management System**
 
-*Django 6, React 19, TypeScript, TanStack Suite, Tailwind CSS* | [GitHub Repository](https://github.com/SoumabhaSaha15/CityLibrary)
+**CityLibrary** is a headless, full-stack digital library management system: a Django REST API serving a React single-page application. The backend owns all business logic, validation, and persistence (Authors, Books, Genres, Book Copies, Borrow transactions, User Profiles), while the frontend is a purely state-synchronized SPA that consumes it over HTTP with session-cookie authentication.
+  
+- [GitHub Repository](https://github.com/SoumabhaSaha15/CityLibrary)
 
-* Engineered a full-stack library management platform using a decoupled architecture powered by Django 6 and React 19\.  
-* Built high-concurrency RESTful endpoints via Django REST Framework with session-based authentication, served via Uvicorn and WhiteNoise.  
-* Implemented file-based, type-safe client-side routing with TanStack React Router and server-state orchestration using TanStack React Query v5.  
-* Enforced strict runtime payload validation using Zod and created an administrative interface utilizing Django Unfold.
+##### Core Frameworks
 
-#### 
+- **Django (v6.1, Python 3.14)** — The application backbone. Provides the ORM and migration system behind the library's domain models, session-based user authentication, the admin site used for catalog management, and the general request/response plumbing.
+
+- **Django REST Framework** — Turns the Django models into a JSON API. Its serializers, class-based views, and permission classes form the `/api` surface the React app talks to; global config sets page-number pagination (10 records/page) and SessionAuthentication with CSRF protection.
+
+- **React (v19) + TypeScript (v7)** — The frontend runtime. All views (auth, book/author catalogs, borrow workflows, user profile with QR badge) are typed React components; the React Compiler (via Babel) handles automatic memoization instead of manual `useMemo`/`useCallback`.
+
+- **Vite (v8, Rolldown-based)** — Dev server and production bundler for the SPA, with the TanStack router plugin for file-based route generation (`src/routes/` → typed route tree).
+
+- **Tailwind CSS 4 + daisyUI** — Styling layer: Tailwind utilities plus daisyUI's component classes, enabling the adaptive theming (light/dark via a theme store) without writing custom CSS.
+
+##### Supporting Libraries — Backend
+
+- **drf-spectacular** — Generates the OpenAPI schema and Swagger UI at `/api/docs/`, making the API self-documenting and contract-testable.
+- **django-filter** — The default filter backend for the REST API; powers the dynamic book/author filtering (ranges, substring matches, cross-relation lookups) via custom FilterSet classes.
+- **django-cors-headers** — Allows the Vite dev origin to call the API during development.
+- **django-unfold** (+ `unfold.contrib.import_export`) — Replaces the stock admin with a modern Tailwind-styled admin theme.
+- **django-import-export** — Bulk import/export of catalog records through the admin.
+- **Cloudinary + Pillow** — Cloudinary stores and delivers book covers and author images; Pillow handles image processing on upload.
+- **django-environ** — 12-factor environment-variable configuration, keeping Cloudinary/secret keys out of the codebase.
+- **WhiteNoise** — Serves static files (and, with the commented-in catch-all route, the built SPA) directly from Django in production, avoiding a dedicated web server.
+- **uvicorn** — ASGI server for deployment; **uv** manages the Python environment via `pyproject.toml`.
+- **django-extensions + pydot/pygraphviz** — Dev-time tooling to auto-generate the ER diagram (`graph_models`) from live models.
+
+##### Supporting Libraries — Frontend
+
+- **TanStack Router** — Type-safe file-based routing with route preloading on intent, scroll restoration, and view transitions.
+- **TanStack Query** (+ persist-client, async-storage-persister) — Server-state management: caching, deduplication, and a 15-minute staleTime, with query caches persisted to `localStorage` for offline-friendly reloads.
+- **TanStack Store** — Lightweight client-state stores (auth session, theme) replacing a heavier state library like Redux.
+- **TanStack Form** — Form state and validation for login, signup, and borrow flows, driven by shared Zod schemas.
+- **TanStack Pacer & react-hotkeys** — Debounced/rate-limited inputs and app keyboard shortcuts.
+- **Zod** — Single source of truth for types and runtime validation: the same schemas validate forms and are injected into Axios to validate API responses.
+- **Axios + js-cookie** — HTTP client (`baseURL: /api`, `withCredentials`) with a custom recursive FormData serializer for multipart uploads; js-cookie manages the CSRF/session cookies.
+- **Zag.js** — Headless, state-machine-driven component logic, used here for pagination and QR-code generation.
+- **react-icons, clsx + tailwind-merge, use-ripple-hook, react-intersection-observer** — Icon set, conditional class merging, material-style button ripples, and viewport-visibility detection respectively.
+- **ESLint + typescript-eslint** — Linting for the TS/React codebase.
+
+One quick verification of where the less-obvious packages are actually used before I write this up:The sandbox restarted and wiped the extracted copy — re-fetching quickly.Here's the project description, based on the code (`.md` files ignored):
+
+---
+
+#### SiteBlocker
+
+**SiteBlocker is a cross-browser extension (Manifest V3) that blocks access to distracting or harmful websites.** A background service worker intercepts tab navigation and checks each URL against a user-managed blacklist and a set of keyword-based rules; matched sites are redirected to an internal guard page or a user-specified URL. All configuration — blocked sites, rules, redirects, and an optional password lock — persists in `browser.storage.local` and is managed through a React-based settings UI.
+
+- [GitHub Repository](https://github.com/SoumabhaSaha15/SiteBlocker)
+
+##### Core Frameworks
+
+- **React 19 + ReactDOM** — powers the extension's options/settings page. Each feature (blocked sites, rules, redirect, password, sync) is its own component under `src/pages/apps/`, switched by a central `App.tsx` shell.
+- **Vite (+ @vitejs/plugin-react)** — the build system, providing fast dev server, HMR, and optimized production bundles.
+- **@crxjs/vite-plugin** — the bridge between Vite and the extension world: it processes `manifest.json`, wires the MV3 service worker (`background.ts`), HTML pages, and icons into a loadable extension bundle without manual config.
+- **TypeScript** — used across the entire codebase for type-safe extension APIs, storage models, and the evaluator logic.
+
+##### Supporting Libraries
+
+- **webextension-polyfill** — abstracts the `browser.*` vs `chrome.*` API differences, so the same code runs on Chrome, Firefox, and Edge.
+- **Zod** — the validation backbone. Schemas define what "a valid site", "a valid rule", and "a valid password change" look like; every write to storage is parsed through them, keeping persisted data trustworthy across sessions.
+- **react-hook-form + @hookform/resolvers** — handles the settings forms (password setup/reset, rule editing) with minimal re-renders, wired directly to the Zod schemas for inline validation errors.
+- **MUI (@mui/material, @mui/lab, @mui/icons-material)** — the component library behind the UI: drawer navigation, dialogs, lists, form controls, theming.
+- **Emotion (@emotion/react, @emotion/styled)** — MUI's CSS-in-JS styling engine, enabling the custom theme defined in `src/config/`.
+- **Tailwind CSS 4** — layered alongside MUI for utility-class layout tweaks.
+- **notistack** — toast/snackbar feedback for user actions (e.g. "Password updated", "Site blocked").
+- **@uiw/react-json-view** — renders the raw synced-data JSON on the Sync page, used for the export/backup workflow.
+- **sharp-cli** (dev) — generates the full set of extension icons (16–128px PNGs) from the SVG source.
+- **pnpm workspaces** — lightweight monorepo/package management for the extension build.
+
+---
+
+#### EnhancedDirectoryView
+
+**What it is:** A Manifest V3 browser extension (TypeScript) that replaces the browser's plain, unstyled `file://` directory listing page with a modern, themed file-explorer view. A content script matches `file:///*` pages, detects the native listing (a `#header` element), tags the document root, injects custom file/folder SVG icons, and re-runs on navigation (`popstate`). All visual enhancement lives in CSS keyed to that root id — including automatic light/dark theming. The codebase is deliberately minimal: one ~19-line script (`main.ts`) and one stylesheet (`index.css`).
+
+- [GitHub Repository](https://github.com/SoumabhaSaha15/SiteBlocker)
+
+### Core frameworks
+
+- **Vite** (`vite`) — the build tool and dev server. Chosen because browser-extension content scripts need bundled, optimised JS/CSS output, and Vite provides near-instant dev builds with a minimal config. It compiles the TypeScript and Tailwind CSS down to the artifacts declared in `manifest.json`.
+- **Tailwind CSS v4** (`tailwindcss` + `@tailwindcss/vite`) — the styling engine. Its Vite plugin compiles utility classes directly in the build pipeline. The entire restyle of the directory table (striped rows, hover states, truncation, icon sizing via CSS variables, responsive widths) is written as `@apply` utilities inside `index.css` — no custom CSS framework of its own.
+
+### Supporting libraries
+
+- **vite-plugin-web-extension** — wires Vite into extension development: it reads `manifest.json`, bundles the content script/CSS entries, copies `web_accessible_resources`, and produces a loadable `dist/` build. Without it, Vite has no notion of an extension manifest.
+- **daisyUI v5** (`daisyui`) — a TailCSS component/theme layer, imported via Tailwind v4's `@plugin` directive. It supplies the semantic design tokens used throughout (`bg-base-100`, `text-accent-content`, `link-info`, `table`, `rounded-box`) plus its light/dark themes, so dark mode works automatically via `prefers-color-scheme` with almost zero effort.
+- **webextension-polyfill** + **@types/webextension-polyfill** — a thin compatibility layer over the extension APIs (the project's only runtime dependency), making `browser.runtime.getURL()` work consistently across Chrome/Firefox; the types package gives full type safety for it.
+- **TypeScript** — strict-mode type checking (`tsc --noEmit`) over the source, ensuring correctness at build time while Vite handles emission.
+- **sharp-cli** — a build-time utility used by the `gen-icons` scripts to rasterise the `folder.svg` source into the five PNG icon sizes (16–128 px) the manifest requires.
+
+
+---
 
 #### **KYC Banking Service**
 
@@ -52,8 +136,7 @@ Results-driven Computer Science Engineering graduate with hands-on experience in
 * Designed backend REST APIs utilizing ASP.NET Core, Entity Framework Core, MS SQL Server, and Fluent Validation for secure transaction handling.  
 * Built a responsive frontend using React, TanStack Query/Form, Material-UI, and Tailwind CSS.
 
-#### 
-
+---
 #### **AutoBilling Application**
 
 *MERN Stack (MongoDB, Express, React, Node.js), Tailwind CSS* | [GitHub Repository](https://github.com/SoumabhaSaha15/AutoBilling)
@@ -61,15 +144,61 @@ Results-driven Computer Science Engineering graduate with hands-on experience in
 * Built an automated billing and invoice management system utilizing Express, Node.js, and MongoDB with Mongoose ORM.  
 * Integrated CSRF-sync for transaction security, Cloudinary for document assets, and React Hook Form with Zod schema validation.
 
-#### 
+---
 
-#### **Daisy Weather Web**
+#### DaisyWeatherWebDude — Project Description
 
-*React, TanStack Query, OpenWeather API, Tailwind CSS* | [Live Demo](https://hero-weather-web-dude.vercel.app/) | [GitHub Repository](https://github.com/SoumabhaSaha15/DaisyWeatherWebDude)
+**What it is:** A React 19 Progressive Web App (PWA) that displays current weather and multi-day forecasts from the OpenWeatherMap API, either for the user's geolocated position or for a searched city (with a ⌘/Ctrl+K search modal and recently cached city suggestions). It's a single-page client app — no router — organized into React contexts (theme, modal, toast, geolocation), TanStack Query data hooks, and Zod validators. Data is cached to `localStorage` for offline use, and the whole UI is installable as a PWA with a service worker.
+- [Live Demo](https://hero-weather-web-dude.vercel.app/) | [GitHub Repository](https://github.com/SoumabhaSaha15/DaisyWeatherWebDude)
+##### Core frameworks
 
-* Developed a weather application integrating OpenWeather REST APIs for real-time weather metrics and multi-day forecasting.
+- **React 19 + ReactDOM** — the UI framework; the component tree is composed of context providers, custom hooks, and typed function components (`FC`), using modern React (StrictMode, `createRoot`, hooks throughout).
+- **Vite** — build tool and dev server; also used to proxy `/api` and `/icon` requests to OpenWeatherMap during development so API keys stay in env vars and CORS is avoided.
+- **Tailwind CSS v4 + daisyUI 5** — the entire styling system. `@tailwindcss/vite` compiles CSS-first utilities, while daisyUI supplies the component classes and light/dark themes used everywhere (`btn`, `modal`, `kbd`, `bg-base-100`, `dropdown`, skeleton loaders). Dark mode follows the OS preference automatically.
+- **TanStack Query (React Query) v5** — the server-state engine. All weather/forecast fetching goes through `useQuery` hooks with tuned `staleTime`/`gcTime`, giving deduplication, caching, retries, and the "recently searched cities" feature (read straight from the query cache). Paired with `react-query-persist-client` + `query-async-storage-persister`, the query cache is persisted to `localStorage` so the app works offline.
 
-### 
+##### Supporting libraries
+
+- **Axios** — HTTP client, wrapped in a shared instance (`base.ts`) whose response interceptor runs Zod validation on every reply before it reaches the app.
+- **Zod v4** — runtime schema validation for both request parameters and API responses (weather, forecast, query schemas); it also transforms raw API values (e.g., icon codes into full icon URLs) and derives the app's TypeScript types via `z.infer`.
+- **react-error-boundary** — top-level error boundary that renders a friendly error page instead of a blank screen when rendering fails.
+- **react-icons** — icon set (search, close, etc.) as tree-shakeable React components.
+- **clsx + tailwind-merge** — combined into a `cn()` helper for safe, conflict-free conditional class merging.
+- **use-ripple-hook** — Material-style ripple effect on buttons for touch/visual polish.
+- **@tanstack/react-hotkeys** — declarative keyboard shortcut handling (the ⌘/Ctrl+K search).
+- **vite-plugin-pwa + workbox-build / workbox-window** — turns the app into an installable PWA: generates the web manifest, precaches app assets, applies runtime caching (CacheFirst for images, NetworkOnly for API calls), and offers an update prompt.
+- **@vite-pwa/assets-generator** — generates the full set of PWA icon sizes from `logo.svg`.
+
+---
+
+#### VRST — Project Description
+
+**What it is:** A minimal, opinionated React starter template — the name maps to its stack: **V**ite + **R**eact + **S**hADCN + **T**anStack. It's meant to be cloned with `pnpm dlx degit SoumabhaSaha15/VRST app`; the single landing page (`routes/index.tsx`) showcases the preconfigured stack, and the rest of the repo is the wired-up foundation an app is built on: a file-based router with a generated route tree, a persisted query client, theme switching, and a set of shadcn-style UI component
+
+- [Github Repository](https://github.com/SoumabhaSaha15/VRST)
+
+##### Core frameworks
+
+- **React 19 + ReactDOM** — the UI runtime. Notably, the build enables **React Compiler** (`babel-plugin-react-compiler` via Babel), which auto-memoizes components so the code doesn't need manual `useMemo`/`useCallback` for render performance.
+- **Vite 8** — build tool and dev server, with a Rolldown-based Babel plugin chain purely to run the React Compiler preset.
+- **TanStack Router** (`@tanstack/react-router` + `@tanstack/router-plugin`) — fully type-safe, file-based routing. The Vite plugin generates `routeTree.gen.ts`, enables auto code-splitting per route, and the router is configured with intent-based preloading, view transitions, and scroll restoration out of the box.
+- **TanStack Query** (`@tanstack/react-query` + `react-query-persist-client` + `query-async-storage-persister`) — server-state layer, pre-wired in `main.tsx`: a `QueryClient` with a 15-minute default stale time, persisted to `localStorage`, and shared with the router context so loaders and components use one cache.
+- **Tailwind CSS v4 + shadcn/ui** — the design system. Tailwind compiles through `@tailwindcss/vite`; `shadcn` (v4, with its `tailwind.css` and design-token CSS variables) supplies the component foundation, and the repo's own `components/ui/*` (button, badge, card, separator) are pre-generated shadcn components.
+
+##### Supporting libraries
+
+- **@base-ui/react** — the unstyled headless primitive library that the shadcn components are built on (e.g., `Button` wraps Base UI's `ButtonPrimitive`); it provides the accessible, unstyled behavior while Tailwind provides the looks.
+- **class-variance-authority (CVA)** — defines variant/size APIs for the UI components (`variant="outline"`, `size="sm"`, etc.).
+- **cn** — tiny class-merge utility used by all components to combine conditional classes safely.
+- **react-icons** and **@hugeicons/react + core-free-icons** — icon sets; Hugeicons is the configured icon library for the shadcn registry, react-icons is used on the landing page.
+- **@fontsource-variable/figtree** — self-hosted variable font, set as the app's default sans font.
+- **tw-animate-css** — Tailwind animation utilities for enter/exit and micro-interactions.
+- **axios** and **zod** — declared dependencies (the HTTP client and schema validator for future API work) but not yet used in the template's code — part of the ready-made data-fetching setup alongside the persisted query client.
+- **ThemeProvider** (`theme-provider.tsx`) — a small in-repo dark/light theme context toggling the `.dark` class.
+
+
+
+--- 
 
 ### **Education**
 
@@ -81,14 +210,13 @@ Results-driven Computer Science Engineering graduate with hands-on experience in
 * **Secondary (10th)**  
   *Laban Hrad Vidyapith (WBBSE)* | *2020* | **Percentage:** 87.85%
 
-### 
-
 ### **Certifications**
 
-* **Soft Computing Techniques** — [NPTEL Certification](https://www.dropbox.com/scl/fi/wipw0b0t5g9hh7y5cb4fr/Soft-Computing-Techniques.pdf?e=1)  
-* **C++ Programming** — [Coursera Certification](https://www.dropbox.com/scl/fi/8zc946rxiupkz3zogyklc/cpp.pdf?e=1)  
-* **Django Web Framework** — [Online Certification](https://www.dropbox.com/scl/fi/hg0dntu57npeauue5rjtf/django.pdf?e=1)  
-* **Approximation Algorithms** — [Coursera Certification](https://www.dropbox.com/scl/fi/eh9mifrpbupwmrgkdl28y/approximation_algorithm.pdf?e=1)  
-* **SQLite certification** — [Coddy.tech](https://www.dropbox.com/scl/fi/5urgr754r94wx4ht3k8pz/MMO5bM-sqlite-oRigJZ.pdf?e=1)  
-* **MERN Stack Development** — [Euphoria GenX](https://www.dropbox.com/scl/fi/9u3i7ulqm1v4f6ux6vu3t/MERN.pdf?e=1)
-
+* **[NPTEL Certification : Soft Computing Techniques ](https://www.dropbox.com/scl/fi/wipw0b0t5g9hh7y5cb4fr/Soft-Computing-Techniques.pdf)**
+* **[Coursera Certification : DSA in C++](https://www.dropbox.com/scl/fi/8zc946rxiupkz3zogyklc/cpp.pdf)**
+* **[Ardent Certification : Python with Django](https://www.dropbox.com/scl/fi/hg0dntu57npeauue5rjtf/django.pdf)**
+* **[Coursera Certification : Approximation Algorithms](https://www.dropbox.com/scl/fi/eh9mifrpbupwmrgkdl28y/approximation_algorithm.pdf)**
+* **[Coddy.tech : SQLite certification](https://www.dropbox.com/scl/fi/5urgr754r94wx4ht3k8pz/MMO5bM-sqlite-oRigJZ.pdf)**
+* **[Euphoria GenX : MERN Stack Development](https://www.dropbox.com/scl/fi/9u3i7ulqm1v4f6ux6vu3t/MERN.pdf)**
+* **[ Webel Fujisoft : Gen-AI ](https://www.dropbox.com/scl/fi/47nrsud8roxlx0rgej1i6/gen_ai.pdf)**
+* **[ MTA.edu : Mongo-DB](https://www.dropbox.com/scl/fi/kfdw85fh56xxplije8vk4/mongo-db.pdf)**
