@@ -183,7 +183,7 @@ html[data-theme="pastel"] {
 }
 
 html[data-theme="cupcake"] {
-  --c1: var(--color-accent);
+  /* --c1: var(--color-accent); */
   --_g: 90deg, #0000 0;
   background: conic-gradient(from 135deg, var(--c1) var(--_g)) var(--s)
       calc(var(--s) / 2),

@@ -1,10 +1,10 @@
-import { TabIndexes, cn } from "../utils";
+import { TabIndexes, cn } from "@/utils";
 import { IoMenu } from "react-icons/io5";
 import { useRipple } from "use-ripple-hook";
 import { type FC, useRef, useEffect } from "react";
 import { MdOutlineColorLens } from "react-icons/md";
-import { useToast } from "../context/toast/ToastContext";
-import { ThemeOptionsValidator, useTheme, type ThemeOptionsType } from "../context/theme/ThemeContext";
+import { useToast } from "@/context/toast/ToastContext";
+import { ThemeOptionsValidator, useTheme, type ThemeOptionsType } from "@/context/theme/ThemeContext";
 
 const Navbar: FC = () => {
   const animatingRef = useRef(false);

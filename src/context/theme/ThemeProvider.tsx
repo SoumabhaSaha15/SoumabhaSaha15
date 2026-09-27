@@ -1,6 +1,6 @@
 import { prettifyError } from "zod";
 import { type ReactNode, useState, useEffect } from "react";
-import { ThemeContext, type ThemeOptionsType, ThemeOptionsValidator } from "./ThemeContext";
+import { ThemeContext, type ThemeOptionsType, ThemeOptionsValidator } from "@/context/theme/ThemeContext";
 
 const getDefaultTheme = (): ThemeOptionsType => {
   const { success, data } = ThemeOptionsValidator.safeParse(localStorage.getItem("theme"));

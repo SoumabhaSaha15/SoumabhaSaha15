@@ -9,8 +9,7 @@ html[data-theme] {
   --depth: 0;
 }
 
-html,
-body {
+* {
   font-family: "Tomorrow", sans-serif;
   transition-property:
     color, background-color, border-color, box-shadow, opacity, scale, radius,

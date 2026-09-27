@@ -110,7 +110,7 @@ One quick verification of where the less-obvious packages are actually used befo
 
 **What it is:** A Manifest V3 browser extension (TypeScript) that replaces the browser's plain, unstyled `file://` directory listing page with a modern, themed file-explorer view. A content script matches `file:///*` pages, detects the native listing (a `#header` element), tags the document root, injects custom file/folder SVG icons, and re-runs on navigation (`popstate`). All visual enhancement lives in CSS keyed to that root id — including automatic light/dark theming. The codebase is deliberately minimal: one ~19-line script (`main.ts`) and one stylesheet (`index.css`).
 
-- [GitHub Repository](https://github.com/SoumabhaSaha15/SiteBlocker)
+- [GitHub Repository](https://github.com/SoumabhaSaha15/EnhancedDirectoryView)
 
 ### Core frameworks
 
@@ -196,8 +196,6 @@ One quick verification of where the less-obvious packages are actually used befo
 - **axios** and **zod** — declared dependencies (the HTTP client and schema validator for future API work) but not yet used in the template's code — part of the ready-made data-fetching setup alongside the persisted query client.
 - **ThemeProvider** (`theme-provider.tsx`) — a small in-repo dark/light theme context toggling the `.dark` class.
 
-
-
 --- 
 
 ### **Education**
@@ -218,5 +216,5 @@ One quick verification of where the less-obvious packages are actually used befo
 * **[Coursera Certification : Approximation Algorithms](https://www.dropbox.com/scl/fi/eh9mifrpbupwmrgkdl28y/approximation_algorithm.pdf)**
 * **[Coddy.tech : SQLite certification](https://www.dropbox.com/scl/fi/5urgr754r94wx4ht3k8pz/MMO5bM-sqlite-oRigJZ.pdf)**
 * **[Euphoria GenX : MERN Stack Development](https://www.dropbox.com/scl/fi/9u3i7ulqm1v4f6ux6vu3t/MERN.pdf)**
-* **[ Webel Fujisoft : Gen-AI ](https://www.dropbox.com/scl/fi/47nrsud8roxlx0rgej1i6/gen_ai.pdf)**
-* **[ MTA.edu : Mongo-DB](https://www.dropbox.com/scl/fi/kfdw85fh56xxplije8vk4/mongo-db.pdf)**
+* **[Webel Fujisoft : Gen-AI ](https://www.dropbox.com/scl/fi/47nrsud8roxlx0rgej1i6/gen_ai.pdf)**
+* **[MTA.edu : Mongo-DB](https://www.dropbox.com/scl/fi/kfdw85fh56xxplije8vk4/mongo-db.pdf)**

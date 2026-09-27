@@ -2,7 +2,9 @@ import { type FC } from "react";
 import { TabIndexes } from "@/utils";
 import { HiDownload } from "react-icons/hi";
 import { useRipple } from "use-ripple-hook";
+
 const DOCX = "https://docs.google.com/document/d/1knazvjDgpXM5M4Ld3-EjeDxfAwL-j6V7/edit?usp=sharing&ouid=116043366224516834437&rtpof=true&sd=true"
+
 const Home: FC = () => {
   const [ripple, event] = useRipple({ duration: 200, timingFunction: 'ease-in-out', color: "currentColor" });
   return (
