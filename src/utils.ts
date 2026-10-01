@@ -161,23 +161,34 @@ export const Projects: Array<Project> = [
 ];
 
 export const ContactSchema = z.strictObject({
-  Name: z.string({ error: "Name is required." })
+  Name: z
+    .string({ error: "Name is required." })
     .min(4, { error: "Name must have 4 to 30 chars." })
     .max(30, { error: "Name can't exceed 30 chars." })
-    .regex(/^[\x00-\x7F]*$/, { error: "Don't use non-ascii chars." }),
-  Email: z.email({ error: "Email is required" })
-    .regex(/^[\x00-\x7F]*$/, { error: "Don't use non-ascii chars." }),
-  Message: z.string({ error: "Message is required." })
-    .regex(/^[\x00-\x7F]*$/, { error: "Don't use non-ascii chars." })
+    .regex(/^[\x20-\x7E]*$/, {
+      error: "Don't use non-ASCII characters.",
+    }),
+
+  Email: z
+    .email({ error: "Email is required" })
+    .regex(/^[\x20-\x7E]*$/, {
+      error: "Don't use non-ASCII characters.",
+    }),
+
+  Message: z
+    .string({ error: "Message is required." })
+    .regex(/^[\x20-\x7E]*$/, {
+      error: "Don't use non-ASCII characters.",
+    })
     .min(10, { error: "Message must have 10 to 100 chars." })
-    .max(100, { error: "Message can't exceed 100 chars." })
+    .max(100, { error: "Message can't exceed 100 chars." }),
 });
 
 export type ContactType = z.infer<typeof ContactSchema>;
 
 export const GoogleScript = axios.create({
   baseURL: '/gscript',
-  validateStatus: (_) => true
+  validateStatus: () => true
 });
 
 export const cn = (...inputs: ClassValue[]) => twMerge(clsx(inputs));
